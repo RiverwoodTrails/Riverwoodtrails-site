@@ -484,7 +484,7 @@ nav{
 }
 
 /* SECTION SHELL */
-#announcements, #dues, #payonline, #calendar, #board, #design-review-board, #grounds-committee, #gallery, #faq, #about, #contact{
+#announcements, #dues, #calendar, #board, #design-review-board, #grounds-committee, #gallery, #faq, #about, #contact{
   scroll-margin-top:80px;
 }
 details[id^="faq-"]{
@@ -648,6 +648,14 @@ details .cite{margin-top:12px;}
   display:block;
 }
 @media (max-width:760px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} .gallery-grid img{height:160px;} }
+
+/* MOBILE-ONLY CROP: shift the front entrance photos left so the right side of the picture shows. Desktop crop is untouched. */
+@media (max-width:760px){
+  .hero-slides img:nth-child(1),
+  .gallery-grid img:nth-child(1){object-position:100% center;}  /* front entrance, day */
+  .hero-slides img:nth-child(5),
+  .gallery-grid img:nth-child(5){object-position:100% center;}  /* front entrance, night */
+}
 @media (max-width:900px){ .grid3[style*="repeat(4"]{grid-template-columns:repeat(2,1fr) !important;} }
 @media (max-width:760px){ .grid3{grid-template-columns:1fr !important;} }
 
@@ -777,7 +785,6 @@ footer a:hover{opacity:1;}
   </a>
   <div style="display:flex; align-items:center; gap:16px;">
     <div class="navlinks" id="navLinks">
-      <a href="payments.html">Resident Login</a>
       <a href="index.html" class="active">Home</a>
       <a href="index.html#announcements">HOA News</a>
       <a href="index.html#dues">HOA Dues</a>
@@ -874,12 +881,8 @@ footer a:hover{opacity:1;}
   </div>
   <div class="announce-list">
     <div class="announce">
-      <div class="date">Sept 2026</div>
-      <div><h4>Board reviewing PayHOA for online dues payment</h4><p>The board is evaluating PayHOA, a dedicated HOA management platform, to handle online dues payment and other administrative tasks going forward. See the new <a href="#payonline" style="text-decoration:underline;">Pay Online with PayHOA</a> section below for details on what PayHOA is and what would change for residents.</p></div>
-    </div>
-    <div class="announce">
       <div class="date">Aug 2026</div>
-      <div><h4>New board members elected</h4><p>At the Annual HOA Meeting on August 29, 2026, Doug Godby (President) and John Cook (Treasurer) completed their terms. Tim Macy and Daniel Kostreva were elected to the board, and Amanda Wells continues her term. Officer positions (President, Treasurer, Secretary) will be assigned at the board's next meeting. Thank you to Doug and John for their service, and welcome to Tim and Daniel.</p></div>
+      <div><h4>New board members elected, officer roles assigned</h4><p>At the Annual HOA Meeting on August 29, 2026, Doug Godby and John Cook completed their board terms, and Tim Macy and Daniel Kostreva were elected to the board. At the board's meeting on September 17, 2026, officer positions were assigned: Amanda Wells is President, Tim Macy is Treasurer, and Daniel Kostreva is Secretary. Thank you to Doug and John for their service, and welcome to Tim and Daniel.</p></div>
     </div>
     <div class="announce">
       <div class="date">April</div>
@@ -915,7 +918,6 @@ footer a:hover{opacity:1;}
       <h4>Dues Information</h4>
       <p>$350 per year, invoiced by April and covering the calendar year. See how dues are used and how to pay.</p>
       <a class="tile-link" href="index.html#dues">View payment info →</a>
-      <a class="tile-link" href="index.html#payonline" style="margin-top:6px;">About PayHOA →</a>
     </div>
     <div class="tile">
       <div class="num">03</div>
@@ -988,7 +990,6 @@ footer a:hover{opacity:1;}
         <div class="num">Online</div>
         <h4>Pay Online</h4>
         <p>Your annual billing notice includes a QR code that links directly to our secure payment portal. If we have your email on file, we can also send the payment link straight to your inbox — just share your contact information below.</p>
-        <p style="margin-top:14px; font-size:.88rem; color:#4a4a43;">The board is also reviewing <a href="#payonline" style="text-decoration:underline;">PayHOA</a>, a dedicated online payment and HOA management platform, as a future option for residents.</p>
         <div style="margin-top:22px; padding-top:20px; border-top:1px solid var(--line);">
           <h4 style="font-size:.98rem;">Request a Payment Link</h4>
           <p style="font-size:.88rem; margin-bottom:14px;">Don't have a link yet? Share your contact info and we'll send one to your email.</p>
@@ -1007,72 +1008,6 @@ footer a:hover{opacity:1;}
       </div>
     </div>
   </div>
-</section>
-</div>
-
-<div class="band">
-<section id="payonline">
-  <div class="section-head" style="max-width:80ch;">
-    <span class="eyebrow">New Payment Option — Under Board Review</span>
-    <h2>Pay Online with PayHOA</h2>
-    <p>The board is evaluating PayHOA, a dedicated HOA management platform, to bring one-click online dues payment — and eventually violation tracking and other tools — to Riverwood Trails.</p>
-  </div>
-
-  <div class="notice-box">
-    <h4>This is a proposed change, not yet finalized</h4>
-    <p>Riverwood Trails HOA has not yet purchased or fully set up a PayHOA account. The board is reviewing PayHOA as an option, and this section is here so residents and the board can see it firsthand during that review. Until a dedicated Riverwood Trails account is configured, "Resident Login" leads to PayHOA's general website rather than a personalized login page — please continue using the payment options above until this is finalized.</p>
-  </div>
-
-  <div style="margin-top:40px;">
-    <p style="color:#4a4a43; font-size:.9rem; font-weight:500; letter-spacing:.04em; text-transform:uppercase; margin-bottom:16px;">What Is PayHOA?</p>
-    <div class="grid3" style="grid-template-columns:repeat(4,1fr);">
-      <div class="tile">
-        <div class="num">Payments</div>
-        <h4>Online Dues Payment</h4>
-        <p>Residents pay dues by card or bank transfer, with the option to set up autopay so dues are never late.</p>
-      </div>
-      <div class="tile">
-        <div class="num">Records</div>
-        <h4>Automatic Accounting</h4>
-        <p>Invoices and payments are recorded automatically, giving the board an accurate, up-to-date ledger.</p>
-      </div>
-      <div class="tile">
-        <div class="num">Compliance</div>
-        <h4>Violation Tracking</h4>
-        <p>If adopted for this use, the board could log and track covenant violations (like garbage can or fencing issues) in one place, with notices sent automatically.</p>
-      </div>
-      <div class="tile">
-        <div class="num">Portal</div>
-        <h4>Resident Portal</h4>
-        <p>Residents could get their own login to view payment history, submit requests, and see community documents.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="callout" style="margin-top:40px;">
-    <div>
-      <h3>What residents can now do through PayHOA</h3>
-      <p>Once set up, residents will log in to pay dues, view payment history, and (if adopted) submit requests or see violation notices — all in one place, instead of by mail or email.</p>
-    </div>
-    <a href="https://www.payhoa.com" class="btn btn-clay" target="_blank" rel="noopener">Resident Login →</a>
-  </div>
-
-  <div style="margin-top:40px;">
-    <div class="grid3" style="grid-template-columns:repeat(2,1fr);">
-      <div class="tile">
-        <div class="num">On PayHOA's Side</div>
-        <h4>What PayHOA handles</h4>
-        <p>PayHOA processes your payment directly (card or bank transfer) and stores your payment method under its own security and privacy policy, not the HOA's. You'd create your own resident login there. Using PayHOA means agreeing to PayHOA's own terms of service and privacy policy, separate from this website's.</p>
-      </div>
-      <div class="tile">
-        <div class="num">On the HOA's Side</div>
-        <h4>What the board can see</h4>
-        <p>The board would see whether your dues are paid and the amounts on record — not your card or bank account details. Any violation notices or resident requests logged in PayHOA would be visible to the board the same way they are today by email.</p>
-      </div>
-    </div>
-  </div>
-
-  <p style="color:#4a4a43; font-size:.86rem; margin-top:24px;">PayHOA is an independent, third-party company — not part of the Riverwood Trails website. Learn more directly at <a href="https://www.payhoa.com" target="_blank" rel="noopener" style="text-decoration:underline;">payhoa.com</a>.</p>
 </section>
 </div>
 
@@ -1131,7 +1066,7 @@ footer a:hover{opacity:1;}
   <div class="footer-grid">
     <div>
       <h5>CONTACT THE BOARD</h5>
-      <p style="color:var(--cream); opacity:.85; font-size:.92rem; margin-bottom:14px;">Email us directly at <a href="mailto:d.kostreva.hoa@outlook.com" style="text-decoration:underline;">d.kostreva.hoa@outlook.com</a>, or send a message below. General questions, design review requests, and neighborhood concerns are all welcome here.</p>
+      <p style="color:var(--cream); opacity:.85; font-size:.92rem; margin-bottom:14px;">Email us directly at <a href="mailto:d.kostreva.hoa@outlook.com" style="text-decoration:underline;">d.kostreva.hoa@outlook.com</a> or send a message below. General questions, design review requests, and neighborhood concerns are all welcome here.</p>
       <form class="contact-form" action="https://formsubmit.co/d.kostreva.hoa@outlook.com" method="POST">
         <input type="hidden" name="_subject" value="New message from Riverwood Trails website">
         <input type="hidden" name="_captcha" value="false">
@@ -1146,7 +1081,6 @@ footer a:hover{opacity:1;}
     </div>
     <div>
       <h5>QUICK LINKS</h5>
-      <a href="payments.html">Resident Login</a>
       <a href="index.html#about">About Riverwood Trails</a>
       <a href="index.html#gallery">Gallery</a>
       <a href="index.html#announcements">Announcements</a>
@@ -1220,13 +1154,12 @@ const searchIndex = [
   { title: "Contact the Board", tag: "Section", href: "#contact", keywords: "contact email message form" },
   { title: "HOA Documents", tag: "Page", href: "documents.html", keywords: "documents covenants policy garbage can design review application" },
   { title: "Design Review Application (fillable)", tag: "Document", href: "documents.html#drb-form", keywords: "design review application form approval submit fillable online" },
+  { title: "Fill Out Design Review Application Online", tag: "Page", href: "design-review-form.html", keywords: "design review application form fill out online jotform submit" },
   { title: "Covenants (Full Declaration)", tag: "Document", href: "documents.html#covenants", keywords: "covenants declaration restrictions easements articles of incorporation code of regulations design review board bylaws" },
   { title: "HOA Policy Clarification", tag: "Document", href: "documents.html#policy-clarification", keywords: "policy clarification signs trash fencing mailbox pools shingle siding shutters fees liens" },
   { title: "Garbage Can Storage Policy", tag: "Document", href: "documents.html#garbage-can-policy", keywords: "garbage can trash storage screen enclosure policy violations fine" },
   { title: "New Residents", tag: "Page", href: "new-residents.html", keywords: "new resident welcome guide moving in trash day new to neighborhood getting started" },
   { title: "Realtors", tag: "Page", href: "realtors.html", keywords: "realtor real estate agent listing buyer selling home" },
-  { title: "Resident Login (PayHOA)", tag: "Page", href: "payments.html", keywords: "payhoa pay online payment login dues violation tracking resident portal autopay" },
-  { title: "Pay Online with PayHOA", tag: "Section", href: "index.html#payonline", keywords: "payhoa pay online payment dues explanation violation tracking resident portal autopay what is payhoa" },
   { title: "New Resident Welcome Guide", tag: "Document", href: "documents.html#new-resident-guide", keywords: "new resident welcome guide moving in trash day new to neighborhood" },
   { title: "When are HOA dues to be paid?", tag: "FAQ", href: "faq.html#faq-1", keywords: "dues due date april 350 payment" },
   { title: "Can I install a fence? If so, what kind is allowed?", tag: "FAQ", href: "faq.html#faq-2", keywords: "fence fencing split rail" },
@@ -1359,7 +1292,7 @@ if (calGrid) {
 
   const calEvents = [
     { year: 2026, month: 7, day: 29, label: "Annual HOA Meeting — new board elected",
-      detail: "Doug Godby (President) and John Cook (Treasurer) completed their terms. Tim Macy and Daniel Kostreva were elected to the board, and Amanda Wells continues her term. Officer positions (President, Treasurer, Secretary) will be assigned at the board's next meeting. Thank you to Doug and John for their service, and welcome to Tim and Daniel.",
+      detail: "Doug Godby and John Cook completed their board terms, and Tim Macy and Daniel Kostreva were elected to the board. At the board's meeting on September 17, 2026, officer positions were assigned: Amanda Wells as President, Tim Macy as Treasurer, and Daniel Kostreva as Secretary. Thank you to Doug and John for their service, and welcome to Tim and Daniel.",
       link: { label: "Read the full announcement", href: "index.html#announcements" } }
   ];
 
