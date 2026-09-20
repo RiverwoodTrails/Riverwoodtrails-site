@@ -6,6 +6,11 @@
 <meta name="description" content="Welcome to Riverwood Trails HOA — everything new residents need to know about dues, trash days, design review, and the neighborhood. Kings Mills, Ohio.">
 <meta property="og:title" content="New Residents — Riverwood Trails HOA">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://riverwoodtrails.github.io/Riverwoodtrails-site/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://riverwoodtrails.github.io/Riverwoodtrails-site/new-residents.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23223829'/%3E%3Cpath d='M6 22c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M6 34c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round' opacity='0.7'/%3E%3Cpath d='M6 46c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round' opacity='0.45'/%3E%3C/svg%3E">
 <title>New Residents — Riverwood Trails HOA</title>
 <style>
@@ -761,6 +766,34 @@ footer a:hover{opacity:1;}
 }
 .contact-form button:hover::after{width:22px;}
 
+
+/* PRINT STYLES */
+@media print{
+  .topbar, .float-logo, .search-wrap, .menu-toggle, .cal-nav, .cal-today-btn,
+  footer .contact-form, nav .search-wrap{ display:none !important; }
+  nav{ position:static; border-bottom:1px solid #999; }
+  .navlinks{ display:none !important; }
+  body{ background:#fff; color:#000; }
+  a{ color:#000; text-decoration:underline; }
+  .hero{ min-height:auto; padding:20px 0; color:#000; }
+  .hero::after{ display:none; }
+  .hero-slides{ display:none; }
+  .hero h1, .hero p.lede{ color:#000; }
+  .btn, .cal-event, .search-toggle{ display:none !important; }
+  section{ padding:14px 0; page-break-inside:avoid; }
+  .callout{ background:#fff !important; color:#000 !important; border:1px solid #999; box-shadow:none; }
+  .callout h3, .callout p{ color:#000 !important; }
+  footer{ background:#fff !important; color:#000 !important; }
+  footer a{ color:#000 !important; }
+  footer h5{ opacity:1; color:#000; }
+  .foot-bottom{ opacity:1; }
+  details{ page-break-inside:avoid; }
+  details p{ color:#000; }
+  .grid3, .board-grid{ display:block !important; }
+  .tile, .board-card{ box-shadow:none; border:1px solid #ccc; margin-bottom:10px; }
+  .gallery-grid{ display:none; }
+  a[href]::after{ content:""; }
+}
 </style>
 </head>
 <body>
@@ -777,12 +810,12 @@ footer a:hover{opacity:1;}
   <div style="display:flex; align-items:center; gap:16px;">
     <div class="navlinks" id="navLinks">
       <a href="index.html">Home</a>
-      <a href="index.html#announcements">HOA News</a>
       <a href="index.html#dues">HOA Dues</a>
+      <a href="documents.html">HOA Documents</a>
+      <a href="index.html#announcements">HOA News</a>
       <a href="board.html">Board &amp; Committees</a>
       <a href="calendar.html">Calendar</a>
       <a href="faq.html">FAQ</a>
-      <a href="documents.html">HOA Documents</a>
       <a href="new-residents.html" class="active">New Residents</a>
       <a href="realtors.html">Realtors</a>
       <a href="#contact">Contact</a>
@@ -835,7 +868,7 @@ footer a:hover{opacity:1;}
       <h3>Download the Welcome Guide</h3>
       <p>A quick read that will answer most of your first questions about living in Riverwood Trails.</p>
     </div>
-    <a href="documents/new-resident-welcome.pdf" class="btn btn-clay" target="_blank" rel="noopener">Open PDF</a>
+    <a href="pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1" class="btn btn-clay" target="_blank" rel="noopener">Open PDF</a>
   </div>
 </section>
 
@@ -916,6 +949,7 @@ footer a:hover{opacity:1;}
       <a href="documents.html">HOA Documents</a>
       <a href="new-residents.html">New Residents</a>
       <a href="realtors.html">Realtors</a>
+      <a href="report-concern.html">Report a Concern</a>
     </div>
     <div>
       <h5>DOCUMENTS</h5>
@@ -984,6 +1018,7 @@ const searchIndex = [
   { title: "New Residents", tag: "Page", href: "new-residents.html", keywords: "new resident welcome guide moving in trash day new to neighborhood getting started" },
   { title: "Realtors", tag: "Page", href: "realtors.html", keywords: "realtor real estate agent listing buyer selling home" },
   { title: "New Resident Welcome Guide", tag: "Document", href: "documents.html#new-resident-guide", keywords: "new resident welcome guide moving in trash day new to neighborhood" },
+  { title: "Report a Concern", tag: "Page", href: "report-concern.html", keywords: "report a concern complaint garbage can parking fencing violation neighbor issue" },
   { title: "When are HOA dues to be paid?", tag: "FAQ", href: "faq.html#faq-1", keywords: "dues due date april 350 payment" },
   { title: "Can I install a fence? If so, what kind is allowed?", tag: "FAQ", href: "faq.html#faq-2", keywords: "fence fencing split rail" },
   { title: "Can I paint my trim, door, and shutters a different color?", tag: "FAQ", href: "faq.html#faq-3", keywords: "paint trim door shutters color" },
@@ -1006,6 +1041,25 @@ const searchIndex = [
   { title: "What is the Design Review Board?", tag: "FAQ", href: "faq.html#faq-20", keywords: "design review board role members" },
   { title: "What is the Grounds Committee?", tag: "FAQ", href: "faq.html#faq-21", keywords: "grounds committee role volunteer" },
   { title: "How do I contact the board?", tag: "FAQ", href: "faq.html#faq-22", keywords: "contact email board" },
+  { title: "Fencing Rules (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Fencing&phrase=true", keywords: "fence fencing split rail height policy full text document" },
+  { title: "Trim, Door &amp; Shutter Colors (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Doors%20and%20Shutters&phrase=true", keywords: "paint trim door shutter color approved policy document" },
+  { title: "Roof Shingle Color (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Shingle%20Color&phrase=true", keywords: "roof shingle color replace policy document" },
+  { title: "Exterior Siding &amp; Paint (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Exterior%20Paint%20and%20Siding&phrase=true", keywords: "siding paint exterior color norandex policy document" },
+  { title: "Swimming Pool Rules (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Swimming%20Pools&phrase=true", keywords: "pool swimming above ground hot tub policy document" },
+  { title: "Mailbox Requirements (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Mailbox&phrase=true", keywords: "mailbox post color loggia white policy document" },
+  { title: "Sign Restrictions (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Signs&phrase=true", keywords: "sign yard real estate policy document" },
+  { title: "Late Fees &amp; Liens (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Late%20Charge&phrase=true", keywords: "late fee lien unpaid assessment collection policy document" },
+  { title: "Design Review &amp; Modifications (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true", keywords: "design review board architectural standards modifications approval covenants" },
+  { title: "Vehicle &amp; Parking Rules (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Vehicles&phrase=true", keywords: "truck rv boat trailer parking vehicle covenants" },
+  { title: "Antenna &amp; Satellite Dish Rules (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Antennae&phrase=true", keywords: "antenna satellite dish covenants" },
+  { title: "Home Business Rules (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Business&phrase=true", keywords: "business home occupation trade covenants" },
+  { title: "Assessments &amp; Dues Rules (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=12&search=ASSESSMENTS&phrase=true", keywords: "assessment dues reserve fund special assessment covenants" },
+  { title: "Board Meeting Schedule (Code of Regulations)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=27&search=Code%20of%20Regulations&phrase=true", keywords: "annual meeting quarterly board meeting minutes bylaws code of regulations" },
+  { title: "Garbage Can Storage Options (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Storage%20Options&phrase=true", keywords: "garbage can trash storage location policy document" },
+  { title: "Garbage Can Screen Regulations (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Screen/Enclosure%20Regulations&phrase=true", keywords: "garbage can screen enclosure dimensions material color policy document" },
+  { title: "Garbage Can Violations &amp; Fines (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=3&search=fine%20of%20%2425/month&phrase=true", keywords: "garbage can violation fine compliance notification policy document" },
+  { title: "Trash Pickup Day (New Resident Guide)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1&search=Garbage%20pickup%20is%20Monday&phrase=true", keywords: "trash day pickup monday recycling new resident guide" },
+  { title: "Annual Dues Amount (New Resident Guide)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1&search=Annual%20Dues&phrase=true", keywords: "dues 350 annual invoice april new resident guide" },
 ];
 
 const searchToggle = document.getElementById('searchToggle');

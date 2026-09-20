@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Riverwood Trails HOA — frequently asked questions about dues, fencing, mailboxes, garbage cans, pools, and design review. Kings Mills, Ohio.">
-<meta property="og:title" content="FAQ — Riverwood Trails HOA">
+<meta name="description" content="Report a neighborhood concern to the Riverwood Trails HOA Board — garbage cans, parking, fencing, and other covenant or upkeep issues. Kings Mills, Ohio.">
+<meta property="og:title" content="Report a Concern — Riverwood Trails HOA">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://riverwoodtrails.github.io/Riverwoodtrails-site/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://riverwoodtrails.github.io/Riverwoodtrails-site/faq.html">
+<meta property="og:url" content="https://riverwoodtrails.github.io/Riverwoodtrails-site/report-concern.html">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23223829'/%3E%3Cpath d='M6 22c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M6 34c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round' opacity='0.7'/%3E%3Cpath d='M6 46c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round' opacity='0.45'/%3E%3C/svg%3E">
-<title>FAQ — Riverwood Trails HOA</title>
+<title>Report a Concern — Riverwood Trails HOA</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
 
@@ -200,131 +200,6 @@ nav{
   .search-panel{position:fixed; top:65px; left:0; right:0; width:auto; max-width:none; border-radius:0; border-left:none; border-right:none; padding:14px 6vw;}
 }
 
-/* CALENDAR */
-.cal-wrap{
-  border:1px solid var(--line);
-  border-radius:10px;
-  overflow:hidden;
-  background:var(--paper);
-  box-shadow:0 12px 32px -16px rgba(22,36,26,0.18);
-}
-.cal-header{
-  display:flex; align-items:center; justify-content:space-between;
-  background:var(--forest);
-  color:var(--cream);
-  padding:16px 20px;
-}
-.cal-header h3{color:var(--cream); font-size:1.1rem; font-weight:500; margin:0;}
-.cal-nav{display:flex; gap:6px;}
-.cal-nav button{
-  background:rgba(244,239,228,0.14);
-  border:none; color:var(--cream);
-  width:32px; height:32px; border-radius:50%;
-  cursor:pointer; font-size:1rem;
-  display:flex; align-items:center; justify-content:center;
-  transition:background .15s ease;
-}
-.cal-nav button:hover{background:rgba(244,239,228,0.26);}
-.cal-today-btn{
-  background:none; border:1px solid rgba(244,239,228,0.4);
-  color:var(--cream); font-size:.78rem;
-  padding:6px 12px; border-radius:20px; cursor:pointer;
-  margin-right:8px;
-}
-.cal-weekdays{
-  display:grid; grid-template-columns:repeat(7,1fr);
-  background:var(--cream);
-  border-bottom:1px solid var(--line);
-}
-.cal-weekdays span{
-  text-align:center; padding:8px 0;
-  font-size:.72rem; font-weight:600; letter-spacing:.04em;
-  color:var(--river); text-transform:uppercase;
-}
-.cal-grid{display:grid; grid-template-columns:repeat(7,1fr);}
-.cal-day{
-  min-height:64px;
-  padding:6px 8px;
-  border-right:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  font-size:.82rem;
-  color:var(--ink);
-  position:relative;
-}
-.cal-day:nth-child(7n){border-right:none;}
-.cal-day.empty{background:rgba(34,56,41,0.02);}
-.cal-day.today{background:rgba(161,90,60,0.08);}
-.cal-day .cal-daynum{font-weight:500;}
-.cal-day.today .cal-daynum{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:22px; height:22px; border-radius:50%;
-  background:var(--clay); color:var(--cream);
-}
-.cal-event{
-  margin-top:4px;
-  font-size:.68rem;
-  background:var(--forest);
-  color:var(--cream);
-  padding:2px 6px;
-  border-radius:3px;
-  line-height:1.3;
-  display:block;
-}
-.cal-event.recurring{background:var(--river);}
-.cal-legend{
-  display:flex; flex-wrap:wrap; gap:16px;
-  padding:14px 20px;
-  background:var(--cream);
-  border-top:1px solid var(--line);
-  font-size:.78rem; color:#4a4a43;
-}
-.cal-legend span{display:flex; align-items:center; gap:6px;}
-.cal-legend .dot{width:9px; height:9px; border-radius:50%; display:inline-block;}
-.cal-event{cursor:pointer;}
-.cal-event:hover{opacity:.85;}
-
-/* CALENDAR EVENT MODAL */
-.cal-modal-overlay{
-  position:fixed; inset:0; z-index:100;
-  background:rgba(22,36,26,0.55);
-  display:flex; align-items:center; justify-content:center;
-  padding:20px;
-  opacity:0; visibility:hidden;
-  transition:opacity .2s ease, visibility .2s ease;
-}
-.cal-modal-overlay.open{opacity:1; visibility:visible;}
-.cal-modal{
-  background:var(--paper);
-  border-radius:10px;
-  max-width:420px; width:100%;
-  padding:28px 26px;
-  position:relative;
-  box-shadow:0 30px 60px -20px rgba(22,36,26,0.4);
-  transform:translateY(10px);
-  transition:transform .2s ease;
-}
-.cal-modal-overlay.open .cal-modal{transform:translateY(0);}
-.cal-modal-close{
-  position:absolute; top:14px; right:14px;
-  background:none; border:none; cursor:pointer;
-  width:30px; height:30px; border-radius:50%;
-  font-size:1.2rem; color:var(--forest-deep); opacity:.6;
-  display:flex; align-items:center; justify-content:center;
-  transition:background .15s ease, opacity .15s ease;
-}
-.cal-modal-close:hover{opacity:1; background:rgba(34,56,41,0.06);}
-.cal-modal-date{
-  font-size:.78rem; color:var(--river); font-weight:600;
-  text-transform:uppercase; letter-spacing:.05em;
-  margin-bottom:8px;
-}
-.cal-modal h3{font-size:1.25rem; margin-bottom:12px; padding-right:20px;}
-.cal-modal p.cal-modal-detail{font-size:.94rem; color:#4a4a43; line-height:1.6; margin-bottom:18px;}
-@media (max-width:600px){
-  .cal-day{min-height:52px; padding:4px 5px; font-size:.74rem;}
-  .cal-event{font-size:.6rem; padding:1px 4px;}
-}
-
 .menu-toggle{
   display:none;
   background:none; border:none; cursor:pointer;
@@ -358,58 +233,6 @@ nav{
   .navlinks > a{padding:16px 4px; border-bottom:1px solid var(--line); font-size:1.02rem;}
 }
 
-
-/* HERO SLIDESHOW */
-.hero{
-  position:relative;
-  min-height:88vh;
-  display:flex;
-  align-items:center;
-  padding:0 6vw;
-  overflow:hidden;
-  isolation:isolate;
-}
-.hero-slides{position:absolute; inset:0; z-index:-2;}
-.hero-slides img{
-  position:absolute; inset:0;
-  width:100%; height:100%;
-  object-fit:cover;
-  opacity:0;
-  animation:heroFade 20s infinite;
-}
-.hero-slides img:nth-child(1){animation-delay:0s;}
-.hero-slides img:nth-child(2){animation-delay:4s;}
-.hero-slides img:nth-child(3){animation-delay:8s;}
-.hero-slides img:nth-child(4){animation-delay:12s;}
-.hero-slides img:nth-child(5){animation-delay:16s;}
-@keyframes heroFade{
-  0%{opacity:0;}
-  3%{opacity:1;}
-  20%{opacity:1;}
-  23%{opacity:0;}
-  100%{opacity:0;}
-}
-.hero::after{
-  content:"";
-  position:absolute; inset:0; z-index:-1;
-  background:linear-gradient(180deg, rgba(22,36,26,0.62) 0%, rgba(22,36,26,0.55) 45%, rgba(22,36,26,0.78) 100%);
-}
-.hero-content{max-width:720px; padding:8vw 0;}
-.hero h1{
-  color:var(--cream);
-  font-size:clamp(2.3rem, 4.2vw, 3.6rem);
-  line-height:1.08;
-}
-@media (min-width:761px){
-  .hero h1 .keep-together{white-space:nowrap;}
-}
-.hero p.lede{
-  margin-top:20px;
-  font-size:1.08rem;
-  max-width:44ch;
-  color:rgba(244,239,228,0.88);
-}
-.hero .cta-row{margin-top:32px; display:flex; gap:14px; flex-wrap:wrap;}
 .btn{
   display:inline-flex;
   align-items:center;
@@ -423,50 +246,7 @@ nav{
   position:relative;
   box-shadow:0 2px 6px rgba(22,36,26,0.12);
   transition:transform .2s cubic-bezier(.2,.7,.3,1), box-shadow .2s ease, border-color .2s ease, background .2s ease;
-}
-.btn-primary{
-  background:var(--forest);
-  color:var(--cream);
-  border:1px solid var(--forest);
-  box-shadow:0 2px 8px rgba(22,36,26,0.22);
-}
-.btn-primary::after{
-  content:"";
-  width:14px; height:1px;
-  background:var(--cream);
-  opacity:.7;
-  transition:width .2s ease;
-}
-.btn-primary:hover{
-  background:var(--forest-deep);
-  border-color:var(--forest-deep);
-  transform:translateY(-1px);
-  box-shadow:0 6px 16px rgba(22,36,26,0.28);
-}
-.btn-primary:hover::after{width:22px;}
-.btn-ghost{
-  border:1.5px solid var(--forest-deep);
-  color:var(--forest-deep);
-  background:rgba(34,56,41,0.07);
-}
-.btn-ghost:hover{
-  background:var(--forest-deep);
-  color:var(--cream);
-  transform:translateY(-1px);
-  box-shadow:0 6px 16px rgba(22,36,26,0.2);
-}
-.btn:focus-visible{outline:2px solid var(--river); outline-offset:3px;}
-.btn-ghost-invert{
-  border:1.5px solid rgba(244,239,228,0.7);
-  color:var(--cream);
-  background:rgba(244,239,228,0.14);
-}
-.btn-ghost-invert:hover{
-  background:var(--cream);
-  color:var(--forest-deep);
-  border-color:var(--cream);
-  transform:translateY(-1px);
-  box-shadow:0 6px 16px rgba(22,36,26,0.22);
+  border:none; cursor:pointer;
 }
 .btn-clay{
   background:var(--clay);
@@ -483,78 +263,8 @@ nav{
 }
 .btn-clay:hover::after{width:22px;}
 
-@media (max-width:820px){
-  .hero{min-height:80vh;}
-}
-
 /* SECTION SHELL */
-#announcements, #dues, #calendar, #board, #design-review-board, #grounds-committee, #gallery, #faq, #about, #contact{
-  scroll-margin-top:80px;
-}
-details[id^="faq-"]{
-  scroll-margin-top:80px;
-}
 section{padding:7vw 6vw; position:relative;}
-.section-head{max-width:60ch; margin-bottom:48px; position:relative; padding-left:20px;}
-.section-head::before{
-  content:"";
-  position:absolute; left:0; top:6px;
-  width:3px; height:calc(100% - 12px);
-  min-height:34px;
-  background:var(--clay);
-  border-radius:2px;
-}
-.section-head .eyebrow{
-  display:block;
-  font-size:.76rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:var(--river);
-  font-weight:600;
-  margin-bottom:10px;
-}
-.section-head h2{font-size:clamp(1.5rem,2.4vw,2rem);}
-.section-head p{color:#4a4a43; margin-top:10px;}
-.band{
-  background:var(--cream);
-  box-shadow:
-    inset 0 1px 0 rgba(34,56,41,0.08),
-    inset 0 -1px 0 rgba(34,56,41,0.08);
-}
-.divider{
-  max-width:6vw; height:1px;
-  margin:0 auto;
-  background:linear-gradient(90deg, transparent, var(--line) 20%, var(--line) 80%, transparent);
-}
-.divider-wide{
-  height:1px;
-  background:linear-gradient(90deg, transparent, var(--line) 15%, var(--line) 85%, transparent);
-}
-
-/* SUBNAV PILLS */
-.subnav{
-  display:flex; gap:10px; flex-wrap:wrap;
-  padding:0 6vw 3vw;
-}
-.subnav a{
-  padding:9px 18px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  font-size:.82rem;
-  font-weight:500;
-  color:var(--forest-deep);
-  text-decoration:none;
-  background:var(--paper);
-  box-shadow:0 1px 3px rgba(22,36,26,0.08);
-  transition:background .15s ease, border-color .15s ease, color .15s ease, transform .15s ease, box-shadow .15s ease;
-}
-.subnav a:hover{
-  background:var(--forest);
-  color:var(--cream);
-  border-color:var(--forest);
-  transform:translateY(-1px);
-  box-shadow:0 4px 10px rgba(22,36,26,0.18);
-}
 
 /* PAGE HEADER (for non-home pages) */
 .page-header{
@@ -573,54 +283,6 @@ section{padding:7vw 6vw; position:relative;}
 .page-header h1{font-size:clamp(1.9rem,3.2vw,2.6rem);}
 .page-header p{color:#4a4a43; margin-top:12px; font-size:1.02rem;}
 
-/* ANNOUNCEMENTS */
-.announce-list{display:flex; flex-direction:column; gap:0;}
-.announce{
-  display:grid;
-  grid-template-columns:120px 1fr;
-  gap:24px;
-  padding:26px 20px;
-  border-top:1px solid var(--line);
-  border-radius:6px;
-  transition:background .2s ease;
-}
-.announce:hover{background:rgba(34,56,41,0.03);}
-.announce:last-child{border-bottom:1px solid var(--line);}
-.announce .date{color:var(--river); font-size:.88rem; font-weight:500; padding-top:2px;}
-.announce h4{font-family:'Fraunces',serif; font-weight:500; font-size:1.08rem; margin-bottom:6px;}
-.announce p{color:#4a4a43; font-size:.96rem;}
-@media (max-width:600px){ .announce{grid-template-columns:1fr; gap:6px;} }
-
-/* QUICK LINKS GRID */
-.grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:8px; overflow:hidden; box-shadow:0 12px 32px -16px rgba(22,36,26,0.18);}
-.tile{background:var(--paper); padding:34px 30px; transition:background .2s ease;}
-.tile:hover{background:#fff;}
-.tile .num{font-family:'Fraunces',serif; color:var(--river); font-size:.85rem; margin-bottom:14px; letter-spacing:.04em; text-transform:uppercase;}
-.tile h4{font-size:1.08rem; margin-bottom:8px; font-family:'Fraunces',serif; font-weight:500;}
-.tile p{font-size:.92rem; color:#4a4a43;}
-.tile a.tile-link{
-  display:flex;
-  align-items:center;
-  gap:6px;
-  width:fit-content;
-  margin-top:14px;
-  padding:8px 14px;
-  font-size:.84rem;
-  font-weight:500;
-  color:var(--clay);
-  background:rgba(161,90,60,0.09);
-  border:1px solid rgba(161,90,60,0.28);
-  border-radius:20px;
-  text-decoration:none;
-  transition:background .15s ease, border-color .15s ease, color .15s ease, transform .15s ease;
-}
-.tile a.tile-link:hover{
-  background:var(--clay);
-  color:var(--cream);
-  border-color:var(--clay);
-  transform:translateY(-1px);
-}
-
 /* NOTICE BOX */
 .notice-box{
   border-left:4px solid var(--clay);
@@ -631,77 +293,62 @@ section{padding:7vw 6vw; position:relative;}
 }
 .notice-box h4{font-size:1.02rem; margin-bottom:6px; color:var(--forest-deep); font-family:'Fraunces',serif; font-weight:600;}
 .notice-box p{font-size:.92rem; color:#4a4a43;}
-.cite{
-  display:block; margin-top:10px;
-  font-size:.78rem; color:var(--river);
-  text-decoration:none;
-  border-bottom:1px dotted currentColor;
-  width:fit-content;
-}
-.cite:hover{color:var(--forest-deep);}
-details .cite{margin-top:12px;}
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-}
-.gallery-grid img{
-  width:100%; height:220px;
-  object-fit:cover;
-  border-radius:6px;
-  display:block;
-}
-@media (max-width:760px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} .gallery-grid img{height:160px;} }
-@media (max-width:900px){ .grid3[style*="repeat(4"]{grid-template-columns:repeat(2,1fr) !important;} }
-@media (max-width:760px){ .grid3{grid-template-columns:1fr !important;} }
 
-/* BOARD */
-.board-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
-.board-card{
-  border-top:2px solid var(--forest);
-  padding:20px 22px 22px;
-  background:var(--paper);
-  border-radius:0 0 6px 6px;
-  box-shadow:0 8px 24px -14px rgba(22,36,26,0.16);
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-.board-card:hover{transform:translateY(-3px); box-shadow:0 14px 30px -14px rgba(22,36,26,0.24);}
-.board-card .role{font-size:.82rem; color:var(--river); font-weight:500; text-transform:none;}
-.board-card h4{font-family:'Fraunces',serif; font-size:1.1rem; margin:4px 0 8px;}
-.board-card p{font-size:.88rem; color:#4a4a43;}
-@media (max-width:900px){ .board-grid{grid-template-columns:repeat(2,1fr) !important;} }
-@media (max-width:520px){ .board-grid{grid-template-columns:1fr !important;} }
-
-/* FAQ */
-details{border-bottom:1px solid var(--line); padding:18px 0;}
-summary{
-  cursor:pointer;
-  font-family:'Fraunces',serif;
-  font-size:1.05rem;
-  color:var(--forest-deep);
-  list-style:none;
-  display:flex; justify-content:space-between; align-items:center;
-}
-summary::-webkit-details-marker{display:none;}
-summary::after{content:"+"; font-size:1.3rem; color:var(--river); font-family:'Inter',sans-serif; transition:transform .2s;}
-details[open] summary::after{content:"–";}
-details p{margin-top:12px; color:#4a4a43; max-width:65ch; font-size:.96rem;}
-
-/* DUES CALLOUT */
-.callout{
-  background:linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%);
-  color:var(--cream);
+.cal-wrap{
+  border:1px solid var(--line);
   border-radius:10px;
-  padding:48px 6vw;
-  display:grid;
-  grid-template-columns:1.3fr auto;
-  align-items:center;
-  gap:24px;
-  box-shadow:0 20px 44px -18px rgba(22,36,26,0.4);
+  overflow:hidden;
+  background:var(--paper);
+  box-shadow:0 12px 32px -16px rgba(22,36,26,0.18);
 }
-.callout h3{color:var(--cream); font-size:1.5rem; max-width:26ch;}
-.callout p{opacity:.85; margin-top:10px; max-width:44ch;}
-@media (max-width:700px){ .callout{grid-template-columns:1fr;} }
+
+/* REPORT FORM */
+.report-form{display:flex; flex-direction:column; gap:16px; max-width:560px;}
+.report-form label{font-size:.86rem; font-weight:500; color:var(--forest-deep); margin-bottom:6px; display:block;}
+.report-form input, .report-form select, .report-form textarea{
+  width:100%;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:12px 14px;
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  font-size:.94rem;
+}
+.report-form input:focus, .report-form select:focus, .report-form textarea:focus{outline:none; border-color:var(--river);}
+.report-form ::placeholder{color:#9a9a90;}
+.report-form .field{display:flex; flex-direction:column;}
+.report-form button{
+  align-self:flex-start;
+  margin-top:6px;
+  background:var(--clay);
+  color:var(--cream);
+  border:1px solid var(--clay);
+  padding:14px 28px;
+  border-radius:6px;
+  font-size:.9rem;
+  letter-spacing:.03em;
+  font-weight:500;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.report-form button::after{
+  content:"";
+  width:14px; height:1px;
+  background:var(--cream);
+  opacity:.7;
+  transition:width .2s ease;
+}
+.report-form button:hover{
+  background:#8a4a30;
+  border-color:#8a4a30;
+  transform:translateY(-1px);
+  box-shadow:0 6px 16px rgba(0,0,0,0.25);
+}
+.report-form button:hover::after{width:22px;}
 
 /* CONTACT / FOOTER */
 footer{
@@ -815,7 +462,7 @@ footer a:hover{opacity:1;}
       <a href="index.html#announcements">HOA News</a>
       <a href="board.html">Board &amp; Committees</a>
       <a href="calendar.html">Calendar</a>
-      <a href="faq.html" class="active">FAQ</a>
+      <a href="faq.html">FAQ</a>
       <a href="new-residents.html">New Residents</a>
       <a href="realtors.html">Realtors</a>
       <a href="#contact">Contact</a>
@@ -847,120 +494,62 @@ footer a:hover{opacity:1;}
 </a>
 
 <div class="page-header">
-  <span class="eyebrow">Good to Know</span>
-  <h1>Frequently asked questions</h1>
-  <p>Fences, paint, pools, mailboxes, garbage cans, parking, signs, dues, and who does what — all in one place.</p>
+  <span class="eyebrow">Neighborhood Upkeep</span>
+  <h1>Report a Concern</h1>
+  <p>See something that doesn't look right — a garbage can screen out of compliance, a vehicle parked too long, a fence that needs a look? Let the board know here. This isn't for design review submissions — use the <a href="documents.html#drb-form" style="text-decoration:underline;">Design Review Application</a> for those.</p>
 </div>
 
-<section id="faq" style="padding-top:2vw;">
-  <div>
-    <details id="faq-1" open>
-      <summary>When are HOA dues to be paid?</summary>
-      <p>Dues are due upon receipt of the annual invoice, mailed no later than April. They cover the current calendar year (January–December) and may fluctuate slightly year to year based on association expenses and reserve levels. Current annual dues are $350. See <a href="index.html#make-a-payment" style="text-decoration:underline;">Make a Payment</a> for online and by-mail payment options.</p>
-    </details>
-    <details id="faq-2">
-      <summary>Can I install a fence? If so, what kind is allowed?</summary>
-      <p>Only wood split-rail fencing is approved by the board. All fencing and other exterior changes must be approved before work is started.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Fencing&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification — Fencing →</a>
-    </details>
-    <details id="faq-3">
-      <summary>Can I paint my trim, door, and shutters a different color?</summary>
-      <p>Yes, but the color must be pre-approved, and bold or exotic colors are not accepted.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Doors%20and%20Shutters&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification — Doors and Shutters →</a>
-    </details>
-    <details id="faq-4">
-      <summary>Can I add on to my house or deck?</summary>
-      <p>Yes, but only after the HOA has approved design plans and all permits are obtained from local governments. No decks are allowed to extend past the width of the house, unless it's a staircase coming down from the deck.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true" target="_blank" rel="noopener">Source: Covenants — Article V, Architectural Standards →</a>
-    </details>
-    <details id="faq-5">
-      <summary>Can I change the color of my roof or siding?</summary>
-      <p>Roof: no. Siding samples, along with trim color samples, must be approved through the HOA, unless it's for a repair where all colors match completely.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Shingle%20Color&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification — Shingle Color →</a>
-    </details>
-    <details id="faq-6">
-      <summary>Can I make my landscaping different?</summary>
-      <p>Usually yes, but all plans need to be reviewed. Bold or exotic landscape designs aren't approved — they must blend well with what's typical in the neighborhood.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=plantings&phrase=true" target="_blank" rel="noopener">Source: Covenants — Article V, Architectural Standards →</a>
-    </details>
-    <details id="faq-7">
-      <summary>Can I install a swimming pool? If so, what kind?</summary>
-      <p>In-ground pools are allowed once the HOA approves your design plans and all local permits are issued. Above-ground pools that extend 12 inches or more above grade are not permitted. Hot tubs, saunas, and temporary, seasonal children's pools under 12 inches are fine — just remove seasonal kids' pools by Labor Day each year.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Swimming%20Pools&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification — Swimming Pools →</a>
-    </details>
-    <details id="faq-8">
-      <summary>Can I extend the width of my driveway?</summary>
-      <p>Yes, but it must be identical to the construction of your current driveway, with all local codes and permits in order before work proceeds.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true" target="_blank" rel="noopener">Source: Covenants — Article V, Modifications →</a>
-    </details>
-    <details id="faq-9">
-      <summary>What's the process for getting approval for a home or yard change?</summary>
-      <p>Complete a Design Review Application and submit it to the board — by email or mail — before starting any work. Include the type and nature of the improvement, color, dimensions, estimated cost, location, and a scale drawing showing placement relative to your lot lines and home. The Design Review Board reviews and approves each application.</p>
-      <a class="cite" href="https://38b33fdc-2fbb-45bb-8d5b-db62f2eab4e1.filesusr.com/ugd/629c19_28e2f6ca15c94cca86528ea7b258446a.pdf" target="_blank" rel="noopener">Source: Design Review Application →</a>
-    </details>
-    <details id="faq-10">
-      <summary>What are the requirements for my mailbox?</summary>
-      <p>If your mailbox needs repair or replacement, it must be white, made of plastic or metal, and free from rust. It must be securely fastened to a weather-treated wooden post painted Sherwin Williams "Loggia" (color code SW7506) to match the neighborhood's original design.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Mailbox&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification — Mailbox →</a>
-    </details>
-    <details id="faq-11">
-      <summary>Where am I allowed to store my garbage cans?</summary>
-      <p>Garbage cans must be concealed from public view using one of three options: inside your garage, up against the back of your house, or up against the side of your house with one approved screen or enclosure. Garbage cans are not allowed in the driveway or front of the house, except within 24 hours before or after your scheduled trash pickup. Any screen or enclosure needs Design Review Board approval before you install it.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Storage%20Options&phrase=true" target="_blank" rel="noopener">Source: Garbage Can Storage Policy →</a>
-    </details>
-    <details id="faq-12">
-      <summary>What are the rules for a garbage can screen or enclosure?</summary>
-      <p>Screens must be the same color as your house or trim, black, or white, and built from wood, composite, or PVC. Height can't exceed 50 inches and can't extend more than 50 inches from your house, with a length no more than 12 inches past your last can (up to 4 cans). Boards or slats can't have large gaps, the screen can't be used for anything other than can storage, and it must be approved by the Design Review Board before installation.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Screen/Enclosure%20Regulations&phrase=true" target="_blank" rel="noopener">Source: Garbage Can Storage Policy — Screen/Enclosure Regulations →</a>
-    </details>
-    <details id="faq-13">
-      <summary>What happens if my garbage cans or screen aren't in compliance?</summary>
-      <p>The HOA will send a notification if your garbage placement or screen upkeep is out of compliance. A fine of $25 per month applies until it's corrected, up to a maximum of $200 per year.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=3&search=fine%20of%20%2425/month&phrase=true" target="_blank" rel="noopener">Source: Garbage Can Storage Policy — Violations →</a>
-    </details>
-    <details id="faq-14">
-      <summary>Can I park a truck, RV, boat, or trailer at my house?</summary>
-      <p>A light pickup truck used as your personal vehicle is fine. But commercial vehicles, larger trucks, boats, trailers, campers, and mobile homes can't be parked or stored on the street or on any lot — unless fully enclosed and shielded from view — for more than 48 hours within any 30-day period. Any structure built to enclose or shield a vehicle needs Design Review Board approval before it goes up.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Vehicles&phrase=true" target="_blank" rel="noopener">Source: Covenants — Article IV, Vehicles →</a>
-    </details>
-    <details id="faq-15">
-      <summary>Can I put up a satellite dish or antenna?</summary>
-      <p>Exterior antennas and satellite dishes generally aren't allowed, except satellite dishes under 24 inches in diameter, which are permitted if positioned to minimize visibility from the street.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Antennae&phrase=true" target="_blank" rel="noopener">Source: Covenants — Article IV, Antennae →</a>
-    </details>
-    <details id="faq-16">
-      <summary>Can I run a business out of my home?</summary>
-      <p>No business, trade, occupation, or profession may be conducted or established on your property without prior written approval from the board.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Business&phrase=true" target="_blank" rel="noopener">Source: Covenants — Article IV, Business →</a>
-    </details>
-    <details id="faq-17">
-      <summary>Are there restrictions on yard signs?</summary>
-      <p>Signs generally aren't permitted, with a few exceptions: official street/identification signs, and one temporary real estate sign no larger than six square feet advertising a home for sale.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Signs&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification — Signs →</a>
-    </details>
-    <details id="faq-18">
-      <summary>What happens if I don't pay my dues on time?</summary>
-      <p>Unpaid assessments accrue a late charge, and the HOA may pursue collection, including placing a lien on the lot, if payment remains outstanding.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=12&search=ASSESSMENTS&phrase=true" target="_blank" rel="noopener">Source: Covenants — Article IX, Assessments →</a>
-    </details>
-    <details id="faq-19">
-      <summary>What does the HOA Board do?</summary>
-      <p>The <a href="board.html#board" style="text-decoration:underline;">Board of Directors</a> is elected by homeowners to two-year terms to make sure Riverwood Trails' covenants are followed, dues are collected, bills are paid, and the HOA keeps proper funds in reserve. It's a volunteer position.</p>
-    </details>
-    <details id="faq-20">
-      <summary>What is the Design Review Board?</summary>
-      <p>The <a href="board.html#design-review-board" style="text-decoration:underline;">Design Review Board</a> is a separate, two-member board appointed by the Board of Directors that reviews and approves every application for exterior or grounds changes, keeping architectural standards consistent across the neighborhood. It's also a volunteer position.</p>
-    </details>
-    <details id="faq-21">
-      <summary>What is the Grounds Committee?</summary>
-      <p>The <a href="board.html#grounds-committee" style="text-decoration:underline;">Grounds Committee</a> sources quotes for landscaping, lawn care, and general ground upkeep, and coordinates volunteers for grounds projects. Unlike the Board and Design Review Board, it's open to any resident — no election required.</p>
-    </details>
-    <details id="faq-22">
-      <summary>How do I contact the board?</summary>
-      <p>Use the <a href="#contact" style="text-decoration:underline;">contact form</a> at the bottom of this page, or email the board directly at <a href="mailto:home@riverwoodtrails.com" style="text-decoration:underline;">home@riverwoodtrails.com</a>. Please allow 1–2 weeks for a response on design review requests. To flag a specific issue — a garbage can screen, a parking concern, a fence — use the <a href="report-concern.html" style="text-decoration:underline;">Report a Concern</a> form instead.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=1&search=Resolution%20to%20Update&phrase=true" target="_blank" rel="noopener">Source: Garbage Can Storage Policy — Resolution Letter →</a>
-    </details>
+<section id="report-form" style="padding-top:1vw;">
+  <a href="faq.html#faq-22" style="display:inline-block; margin-bottom:24px; color:var(--river); font-weight:500; font-size:.9rem; text-decoration:underline;">← Back to FAQ</a>
+
+  <div class="notice-box" style="margin-top:8px; margin-bottom:32px; max-width:70ch;">
+    <h4>What happens after you submit</h4>
+    <p>Your report goes directly to the board at home@riverwoodtrails.com. We'll follow up with the homeowner as needed — please allow 1–2 weeks for a response. Reports are not anonymous; we may need to contact you for details.</p>
   </div>
+
+  <div class="cal-wrap" style="box-shadow:none; padding:32px 28px; max-width:640px;">
+    <form class="report-form" action="https://formsubmit.co/home@riverwoodtrails.com" method="POST">
+      <input type="hidden" name="_subject" value="New Concern Report — Riverwood Trails website">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://riverwoodtrails.github.io/Riverwoodtrails-site/report-concern.html#contact">
+
+      <div class="field">
+        <label for="rc-name">Your name</label>
+        <input type="text" id="rc-name" name="Name" placeholder="Your name" required>
+      </div>
+
+      <div class="field">
+        <label for="rc-email">Your email</label>
+        <input type="email" id="rc-email" name="Email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="field">
+        <label for="rc-category">Category</label>
+        <select id="rc-category" name="Category" required>
+          <option value="" disabled selected>Select a category…</option>
+          <option value="Garbage Cans">Garbage cans / screens</option>
+          <option value="Parking">Parking / vehicles</option>
+          <option value="Fencing">Fencing</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="rc-location">Location of concern</label>
+        <input type="text" id="rc-location" name="Location" placeholder="Address or general area">
+      </div>
+
+      <div class="field">
+        <label for="rc-description">Description</label>
+        <textarea id="rc-description" name="Description" rows="5" placeholder="Tell us what you're seeing" required></textarea>
+      </div>
+
+      <button type="submit">Submit Report</button>
+    </form>
+  </div>
+
+  <p style="max-width:62ch; margin-top:24px; color:#4a4a43; font-size:.88rem;">Prefer to email directly? Reach the board at <a href="mailto:home@riverwoodtrails.com" style="text-decoration:underline;">home@riverwoodtrails.com</a>.</p>
 </section>
 
 <footer id="contact">
@@ -972,7 +561,7 @@ footer a:hover{opacity:1;}
         <input type="hidden" name="_subject" value="New message from Riverwood Trails website">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://riverwoodtrails.github.io/Riverwoodtrails-site/faq.html#contact">
+        <input type="hidden" name="_next" value="https://riverwoodtrails.github.io/Riverwoodtrails-site/report-concern.html#contact">
         <input type="text" name="Name" placeholder="Your name" required>
         <input type="text" name="Address" placeholder="Address (optional)">
         <input type="email" name="Email" placeholder="Email" required>
@@ -1198,160 +787,6 @@ if (location.hash && location.hash.startsWith('#faq-')) {
     setTimeout(() => d.scrollIntoView({ behavior: 'smooth', block: 'center' }), 60);
   }
 }
-
-// ---- COMMUNITY CALENDAR (only runs on calendar.html) ----
-const calGrid = document.getElementById('calGrid');
-if (calGrid) {
-  const calTitle = document.getElementById('calTitle');
-  const calPrev = document.getElementById('calPrev');
-  const calNext = document.getElementById('calNext');
-  const calToday = document.getElementById('calToday');
-
-  const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-  const today = new Date();
-  let viewYear = today.getFullYear();
-  let viewMonth = today.getMonth();
-
-  const calEvents = [
-    { year: 2026, month: 7, day: 29, label: "Annual HOA Meeting — new board elected",
-      detail: "Doug Godby and John Cook completed their board terms, and Tim Macy and Daniel Kostreva were elected to the board. At the board's meeting on September 17, 2026, officer positions were assigned: Amanda Wells as President, Tim Macy as Treasurer, and Daniel Kostreva as Secretary. Thank you to Doug and John for their service, and welcome to Tim and Daniel.",
-      link: { label: "Read the full announcement", href: "index.html#announcements" } },
-    { year: 2026, month: 8, day: 17, label: "Board meeting — roles assigned, board transition",
-      detail: "The board held a meeting on September 17, 2026, to assign officer roles and hold a transition meeting between the existing and outgoing board members.",
-      link: { label: "Read the full announcement", href: "index.html#announcements" } }
-  ];
-
-  const duesRecurringEvent = {
-    label: "Dues invoiced this month",
-    detail: "Annual HOA dues invoices are mailed no later than April each year, covering the calendar year January through December. Current annual dues are $350.",
-    link: { label: "See dues details", href: "index.html#dues" }
-  };
-
-  function renderCalendar(year, month) {
-    calTitle.textContent = monthNames[month] + " " + year;
-    calGrid.innerHTML = '';
-
-    const firstDay = new Date(year, month, 1).getDay();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const isCurrentMonth = (year === today.getFullYear() && month === today.getMonth());
-    const isAprilView = (month === 3);
-
-    for (let i = 0; i < firstDay; i++) {
-      const cell = document.createElement('div');
-      cell.className = 'cal-day empty';
-      calGrid.appendChild(cell);
-    }
-
-    for (let d = 1; d <= daysInMonth; d++) {
-      const cell = document.createElement('div');
-      cell.className = 'cal-day';
-      if (isCurrentMonth && d === today.getDate()) cell.classList.add('today');
-
-      const num = document.createElement('span');
-      num.className = 'cal-daynum';
-      num.textContent = d;
-      cell.appendChild(num);
-
-      if (isAprilView && d === 1) {
-        const ev = document.createElement('span');
-        ev.className = 'cal-event recurring';
-        ev.textContent = duesRecurringEvent.label;
-        ev.addEventListener('click', (e) => {
-          e.stopPropagation();
-          openCalModal(monthNames[month] + " 1, " + year, duesRecurringEvent.label, duesRecurringEvent.detail, duesRecurringEvent.link);
-        });
-        cell.appendChild(ev);
-      }
-
-      const dateEvents = calEvents.filter(e => e.year === year && e.month === month && e.day === d);
-      dateEvents.forEach(e => {
-        const ev = document.createElement('span');
-        ev.className = 'cal-event';
-        ev.textContent = e.label;
-        ev.addEventListener('click', (evt) => {
-          evt.stopPropagation();
-          openCalModal(monthNames[month] + " " + d + ", " + year, e.label, e.detail, e.link);
-        });
-        cell.appendChild(ev);
-      });
-
-      calGrid.appendChild(cell);
-    }
-
-    const totalCells = firstDay + daysInMonth;
-    const remainder = totalCells % 7;
-    if (remainder !== 0) {
-      for (let i = 0; i < 7 - remainder; i++) {
-        const cell = document.createElement('div');
-        cell.className = 'cal-day empty';
-        calGrid.appendChild(cell);
-      }
-    }
-  }
-
-  calPrev.addEventListener('click', () => {
-    viewMonth--;
-    if (viewMonth < 0) { viewMonth = 11; viewYear--; }
-    renderCalendar(viewYear, viewMonth);
-  });
-  calNext.addEventListener('click', () => {
-    viewMonth++;
-    if (viewMonth > 11) { viewMonth = 0; viewYear++; }
-    renderCalendar(viewYear, viewMonth);
-  });
-  calToday.addEventListener('click', () => {
-    viewYear = today.getFullYear();
-    viewMonth = today.getMonth();
-    renderCalendar(viewYear, viewMonth);
-  });
-
-  const calModalOverlay = document.getElementById('calModalOverlay');
-  const calModalClose = document.getElementById('calModalClose');
-  const calModalDate = document.getElementById('calModalDate');
-  const calModalTitle = document.getElementById('calModalTitle');
-  const calModalDetail = document.getElementById('calModalDetail');
-  const calModalLink = document.getElementById('calModalLink');
-
-  function openCalModal(dateLabel, title, detail, link) {
-    calModalDate.textContent = dateLabel;
-    calModalTitle.textContent = title;
-    calModalDetail.textContent = detail;
-    if (link) {
-      calModalLink.textContent = link.label;
-      calModalLink.href = link.href;
-      calModalLink.style.display = 'inline-flex';
-      calModalLink.onclick = () => closeCalModal();
-    } else {
-      calModalLink.style.display = 'none';
-    }
-    calModalOverlay.classList.add('open');
-  }
-  function closeCalModal() {
-    calModalOverlay.classList.remove('open');
-  }
-  calModalClose.addEventListener('click', closeCalModal);
-  calModalOverlay.addEventListener('click', (e) => {
-    if (e.target === calModalOverlay) closeCalModal();
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeCalModal();
-  });
-
-  renderCalendar(viewYear, viewMonth);
-}
-
-// ---- DRB FORM TOGGLE (only runs on board.html) ----
-const drbFormToggle = document.getElementById('drbFormToggle');
-const drbFormWrap = document.getElementById('drbFormWrap');
-if (drbFormToggle && drbFormWrap) {
-  drbFormToggle.addEventListener('click', () => {
-    const showing = drbFormWrap.style.display !== 'none';
-    drbFormWrap.style.display = showing ? 'none' : 'block';
-    drbFormToggle.textContent = showing ? 'Fill It Out Online' : 'Hide Form';
-    if (!showing) drbFormWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-}
-
 </script>
 </body>
 </html>
