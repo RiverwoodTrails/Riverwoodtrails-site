@@ -687,6 +687,10 @@ summary::after{content:"+"; font-size:1.3rem; color:var(--river); font-family:'I
 details[open] summary::after{content:"–";}
 details p{margin-top:12px; color:#4a4a43; max-width:65ch; font-size:.96rem;}
 
+.faq-cat h3{margin:44px 0 4px; font-size:1.35rem;}
+.faq-cat:first-child h3{margin-top:0;}
+.faq-cat p.faq-cat-desc{color:#4a4a43; font-size:.92rem; margin-bottom:6px;}
+
 /* DUES CALLOUT */
 .callout{
   background:linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%);
@@ -1065,54 +1069,89 @@ const searchIndex = [
   { title: "HOA Documents", tag: "Page", href: "documents.html", keywords: "documents covenants policy garbage can design review application" },
   { title: "Design Review Application (fillable)", tag: "Document", href: "documents.html#drb-form", keywords: "design review application form approval submit fillable online" },
   { title: "Fill Out Design Review Application Online", tag: "Page", href: "design-review-form.html", keywords: "design review application form fill out online jotform submit" },
-  { title: "Covenants (Full Declaration)", tag: "Document", href: "documents.html#covenants", keywords: "covenants declaration restrictions easements articles of incorporation code of regulations design review board bylaws" },
+  { title: "Covenants (Full Declaration)", tag: "Document", href: "documents.html#covenants", keywords: "covenants declaration restrictions easements articles of incorporation code of regulations bylaws" },
   { title: "HOA Policy Clarification", tag: "Document", href: "documents.html#policy-clarification", keywords: "policy clarification signs trash fencing mailbox pools shingle siding shutters fees liens" },
   { title: "Garbage Can Storage Policy", tag: "Document", href: "documents.html#garbage-can-policy", keywords: "garbage can trash storage screen enclosure policy violations fine" },
   { title: "New Residents", tag: "Page", href: "new-residents.html", keywords: "new resident welcome guide moving in trash day new to neighborhood getting started" },
   { title: "Realtors", tag: "Page", href: "realtors.html", keywords: "realtor real estate agent listing buyer selling home" },
   { title: "New Resident Welcome Guide", tag: "Document", href: "documents.html#new-resident-guide", keywords: "new resident welcome guide moving in trash day new to neighborhood" },
   { title: "Report a Concern", tag: "Page", href: "report-concern.html", keywords: "report a concern complaint garbage can parking fencing violation neighbor issue" },
-  { title: "When are HOA dues to be paid?", tag: "FAQ", href: "faq.html#faq-1", keywords: "dues due date april 350 payment" },
-  { title: "Can I install a fence? If so, what kind is allowed?", tag: "FAQ", href: "faq.html#faq-2", keywords: "fence fencing split rail" },
-  { title: "Can I paint my trim, door, and shutters a different color?", tag: "FAQ", href: "faq.html#faq-3", keywords: "paint trim door shutters color" },
-  { title: "Can I add on to my house or deck?", tag: "FAQ", href: "faq.html#faq-4", keywords: "addition deck add on" },
-  { title: "Can I change the color of my roof or siding?", tag: "FAQ", href: "faq.html#faq-5", keywords: "roof siding color shingle" },
-  { title: "Can I make my landscaping different?", tag: "FAQ", href: "faq.html#faq-6", keywords: "landscaping landscape yard" },
-  { title: "Can I install a swimming pool? If so, what kind?", tag: "FAQ", href: "faq.html#faq-7", keywords: "pool swimming pool above ground in ground hot tub" },
-  { title: "Can I extend the width of my driveway?", tag: "FAQ", href: "faq.html#faq-8", keywords: "driveway widen extend" },
-  { title: "What's the process for getting approval for a home or yard change?", tag: "FAQ", href: "faq.html#faq-9", keywords: "approval process design review application submit" },
-  { title: "What are the requirements for my mailbox?", tag: "FAQ", href: "faq.html#faq-10", keywords: "mailbox post color white loggia" },
-  { title: "Where am I allowed to store my garbage cans?", tag: "FAQ", href: "faq.html#faq-11", keywords: "garbage can storage location trash" },
-  { title: "What are the rules for a garbage can screen or enclosure?", tag: "FAQ", href: "faq.html#faq-12", keywords: "garbage can screen enclosure dimensions materials" },
-  { title: "What happens if my garbage cans or screen aren't in compliance?", tag: "FAQ", href: "faq.html#faq-13", keywords: "garbage can violation fine compliance" },
-  { title: "Can I park a truck, RV, boat, or trailer at my house?", tag: "FAQ", href: "faq.html#faq-14", keywords: "truck rv boat trailer vehicle parking pickup" },
-  { title: "Can I put up a satellite dish or antenna?", tag: "FAQ", href: "faq.html#faq-15", keywords: "satellite dish antenna" },
-  { title: "Can I run a business out of my home?", tag: "FAQ", href: "faq.html#faq-16", keywords: "business home occupation" },
-  { title: "Are there restrictions on yard signs?", tag: "FAQ", href: "faq.html#faq-17", keywords: "signs yard sign real estate" },
-  { title: "What happens if I don't pay my dues on time?", tag: "FAQ", href: "faq.html#faq-18", keywords: "late dues unpaid fee lien" },
-  { title: "What does the HOA Board do?", tag: "FAQ", href: "faq.html#faq-19", keywords: "board of directors role duties" },
-  { title: "What is the Design Review Board?", tag: "FAQ", href: "faq.html#faq-20", keywords: "design review board role members" },
-  { title: "What is the Grounds Committee?", tag: "FAQ", href: "faq.html#faq-21", keywords: "grounds committee role volunteer" },
-  { title: "How do I contact the board?", tag: "FAQ", href: "faq.html#faq-22", keywords: "contact email board" },
-  { title: "Fencing Rules (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Fencing&phrase=true", keywords: "fence fencing split rail height policy full text document" },
-  { title: "Trim, Door &amp; Shutter Colors (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Doors%20and%20Shutters&phrase=true", keywords: "paint trim door shutter color approved policy document" },
-  { title: "Roof Shingle Color (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Shingle%20Color&phrase=true", keywords: "roof shingle color replace policy document" },
-  { title: "Exterior Siding &amp; Paint (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Exterior%20Paint%20and%20Siding&phrase=true", keywords: "siding paint exterior color norandex policy document" },
-  { title: "Swimming Pool Rules (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Swimming%20Pools&phrase=true", keywords: "pool swimming above ground hot tub policy document" },
-  { title: "Mailbox Requirements (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Mailbox&phrase=true", keywords: "mailbox post color loggia white policy document" },
-  { title: "Sign Restrictions (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Signs&phrase=true", keywords: "sign yard real estate policy document" },
-  { title: "Late Fees &amp; Liens (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Late%20Charge&phrase=true", keywords: "late fee lien unpaid assessment collection policy document" },
-  { title: "Design Review &amp; Modifications (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true", keywords: "design review board architectural standards modifications approval covenants" },
-  { title: "Vehicle &amp; Parking Rules (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Vehicles&phrase=true", keywords: "truck rv boat trailer parking vehicle covenants" },
-  { title: "Antenna &amp; Satellite Dish Rules (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Antennae&phrase=true", keywords: "antenna satellite dish covenants" },
-  { title: "Home Business Rules (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Business&phrase=true", keywords: "business home occupation trade covenants" },
-  { title: "Assessments &amp; Dues Rules (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=12&search=ASSESSMENTS&phrase=true", keywords: "assessment dues reserve fund special assessment covenants" },
-  { title: "Board Meeting Schedule (Code of Regulations)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=27&search=Code%20of%20Regulations&phrase=true", keywords: "annual meeting quarterly board meeting minutes bylaws code of regulations" },
-  { title: "Garbage Can Storage Options (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Storage%20Options&phrase=true", keywords: "garbage can trash storage location policy document" },
-  { title: "Garbage Can Screen Regulations (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Screen/Enclosure%20Regulations&phrase=true", keywords: "garbage can screen enclosure dimensions material color policy document" },
-  { title: "Garbage Can Violations &amp; Fines (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=3&search=fine%20of%20%2425/month&phrase=true", keywords: "garbage can violation fine compliance notification policy document" },
-  { title: "Trash Pickup Day (New Resident Guide)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1&search=Garbage%20pickup%20is%20Monday&phrase=true", keywords: "trash day pickup monday recycling new resident guide" },
-  { title: "Annual Dues Amount (New Resident Guide)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1&search=Annual%20Dues&phrase=true", keywords: "dues 350 annual invoice april new resident guide" },
+  { title: "When are HOA dues to be paid?", tag: "FAQ", href: "faq.html#faq-dues-when", keywords: "dues due date april 350 payment annual invoice" },
+  { title: "What happens if I don’t pay my dues on time?", tag: "FAQ", href: "faq.html#faq-dues-late", keywords: "late dues unpaid fee lien 10 per month 120 maximum charge" },
+  { title: "What is a special assessment, and can the board levy one?", tag: "FAQ", href: "faq.html#faq-special-assessment", keywords: "special assessment extra fee unbudgeted expense vote" },
+  { title: "What is the Reserve Fund for?", tag: "FAQ", href: "faq.html#faq-reserve-fund", keywords: "reserve fund savings capital repairs replacement" },
+  { title: "Can the HOA place a lien on my home over unpaid dues?", tag: "FAQ", href: "faq.html#faq-liens", keywords: "lien unpaid assessment foreclosure collection 400" },
+  { title: "When do I see the HOA’s annual budget?", tag: "FAQ", href: "faq.html#faq-budget", keywords: "budget annual operating capital fiscal year" },
+  { title: "Can homeowners request an independent audit of the HOA’s finances?", tag: "FAQ", href: "faq.html#faq-audit", keywords: "audit finances accountant review vote" },
+  { title: "Can I see the HOA’s financial records and meeting minutes?", tag: "FAQ", href: "faq.html#faq-records", keywords: "records minutes books inspect membership account" },
+  { title: "What’s the process for getting approval for a home or yard change?", tag: "FAQ", href: "faq.html#faq-drb-process", keywords: "approval process design review application submit" },
+  { title: "Can I add on to my house or deck?", tag: "FAQ", href: "faq.html#faq-additions", keywords: "addition deck add on extend" },
+  { title: "Can I extend the width of my driveway?", tag: "FAQ", href: "faq.html#faq-driveway", keywords: "driveway widen extend concrete" },
+  { title: "Can I make my landscaping different?", tag: "FAQ", href: "faq.html#faq-landscaping", keywords: "landscaping landscape yard plants" },
+  { title: "What is a “no-build zone,” and can I build or plant there?", tag: "FAQ", href: "faq.html#faq-no-build", keywords: "no build zone easement construction plat restriction" },
+  { title: "What happens if I make a change without HOA approval first?", tag: "FAQ", href: "faq.html#faq-no-approval", keywords: "unapproved change violation remove redo without approval" },
+  { title: "Can I change the color of my roof or siding?", tag: "FAQ", href: "faq.html#faq-roof-siding", keywords: "roof siding color shingle change" },
+  { title: "Can I paint my trim, door, and shutters a different color?", tag: "FAQ", href: "faq.html#faq-trim-paint", keywords: "paint trim door shutters color approved" },
+  { title: "What siding material or brand am I supposed to use if I replace mine?", tag: "FAQ", href: "faq.html#faq-siding-material", keywords: "siding material brand norandex vinyl replace" },
+  { title: "Can I install a fence? If so, what kind is allowed?", tag: "FAQ", href: "faq.html#faq-fence-type", keywords: "fence fencing split rail wood mesh" },
+  { title: "Are there height or placement rules for fences?", tag: "FAQ", href: "faq.html#faq-fence-rules", keywords: "fence height 48 inches setback placement street" },
+  { title: "Can I install a swimming pool? If so, what kind?", tag: "FAQ", href: "faq.html#faq-pool", keywords: "pool swimming pool above ground in ground hot tub sauna" },
+  { title: "Are there restrictions on yard signs?", tag: "FAQ", href: "faq.html#faq-signs", keywords: "signs sign yard restriction rules" },
+  { title: "Can I put up a “for sale” or realtor sign?", tag: "FAQ", href: "faq.html#faq-signs-realestate", keywords: "for sale sign realtor real estate sign yard" },
+  { title: "What about security-company signs, political signs, or holiday signs?", tag: "FAQ", href: "faq.html#faq-signs-other", keywords: "security sign political sign holiday sign alarm company yard sign not allowed" },
+  { title: "What are the requirements for my mailbox?", tag: "FAQ", href: "faq.html#faq-mailbox", keywords: "mailbox post color white loggia repair replace" },
+  { title: "What day is trash and recycling picked up?", tag: "FAQ", href: "faq.html#faq-trash-day", keywords: "trash day pickup monday recycling schedule" },
+  { title: "Where am I allowed to store my garbage cans?", tag: "FAQ", href: "faq.html#faq-garbage-storage", keywords: "garbage can storage location trash" },
+  { title: "What are the rules for a garbage can screen or enclosure?", tag: "FAQ", href: "faq.html#faq-garbage-screen", keywords: "garbage can screen enclosure dimensions materials height" },
+  { title: "What happens if my garbage cans or screen aren’t in compliance?", tag: "FAQ", href: "faq.html#faq-garbage-violation", keywords: "garbage can violation fine compliance notification" },
+  { title: "Can I park a truck, RV, boat, or trailer at my house?", tag: "FAQ", href: "faq.html#faq-vehicles", keywords: "truck rv boat trailer vehicle parking pickup camper" },
+  { title: "Can I put up a satellite dish or antenna?", tag: "FAQ", href: "faq.html#faq-antenna", keywords: "satellite dish antenna" },
+  { title: "Can I run a business out of my home?", tag: "FAQ", href: "faq.html#faq-business", keywords: "business home occupation trade profession" },
+  { title: "What does the HOA Board do?", tag: "FAQ", href: "faq.html#faq-board-role", keywords: "board of directors role duties" },
+  { title: "What is the Design Review Board?", tag: "FAQ", href: "faq.html#faq-drb-role", keywords: "design review board role members drb" },
+  { title: "What is the Grounds Committee?", tag: "FAQ", href: "faq.html#faq-grounds-committee", keywords: "grounds committee role volunteer landscaping" },
+  { title: "Who can serve on the Board, and how are trustees nominated?", tag: "FAQ", href: "faq.html#faq-board-qualify", keywords: "board trustee qualification nomination election who can serve" },
+  { title: "How much notice do I get before an HOA meeting, and can I call a special meeting?", tag: "FAQ", href: "faq.html#faq-meetings-notice", keywords: "meeting notice special meeting annual petition" },
+  { title: "Can someone vote on my behalf if I can’t attend the annual meeting?", tag: "FAQ", href: "faq.html#faq-proxy", keywords: "proxy vote absentee meeting" },
+  { title: "If the covenants, articles of incorporation, and rules conflict, which one wins?", tag: "FAQ", href: "faq.html#faq-rules-precedence", keywords: "conflicts precedence ohio law which rule wins" },
+  { title: "Is there a quick-reference guide for new residents?", tag: "FAQ", href: "faq.html#faq-new-resident-guide", keywords: "new resident welcome guide moving in getting started" },
+  { title: "How do I contact the board?", tag: "FAQ", href: "faq.html#faq-contact-board", keywords: "contact email board message" },
+  { title: "How do I report a specific concern, like a violation?", tag: "FAQ", href: "faq.html#faq-report-concern", keywords: "report a concern complaint violation neighbor issue" },
+  { title: "What happens if I don’t pay my dues on time (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Late%20Charge%3B%20Acceleration&phrase=true", keywords: "late dues unpaid fee lien 10 per month 120 maximum charge full text document policy source" },
+  { title: "What is a special assessment, and can the board levy one (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=13&search=Special%20Assessments&phrase=true", keywords: "special assessment extra fee unbudgeted expense vote full text document policy source" },
+  { title: "What is the Reserve Fund for (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=12&search=Reserve%20Fund&phrase=true", keywords: "reserve fund savings capital repairs replacement full text document policy source" },
+  { title: "Can the HOA place a lien on my home over unpaid dues (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Liens.&phrase=true", keywords: "lien unpaid assessment foreclosure collection 400 full text document policy source" },
+  { title: "When do I see the HOA’s annual budget (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=34&search=Failure%20to%20Adopt%20Budget&phrase=true", keywords: "budget annual operating capital fiscal year full text document policy source" },
+  { title: "Can homeowners request an independent audit of the HOA’s finances (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=36&search=audited%20as%20a%20common%20expense&phrase=true", keywords: "audit finances accountant review vote full text document policy source" },
+  { title: "Can I see the HOA’s financial records and meeting minutes (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=35&search=Inspection%20by%20Members&phrase=true", keywords: "records minutes books inspect membership account full text document policy source" },
+  { title: "Can I add on to my house or deck (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true", keywords: "addition deck add on extend full text document policy source" },
+  { title: "Can I extend the width of my driveway (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true", keywords: "driveway widen extend concrete full text document policy source" },
+  { title: "Can I make my landscaping different (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=plantings&phrase=true", keywords: "landscaping landscape yard plants full text document policy source" },
+  { title: "What is a “no-build zone,” and can I build or plant there (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=10&search=No-Build%20Zones&phrase=true", keywords: "no build zone easement construction plat restriction full text document policy source" },
+  { title: "What happens if I make a change without HOA approval first (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1&search=Starting%20work%20without%20approval&phrase=true", keywords: "unapproved change violation remove redo without approval full text document policy source" },
+  { title: "Can I change the color of my roof or siding (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Shingle%20Color&phrase=true", keywords: "roof siding color shingle change full text document policy source" },
+  { title: "Can I paint my trim, door, and shutters a different color (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Doors%20and%20Shutters&phrase=true", keywords: "paint trim door shutters color approved full text document policy source" },
+  { title: "What siding material or brand am I supposed to use if I replace mine (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Norandex&phrase=true", keywords: "siding material brand norandex vinyl replace full text document policy source" },
+  { title: "Can I install a fence? If so, what kind is allowed (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Fencing%3A&phrase=true", keywords: "fence fencing split rail wood mesh full text document policy source" },
+  { title: "Are there height or placement rules for fences (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=No%20fence%20or%20wall%20shall%20be%20constructed&phrase=true", keywords: "fence height 48 inches setback placement street full text document policy source" },
+  { title: "Can I install a swimming pool? If so, what kind (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Swimming%20Pools&phrase=true", keywords: "pool swimming pool above ground in ground hot tub sauna full text document policy source" },
+  { title: "Are there restrictions on yard signs (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Signs.&phrase=true", keywords: "signs sign yard restriction rules full text document policy source" },
+  { title: "Can I put up a “for sale” or realtor sign (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=temporary%20real%20estate%20sign&phrase=true", keywords: "for sale sign realtor real estate sign yard full text document policy source" },
+  { title: "What about security-company signs, political signs, or holiday signs (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=subject%20to%20board%20action&phrase=true", keywords: "security sign political sign holiday sign alarm company yard sign not allowed full text document policy source" },
+  { title: "What are the requirements for my mailbox (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Mailbox&phrase=true", keywords: "mailbox post color white loggia repair replace full text document policy source" },
+  { title: "What day is trash and recycling picked up (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1&search=Garbage%20pickup%20is%20Monday&phrase=true", keywords: "trash day pickup monday recycling schedule full text document policy source" },
+  { title: "Where am I allowed to store my garbage cans (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Storage%20Options&phrase=true", keywords: "garbage can storage location trash full text document policy source" },
+  { title: "What are the rules for a garbage can screen or enclosure (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Screen%2FEnclosure%20Regulations&phrase=true", keywords: "garbage can screen enclosure dimensions materials height full text document policy source" },
+  { title: "What happens if my garbage cans or screen aren’t in compliance (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=3&search=fine%20of%20%2425%2Fmonth&phrase=true", keywords: "garbage can violation fine compliance notification full text document policy source" },
+  { title: "Can I park a truck, RV, boat, or trailer at my house (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Vehicles&phrase=true", keywords: "truck rv boat trailer vehicle parking pickup camper full text document policy source" },
+  { title: "Can I put up a satellite dish or antenna (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Antennae&phrase=true", keywords: "satellite dish antenna full text document policy source" },
+  { title: "Can I run a business out of my home (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Business&phrase=true", keywords: "business home occupation trade profession full text document policy source" },
+  { title: "Who can serve on the Board, and how are trustees nominated (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=30&search=Number%20and%20Qualification%20of%20Trustees&phrase=true", keywords: "board trustee qualification nomination election who can serve full text document policy source" },
+  { title: "How much notice do I get before an HOA meeting, and can I call a special meeting (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=28&search=Notice%20of%20Meetings&phrase=true", keywords: "meeting notice special meeting annual petition full text document policy source" },
+  { title: "Can someone vote on my behalf if I can’t attend the annual meeting (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=29&search=A%20vote%20allocated%20to%20a%20lot%20may%20be%20cast%20pursuant%20to%20a%20proxy&phrase=true", keywords: "proxy vote absentee meeting full text document policy source" },
+  { title: "If the covenants, articles of incorporation, and rules conflict, which one wins (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=35&search=Conflicts&phrase=true", keywords: "conflicts precedence ohio law which rule wins full text document policy source" },
+  { title: "Is there a quick-reference guide for new residents (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1", keywords: "new resident welcome guide moving in getting started full text document policy source" },
+  { title: "How do I contact the board (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=1&search=Resolution%20to%20Update&phrase=true", keywords: "contact email board message full text document policy source" },
 ];
 
 const searchToggle = document.getElementById('searchToggle');
@@ -1125,12 +1164,28 @@ function currentPageName() {
   return p === '' ? 'index.html' : p;
 }
 
+function scoreItem(item, q) {
+  const title = item.title.toLowerCase();
+  const kw = item.keywords.toLowerCase();
+  const esc = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const wordStart = new RegExp('(^|[^a-z0-9])' + esc);
+  if (title === q) return 5;
+  if (wordStart.test(title)) return 4;
+  if (wordStart.test(kw)) return 3;
+  if (title.includes(q)) return 2;
+  if (kw.includes(q)) return 1;
+  return 0;
+}
+
 function renderResults(query) {
   const q = query.trim().toLowerCase();
   if (!q) { searchResults.innerHTML = ''; return; }
-  const matches = searchIndex.filter(item =>
-    item.title.toLowerCase().includes(q) || item.keywords.toLowerCase().includes(q)
-  ).slice(0, 8);
+  const matches = searchIndex
+    .map((item, i) => ({ item, i, score: scoreItem(item, q) }))
+    .filter(m => m.score > 0)
+    .sort((a, b) => b.score - a.score || a.i - b.i)
+    .slice(0, 8)
+    .map(m => m.item);
   if (matches.length === 0) {
     searchResults.innerHTML = '<div class="search-empty">No matches — try a different word.</div>';
     return;

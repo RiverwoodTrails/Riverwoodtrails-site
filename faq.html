@@ -687,6 +687,10 @@ summary::after{content:"+"; font-size:1.3rem; color:var(--river); font-family:'I
 details[open] summary::after{content:"–";}
 details p{margin-top:12px; color:#4a4a43; max-width:65ch; font-size:.96rem;}
 
+.faq-cat h3{margin:44px 0 4px; font-size:1.35rem;}
+.faq-cat:first-child h3{margin-top:0;}
+.faq-cat p.faq-cat-desc{color:#4a4a43; font-size:.92rem; margin-bottom:6px;}
+
 /* DUES CALLOUT */
 .callout{
   background:linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%);
@@ -853,113 +857,269 @@ footer a:hover{opacity:1;}
 </div>
 
 <section id="faq" style="padding-top:2vw;">
+  <div class="subnav" style="padding:0 0 3vw;">
+      <a href="#cat-dues">Dues, Assessments &amp; Money</a>
+      <a href="#cat-design">Design Review &amp; Home Improvements</a>
+      <a href="#cat-exterior">Exterior Colors, Roofing &amp; Siding</a>
+      <a href="#cat-fencing">Fencing &amp; Yard Structures</a>
+      <a href="#cat-pools">Pools &amp; Recreation</a>
+      <a href="#cat-signs">Signs &amp; Yard Postings</a>
+      <a href="#cat-mailbox">Mailboxes</a>
+      <a href="#cat-trash">Trash, Recycling &amp; Garbage Cans</a>
+      <a href="#cat-vehicles-home">Vehicles, Parking &amp; Home Use</a>
+      <a href="#cat-governance">HOA Board &amp; Governance</a>
+      <a href="#cat-new-residents">New Residents</a>
+      <a href="#cat-contact">Contact &amp; Reporting</a>
+  </div>
   <div>
-    <details id="faq-1" open>
-      <summary>When are HOA dues to be paid?</summary>
-      <p>Dues are due upon receipt of the annual invoice, mailed no later than April. They cover the current calendar year (January–December) and may fluctuate slightly year to year based on association expenses and reserve levels. Current annual dues are $350. See <a href="index.html#make-a-payment" style="text-decoration:underline;">Make a Payment</a> for online and by-mail payment options.</p>
-    </details>
-    <details id="faq-2">
-      <summary>Can I install a fence? If so, what kind is allowed?</summary>
-      <p>Only wood split-rail fencing is approved by the board. All fencing and other exterior changes must be approved before work is started.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Fencing&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification — Fencing →</a>
-    </details>
-    <details id="faq-3">
-      <summary>Can I paint my trim, door, and shutters a different color?</summary>
-      <p>Yes, but the color must be pre-approved, and bold or exotic colors are not accepted.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Doors%20and%20Shutters&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification — Doors and Shutters →</a>
-    </details>
-    <details id="faq-4">
-      <summary>Can I add on to my house or deck?</summary>
-      <p>Yes, but only after the HOA has approved design plans and all permits are obtained from local governments. No decks are allowed to extend past the width of the house, unless it's a staircase coming down from the deck.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true" target="_blank" rel="noopener">Source: Covenants — Article V, Architectural Standards →</a>
-    </details>
-    <details id="faq-5">
-      <summary>Can I change the color of my roof or siding?</summary>
-      <p>Roof: no. Siding samples, along with trim color samples, must be approved through the HOA, unless it's for a repair where all colors match completely.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Shingle%20Color&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification — Shingle Color →</a>
-    </details>
-    <details id="faq-6">
-      <summary>Can I make my landscaping different?</summary>
-      <p>Usually yes, but all plans need to be reviewed. Bold or exotic landscape designs aren't approved — they must blend well with what's typical in the neighborhood.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=plantings&phrase=true" target="_blank" rel="noopener">Source: Covenants — Article V, Architectural Standards →</a>
-    </details>
-    <details id="faq-7">
-      <summary>Can I install a swimming pool? If so, what kind?</summary>
-      <p>In-ground pools are allowed once the HOA approves your design plans and all local permits are issued. Above-ground pools that extend 12 inches or more above grade are not permitted. Hot tubs, saunas, and temporary, seasonal children's pools under 12 inches are fine — just remove seasonal kids' pools by Labor Day each year.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Swimming%20Pools&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification — Swimming Pools →</a>
-    </details>
-    <details id="faq-8">
-      <summary>Can I extend the width of my driveway?</summary>
-      <p>Yes, but it must be identical to the construction of your current driveway, with all local codes and permits in order before work proceeds.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true" target="_blank" rel="noopener">Source: Covenants — Article V, Modifications →</a>
-    </details>
-    <details id="faq-9">
-      <summary>What's the process for getting approval for a home or yard change?</summary>
-      <p>Complete a Design Review Application and submit it to the board — by email or mail — before starting any work. Include the type and nature of the improvement, color, dimensions, estimated cost, location, and a scale drawing showing placement relative to your lot lines and home. The Design Review Board reviews and approves each application.</p>
-      <a class="cite" href="https://38b33fdc-2fbb-45bb-8d5b-db62f2eab4e1.filesusr.com/ugd/629c19_28e2f6ca15c94cca86528ea7b258446a.pdf" target="_blank" rel="noopener">Source: Design Review Application →</a>
-    </details>
-    <details id="faq-10">
-      <summary>What are the requirements for my mailbox?</summary>
-      <p>If your mailbox needs repair or replacement, it must be white, made of plastic or metal, and free from rust. It must be securely fastened to a weather-treated wooden post painted Sherwin Williams "Loggia" (color code SW7506) to match the neighborhood's original design.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Mailbox&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification — Mailbox →</a>
-    </details>
-    <details id="faq-11">
-      <summary>Where am I allowed to store my garbage cans?</summary>
-      <p>Garbage cans must be concealed from public view using one of three options: inside your garage, up against the back of your house, or up against the side of your house with one approved screen or enclosure. Garbage cans are not allowed in the driveway or front of the house, except within 24 hours before or after your scheduled trash pickup. Any screen or enclosure needs Design Review Board approval before you install it.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Storage%20Options&phrase=true" target="_blank" rel="noopener">Source: Garbage Can Storage Policy →</a>
-    </details>
-    <details id="faq-12">
-      <summary>What are the rules for a garbage can screen or enclosure?</summary>
-      <p>Screens must be the same color as your house or trim, black, or white, and built from wood, composite, or PVC. Height can't exceed 50 inches and can't extend more than 50 inches from your house, with a length no more than 12 inches past your last can (up to 4 cans). Boards or slats can't have large gaps, the screen can't be used for anything other than can storage, and it must be approved by the Design Review Board before installation.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Screen/Enclosure%20Regulations&phrase=true" target="_blank" rel="noopener">Source: Garbage Can Storage Policy — Screen/Enclosure Regulations →</a>
-    </details>
-    <details id="faq-13">
-      <summary>What happens if my garbage cans or screen aren't in compliance?</summary>
-      <p>The HOA will send a notification if your garbage placement or screen upkeep is out of compliance. A fine of $25 per month applies until it's corrected, up to a maximum of $200 per year.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=3&search=fine%20of%20%2425/month&phrase=true" target="_blank" rel="noopener">Source: Garbage Can Storage Policy — Violations →</a>
-    </details>
-    <details id="faq-14">
-      <summary>Can I park a truck, RV, boat, or trailer at my house?</summary>
-      <p>A light pickup truck used as your personal vehicle is fine. But commercial vehicles, larger trucks, boats, trailers, campers, and mobile homes can't be parked or stored on the street or on any lot — unless fully enclosed and shielded from view — for more than 48 hours within any 30-day period. Any structure built to enclose or shield a vehicle needs Design Review Board approval before it goes up.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Vehicles&phrase=true" target="_blank" rel="noopener">Source: Covenants — Article IV, Vehicles →</a>
-    </details>
-    <details id="faq-15">
-      <summary>Can I put up a satellite dish or antenna?</summary>
-      <p>Exterior antennas and satellite dishes generally aren't allowed, except satellite dishes under 24 inches in diameter, which are permitted if positioned to minimize visibility from the street.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Antennae&phrase=true" target="_blank" rel="noopener">Source: Covenants — Article IV, Antennae →</a>
-    </details>
-    <details id="faq-16">
-      <summary>Can I run a business out of my home?</summary>
-      <p>No business, trade, occupation, or profession may be conducted or established on your property without prior written approval from the board.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Business&phrase=true" target="_blank" rel="noopener">Source: Covenants — Article IV, Business →</a>
-    </details>
-    <details id="faq-17">
-      <summary>Are there restrictions on yard signs?</summary>
-      <p>Signs generally aren't permitted, with a few exceptions: official street/identification signs, and one temporary real estate sign no larger than six square feet advertising a home for sale.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Signs&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification — Signs →</a>
-    </details>
-    <details id="faq-18">
-      <summary>What happens if I don't pay my dues on time?</summary>
-      <p>Unpaid assessments accrue a late charge, and the HOA may pursue collection, including placing a lien on the lot, if payment remains outstanding.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=12&search=ASSESSMENTS&phrase=true" target="_blank" rel="noopener">Source: Covenants — Article IX, Assessments →</a>
-    </details>
-    <details id="faq-19">
-      <summary>What does the HOA Board do?</summary>
-      <p>The <a href="board.html#board" style="text-decoration:underline;">Board of Directors</a> is elected by homeowners to two-year terms to make sure Riverwood Trails' covenants are followed, dues are collected, bills are paid, and the HOA keeps proper funds in reserve. It's a volunteer position.</p>
-    </details>
-    <details id="faq-20">
-      <summary>What is the Design Review Board?</summary>
-      <p>The <a href="board.html#design-review-board" style="text-decoration:underline;">Design Review Board</a> is a separate, two-member board appointed by the Board of Directors that reviews and approves every application for exterior or grounds changes, keeping architectural standards consistent across the neighborhood. It's also a volunteer position.</p>
-    </details>
-    <details id="faq-21">
-      <summary>What is the Grounds Committee?</summary>
-      <p>The <a href="board.html#grounds-committee" style="text-decoration:underline;">Grounds Committee</a> sources quotes for landscaping, lawn care, and general ground upkeep, and coordinates volunteers for grounds projects. Unlike the Board and Design Review Board, it's open to any resident — no election required.</p>
-    </details>
-    <details id="faq-22">
-      <summary>How do I contact the board?</summary>
-      <p>Use the <a href="#contact" style="text-decoration:underline;">contact form</a> at the bottom of this page, or email the board directly at <a href="mailto:home@riverwoodtrails.com" style="text-decoration:underline;">home@riverwoodtrails.com</a>. Please allow 1–2 weeks for a response on design review requests. To flag a specific issue — a garbage can screen, a parking concern, a fence — use the <a href="report-concern.html" style="text-decoration:underline;">Report a Concern</a> form instead.</p>
-      <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=1&search=Resolution%20to%20Update&phrase=true" target="_blank" rel="noopener">Source: Garbage Can Storage Policy — Resolution Letter →</a>
-    </details>
+    <div class="faq-cat" id="cat-dues">
+      <h3>Dues, Assessments &amp; Money</h3>
+      <p class="faq-cat-desc">How much you pay, when, what happens if you're late, and where the money goes.</p>
+      <details id="faq-dues-when" open>
+        <summary>When are HOA dues to be paid?</summary>
+        <p>Dues are due upon receipt of the annual invoice, mailed no later than April. They cover the current calendar year (January&ndash;December) and may fluctuate slightly year to year based on association expenses and reserve levels. Current annual dues are $350. See <a href="index.html#make-a-payment" style="text-decoration:underline;">Make a Payment</a> for online and by-mail payment options.</p>
+      </details>
+      <details id="faq-dues-late">
+        <summary>What happens if I don&rsquo;t pay my dues on time?</summary>
+        <p>A late payment triggers a $10/month late charge, starting the first of the month after the due date, up to a maximum of $120 per unpaid assessment. Unpaid amounts become the homeowner&rsquo;s personal obligation &mdash; including any successor who later buys the home &mdash; and can be pursued through collection or a lien on the lot.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Late%20Charge%3B%20Acceleration&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification &mdash; Late Charge; Acceleration &rarr;</a>
+      </details>
+      <details id="faq-special-assessment">
+        <summary>What is a special assessment, and can the board levy one?</summary>
+        <p>Yes &mdash; beyond the regular annual dues, the Board can levy a special assessment against lots to cover an unbudgeted expense, with the approval of a majority of members voting in person or by proxy at a meeting called for that purpose.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=13&search=Special%20Assessments&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Article IX, Special Assessments &rarr;</a>
+      </details>
+      <details id="faq-reserve-fund">
+        <summary>What is the Reserve Fund for?</summary>
+        <p>The Reserve Fund is money the Board sets aside from dues to cover major future repairs and replacements &mdash; things like common-area landscaping, entrances, and other shared assets &mdash; instead of relying on a surprise special assessment when something wears out.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=12&search=Reserve%20Fund&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Article IX, Reserve Fund &rarr;</a>
+      </details>
+      <details id="faq-liens">
+        <summary>Can the HOA place a lien on my home over unpaid dues?</summary>
+        <p>Yes. Unpaid assessments and late charges become a continuing lien against the lot. If the total past-due balance (including late charges) exceeds $400, the Board can file a certificate of lien with the county, and the lien stays valid for five years unless it&rsquo;s paid, released, or discharged by a court.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Liens.&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification &mdash; Liens &rarr;</a>
+      </details>
+      <details id="faq-budget">
+        <summary>When do I see the HOA&rsquo;s annual budget?</summary>
+        <p>The Board delivers a summary of the annual operating budget and assessments to every owner at least 30 days before the fiscal year starts, along with the capital budget. If the Board doesn&rsquo;t adopt a new budget on time, assessments simply continue at the prior year&rsquo;s budgeted amount until a new one is adopted.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=34&search=Failure%20to%20Adopt%20Budget&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Code of Regulations, Budget &rarr;</a>
+      </details>
+      <details id="faq-audit">
+        <summary>Can homeowners request an independent audit of the HOA&rsquo;s finances?</summary>
+        <p>Yes. After hearing the Board&rsquo;s financial report at the annual meeting, owners can vote by majority to require an independent audit of the association&rsquo;s accounts, paid for as a common expense.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=36&search=audited%20as%20a%20common%20expense&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Code of Regulations, Financial Review &rarr;</a>
+      </details>
+      <details id="faq-records">
+        <summary>Can I see the HOA&rsquo;s financial records and meeting minutes?</summary>
+        <p>Yes. The membership book, account books, and Board or committee minutes are available for inspection and copying by any member at a reasonable time, for a purpose reasonably related to their interest as a member. Contact the board to arrange a time.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=35&search=Inspection%20by%20Members&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Code of Regulations, Books and Records &rarr;</a>
+      </details>
+    </div>
+    <div class="faq-cat" id="cat-design">
+      <h3>Design Review &amp; Home Improvements</h3>
+      <p class="faq-cat-desc">Additions, decks, driveways, landscaping, and the approval process that covers all of it.</p>
+      <details id="faq-drb-process">
+        <summary>What&rsquo;s the process for getting approval for a home or yard change?</summary>
+        <p>Complete a Design Review Application and submit it to the board &mdash; by email or mail &mdash; before starting any work. Include the type and nature of the improvement, color, dimensions, estimated cost, location, and a scale drawing showing placement relative to your lot lines and home. The Design Review Board reviews and approves each application.</p>
+        <a class="cite" href="https://38b33fdc-2fbb-45bb-8d5b-db62f2eab4e1.filesusr.com/ugd/629c19_28e2f6ca15c94cca86528ea7b258446a.pdf" target="_blank" rel="noopener">Source: Design Review Application &rarr;</a>
+      </details>
+      <details id="faq-additions">
+        <summary>Can I add on to my house or deck?</summary>
+        <p>Yes, but only after the HOA has approved design plans and all permits are obtained from local governments. No decks are allowed to extend past the width of the house, unless it&rsquo;s a staircase coming down from the deck.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Article V, Architectural Standards &rarr;</a>
+      </details>
+      <details id="faq-driveway">
+        <summary>Can I extend the width of my driveway?</summary>
+        <p>Yes, but it must be identical to the construction of your current driveway, with all local codes and permits in order before work proceeds.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Article V, Modifications &rarr;</a>
+      </details>
+      <details id="faq-landscaping">
+        <summary>Can I make my landscaping different?</summary>
+        <p>Usually yes, but all plans need to be reviewed. Bold or exotic landscape designs aren&rsquo;t approved &mdash; they must blend well with what&rsquo;s typical in the neighborhood.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=plantings&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Article V, Architectural Standards &rarr;</a>
+      </details>
+      <details id="faq-no-build">
+        <summary>What is a &ldquo;no-build zone,&rdquo; and can I build or plant there?</summary>
+        <p>Some areas of the neighborhood &mdash; shown on the recorded plat or in prior deed restrictions &mdash; are designated &ldquo;No-Build Zones,&rdquo; where no structures may be built. In vegetated no-build zones you may still do safety-related maintenance, like removing poisonous or hazardous growth; grassed no-build zones must be mowed, trimmed, and watered by whoever is otherwise responsible for that area.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=10&search=No-Build%20Zones&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Article VI, Easements &rarr;</a>
+      </details>
+      <details id="faq-no-approval">
+        <summary>What happens if I make a change without HOA approval first?</summary>
+        <p>Starting exterior or yard work before it&rsquo;s approved is a real risk &mdash; the HOA can require you to change or remove the improvement entirely, at your own expense. It&rsquo;s always faster and cheaper to submit a Design Review Application first.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1&search=Starting%20work%20without%20approval&phrase=true" target="_blank" rel="noopener">Source: New Resident Welcome Guide &rarr;</a>
+      </details>
+    </div>
+    <div class="faq-cat" id="cat-exterior">
+      <h3>Exterior Colors, Roofing &amp; Siding</h3>
+      <p class="faq-cat-desc">What colors and materials are pre-approved for paint, roofing, and siding.</p>
+      <details id="faq-roof-siding">
+        <summary>Can I change the color of my roof or siding?</summary>
+        <p>Roof: no. Siding samples, along with trim color samples, must be approved through the HOA, unless it&rsquo;s for a repair where all colors match completely.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Shingle%20Color&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification &mdash; Shingle Color &rarr;</a>
+      </details>
+      <details id="faq-trim-paint">
+        <summary>Can I paint my trim, door, and shutters a different color?</summary>
+        <p>Yes, but the color must be pre-approved, and bold or exotic colors are not accepted.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Doors%20and%20Shutters&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification &mdash; Doors and Shutters &rarr;</a>
+      </details>
+      <details id="faq-siding-material">
+        <summary>What siding material or brand am I supposed to use if I replace mine?</summary>
+        <p>Siding should be similar in style and quality to Norandex Summit Manor Dutch Lap Vinyl, 4&ndash;5 inches in size, in white, silver/light grey, cream, tan, almond/light cream, granite/dark grey, or cobblestone (or a comparable color). Homes with different siding installed before July 1, 2014 are grandfathered in until it needs repair or replacement.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Norandex&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification &mdash; Exterior Paint and Siding &rarr;</a>
+      </details>
+    </div>
+    <div class="faq-cat" id="cat-fencing">
+      <h3>Fencing &amp; Yard Structures</h3>
+      <p class="faq-cat-desc">What kind of fence is allowed, and the height and placement rules that go with it.</p>
+      <details id="faq-fence-type">
+        <summary>Can I install a fence? If so, what kind is allowed?</summary>
+        <p>Only wood split-rail fencing is approved by the board (dark-painted wire or plastic mesh can be attached inside the rail). Fences installed before July 1, 2014 in a different style are grandfathered in until they need repair or replacement. All fencing and other exterior changes must be approved before work is started.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Fencing%3A&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification &mdash; Fencing &rarr;</a>
+      </details>
+      <details id="faq-fence-rules">
+        <summary>Are there height or placement rules for fences?</summary>
+        <p>Fences and walls can&rsquo;t exceed 48 inches above grade, unless a government safety code requires taller (like a pool enclosure). They also can&rsquo;t be placed closer to the street than the midpoint line between the front corners of the home &mdash; except short decorative railings near an entrance, which can be up to 3 feet.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=No%20fence%20or%20wall%20shall%20be%20constructed&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification &mdash; Fencing &rarr;</a>
+      </details>
+    </div>
+    <div class="faq-cat" id="cat-pools">
+      <h3>Pools &amp; Recreation</h3>
+      <p class="faq-cat-desc">In-ground pools, above-ground pools, hot tubs, and seasonal kiddie pools.</p>
+      <details id="faq-pool">
+        <summary>Can I install a swimming pool? If so, what kind?</summary>
+        <p>In-ground pools are allowed once the HOA approves your design plans and all local permits are issued. Above-ground pools that extend 12 inches or more above grade are not permitted. Hot tubs, saunas, and temporary, seasonal children&rsquo;s pools under 12 inches are fine &mdash; just remove seasonal kids&rsquo; pools by Labor Day each year.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Swimming%20Pools&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification &mdash; Swimming Pools &rarr;</a>
+      </details>
+    </div>
+    <div class="faq-cat" id="cat-signs">
+      <h3>Signs &amp; Yard Postings</h3>
+      <p class="faq-cat-desc">Yard signs, real-estate signs, and what isn&rsquo;t allowed.</p>
+      <details id="faq-signs">
+        <summary>Are there restrictions on yard signs?</summary>
+        <p>Yes. No signs of any kind are allowed on a lot except: official street or identification signs installed by the Association, and one temporary real estate sign, no larger than six square feet, advertising that the home is for sale. Any other sign is a violation and can result in board action, including a fine.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Signs.&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification &mdash; Signs &rarr;</a>
+      </details>
+      <details id="faq-signs-realestate">
+        <summary>Can I put up a &ldquo;for sale&rdquo; or realtor sign?</summary>
+        <p>Yes &mdash; you&rsquo;re allowed one temporary real estate sign, no larger than six square feet, advertising that your home is for sale. It should come down once the home is no longer listed.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=temporary%20real%20estate%20sign&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification &mdash; Signs &rarr;</a>
+      </details>
+      <details id="faq-signs-other">
+        <summary>What about security-company signs, political signs, or holiday signs?</summary>
+        <p>Those aren&rsquo;t among the exceptions in the covenants &mdash; only official street/identification signs and one real-estate-for-sale sign are permitted. Putting up any other sign, including security company, political, or holiday/seasonal signs, can result in board action, including a fine.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=subject%20to%20board%20action&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification &mdash; Signs &rarr;</a>
+      </details>
+    </div>
+    <div class="faq-cat" id="cat-mailbox">
+      <h3>Mailboxes</h3>
+      <p class="faq-cat-desc">Keeping your mailbox and post to the neighborhood standard.</p>
+      <details id="faq-mailbox">
+        <summary>What are the requirements for my mailbox?</summary>
+        <p>If your mailbox needs repair or replacement, it must be white, made of plastic or metal, and free from rust. It must be securely fastened to a weather-treated wooden post painted Sherwin Williams &ldquo;Loggia&rdquo; (color code SW7506) to match the neighborhood&rsquo;s original design.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Mailbox&phrase=true" target="_blank" rel="noopener">Source: HOA Policy Clarification &mdash; Mailbox &rarr;</a>
+      </details>
+    </div>
+    <div class="faq-cat" id="cat-trash">
+      <h3>Trash, Recycling &amp; Garbage Cans</h3>
+      <p class="faq-cat-desc">Pickup day, where cans can be stored, and the rules for screens and enclosures.</p>
+      <details id="faq-trash-day">
+        <summary>What day is trash and recycling picked up?</summary>
+        <p>Garbage pickup is Monday morning &mdash; put your cans out Sunday night.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1&search=Garbage%20pickup%20is%20Monday&phrase=true" target="_blank" rel="noopener">Source: New Resident Welcome Guide &rarr;</a>
+      </details>
+      <details id="faq-garbage-storage">
+        <summary>Where am I allowed to store my garbage cans?</summary>
+        <p>Garbage cans must be concealed from public view using one of three options: inside your garage, up against the back of your house, or up against the side of your house with one approved screen or enclosure. Garbage cans are not allowed in the driveway or front of the house, except within 24 hours before or after your scheduled trash pickup. Any screen or enclosure needs Design Review Board approval before you install it.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Storage%20Options&phrase=true" target="_blank" rel="noopener">Source: Garbage Can Storage Policy &rarr;</a>
+      </details>
+      <details id="faq-garbage-screen">
+        <summary>What are the rules for a garbage can screen or enclosure?</summary>
+        <p>Screens must be the same color as your house or trim, black, or white, and built from wood, composite, or PVC. Height can&rsquo;t exceed 50 inches and can&rsquo;t extend more than 50 inches from your house, with a length no more than 12 inches past your last can (up to 4 cans). Boards or slats can&rsquo;t have large gaps, the screen can&rsquo;t be used for anything other than can storage, and it must be approved by the Design Review Board before installation.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Screen%2FEnclosure%20Regulations&phrase=true" target="_blank" rel="noopener">Source: Garbage Can Storage Policy &mdash; Screen/Enclosure Regulations &rarr;</a>
+      </details>
+      <details id="faq-garbage-violation">
+        <summary>What happens if my garbage cans or screen aren&rsquo;t in compliance?</summary>
+        <p>The HOA will send a notification if your garbage placement or screen upkeep is out of compliance. A fine of $25 per month applies until it&rsquo;s corrected, up to a maximum of $200 per year.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=3&search=fine%20of%20%2425%2Fmonth&phrase=true" target="_blank" rel="noopener">Source: Garbage Can Storage Policy &mdash; Violations &rarr;</a>
+      </details>
+    </div>
+    <div class="faq-cat" id="cat-vehicles-home">
+      <h3>Vehicles, Parking &amp; Home Use</h3>
+      <p class="faq-cat-desc">Parking rules, antennas and dishes, and running a business from home.</p>
+      <details id="faq-vehicles">
+        <summary>Can I park a truck, RV, boat, or trailer at my house?</summary>
+        <p>A light pickup truck used as your personal vehicle is fine. But commercial vehicles, larger trucks, boats, trailers, campers, and mobile homes can&rsquo;t be parked or stored on the street or on any lot &mdash; unless fully enclosed and shielded from view &mdash; for more than 48 hours within any 30-day period. Any structure built to enclose or shield a vehicle needs Design Review Board approval before it goes up.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Vehicles&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Article IV, Vehicles &rarr;</a>
+      </details>
+      <details id="faq-antenna">
+        <summary>Can I put up a satellite dish or antenna?</summary>
+        <p>Exterior antennas and satellite dishes generally aren&rsquo;t allowed, except satellite dishes under 24 inches in diameter, which are permitted if positioned to minimize visibility from the street.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Antennae&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Article IV, Antennae &rarr;</a>
+      </details>
+      <details id="faq-business">
+        <summary>Can I run a business out of my home?</summary>
+        <p>No business, trade, occupation, or profession may be conducted or established on your property without prior written approval from the board.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Business&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Article IV, Business &rarr;</a>
+      </details>
+    </div>
+    <div class="faq-cat" id="cat-governance">
+      <h3>HOA Board &amp; Governance</h3>
+      <p class="faq-cat-desc">How the board and committees work, meetings, voting, and which rules win in a conflict.</p>
+      <details id="faq-board-role">
+        <summary>What does the HOA Board do?</summary>
+        <p>The <a href="board.html#board" style="text-decoration:underline;">Board of Directors</a> is elected by homeowners to two-year terms to make sure Riverwood Trails&rsquo; covenants are followed, dues are collected, bills are paid, and the HOA keeps proper funds in reserve. It&rsquo;s a volunteer position.</p>
+      </details>
+      <details id="faq-drb-role">
+        <summary>What is the Design Review Board?</summary>
+        <p>The <a href="board.html#design-review-board" style="text-decoration:underline;">Design Review Board</a> is a separate, two-member board appointed by the Board of Directors that reviews and approves every application for exterior or grounds changes, keeping architectural standards consistent across the neighborhood. It&rsquo;s also a volunteer position.</p>
+      </details>
+      <details id="faq-grounds-committee">
+        <summary>What is the Grounds Committee?</summary>
+        <p>The <a href="board.html#grounds-committee" style="text-decoration:underline;">Grounds Committee</a> sources quotes for landscaping, lawn care, and general ground upkeep, and coordinates volunteers for grounds projects. Unlike the Board and Design Review Board, it&rsquo;s open to any resident &mdash; no election required.</p>
+      </details>
+      <details id="faq-board-qualify">
+        <summary>Who can serve on the Board, and how are trustees nominated?</summary>
+        <p>The Board consists of three trustees, and each must be an owner (or the owner&rsquo;s spouse) who occupies the lot &mdash; a person and their spouse can&rsquo;t both serve at the same time. Nominees are put forward by a Nominating Committee: a board member serving as chair, plus two or more other association members, appointed at each annual meeting.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=30&search=Number%20and%20Qualification%20of%20Trustees&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Code of Regulations, Board of Trustees &rarr;</a>
+      </details>
+      <details id="faq-meetings-notice">
+        <summary>How much notice do I get before an HOA meeting, and can I call a special meeting?</summary>
+        <p>The Secretary mails or delivers notice of annual or special meetings to every owner between 10 and 60 days before the meeting. A special meeting can be called by the President, or by a written petition signed by at least 25% of the association&rsquo;s total votes.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=28&search=Notice%20of%20Meetings&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Code of Regulations, Meetings &rarr;</a>
+      </details>
+      <details id="faq-proxy">
+        <summary>Can someone vote on my behalf if I can&rsquo;t attend the annual meeting?</summary>
+        <p>Yes. A vote allocated to a lot can be cast by a written, signed, and dated proxy. A proxy is only valid for one year from its date unless it specifies a shorter period, and you can revoke it in writing to the Secretary or the Association any time before it&rsquo;s used.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=29&search=A%20vote%20allocated%20to%20a%20lot%20may%20be%20cast%20pursuant%20to%20a%20proxy&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Code of Regulations, Proxies &rarr;</a>
+      </details>
+      <details id="faq-rules-precedence">
+        <summary>If the covenants, articles of incorporation, and rules conflict, which one wins?</summary>
+        <p>If Ohio law, the Declaration (Covenants), the Articles of Incorporation, and the Code of Regulations ever conflict, they&rsquo;re applied in that order &mdash; Ohio law first, then the Declaration, then the Articles of Incorporation, then the Code of Regulations.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=35&search=Conflicts&phrase=true" target="_blank" rel="noopener">Source: Covenants &mdash; Code of Regulations, Conflicts &rarr;</a>
+      </details>
+    </div>
+    <div class="faq-cat" id="cat-new-residents">
+      <h3>New Residents</h3>
+      <p class="faq-cat-desc">Getting oriented in your first few weeks at Riverwood Trails.</p>
+      <details id="faq-new-resident-guide">
+        <summary>Is there a quick-reference guide for new residents?</summary>
+        <p>Yes &mdash; check out our <a href="new-residents.html" style="text-decoration:underline;">New Resident Welcome Guide</a>, which covers trash day, dues, key architectural guidelines, and who to contact for questions, all in one place.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1" target="_blank" rel="noopener">Source: New Resident Welcome Guide &rarr;</a>
+      </details>
+    </div>
+    <div class="faq-cat" id="cat-contact">
+      <h3>Contact &amp; Reporting</h3>
+      <p class="faq-cat-desc">Getting in touch with the board, and flagging a specific concern.</p>
+      <details id="faq-contact-board">
+        <summary>How do I contact the board?</summary>
+        <p>Use the <a href="#contact" style="text-decoration:underline;">contact form</a> at the bottom of this page, or email the board directly at <a href="mailto:home@riverwoodtrails.com" style="text-decoration:underline;">home@riverwoodtrails.com</a>. Please allow 1&ndash;2 weeks for a response on design review requests.</p>
+        <a class="cite" href="pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=1&search=Resolution%20to%20Update&phrase=true" target="_blank" rel="noopener">Source: Garbage Can Storage Policy &mdash; Resolution Letter &rarr;</a>
+      </details>
+      <details id="faq-report-concern">
+        <summary>How do I report a specific concern, like a violation?</summary>
+        <p>To flag a specific issue &mdash; a garbage can screen, a parking concern, a fence, a sign &mdash; use the <a href="report-concern.html" style="text-decoration:underline;">Report a Concern</a> form. For general questions or design review requests, use the contact form or email instead.</p>
+      </details>
+    </div>
   </div>
 </section>
 
@@ -1057,54 +1217,89 @@ const searchIndex = [
   { title: "HOA Documents", tag: "Page", href: "documents.html", keywords: "documents covenants policy garbage can design review application" },
   { title: "Design Review Application (fillable)", tag: "Document", href: "documents.html#drb-form", keywords: "design review application form approval submit fillable online" },
   { title: "Fill Out Design Review Application Online", tag: "Page", href: "design-review-form.html", keywords: "design review application form fill out online jotform submit" },
-  { title: "Covenants (Full Declaration)", tag: "Document", href: "documents.html#covenants", keywords: "covenants declaration restrictions easements articles of incorporation code of regulations design review board bylaws" },
+  { title: "Covenants (Full Declaration)", tag: "Document", href: "documents.html#covenants", keywords: "covenants declaration restrictions easements articles of incorporation code of regulations bylaws" },
   { title: "HOA Policy Clarification", tag: "Document", href: "documents.html#policy-clarification", keywords: "policy clarification signs trash fencing mailbox pools shingle siding shutters fees liens" },
   { title: "Garbage Can Storage Policy", tag: "Document", href: "documents.html#garbage-can-policy", keywords: "garbage can trash storage screen enclosure policy violations fine" },
   { title: "New Residents", tag: "Page", href: "new-residents.html", keywords: "new resident welcome guide moving in trash day new to neighborhood getting started" },
   { title: "Realtors", tag: "Page", href: "realtors.html", keywords: "realtor real estate agent listing buyer selling home" },
   { title: "New Resident Welcome Guide", tag: "Document", href: "documents.html#new-resident-guide", keywords: "new resident welcome guide moving in trash day new to neighborhood" },
   { title: "Report a Concern", tag: "Page", href: "report-concern.html", keywords: "report a concern complaint garbage can parking fencing violation neighbor issue" },
-  { title: "When are HOA dues to be paid?", tag: "FAQ", href: "faq.html#faq-1", keywords: "dues due date april 350 payment" },
-  { title: "Can I install a fence? If so, what kind is allowed?", tag: "FAQ", href: "faq.html#faq-2", keywords: "fence fencing split rail" },
-  { title: "Can I paint my trim, door, and shutters a different color?", tag: "FAQ", href: "faq.html#faq-3", keywords: "paint trim door shutters color" },
-  { title: "Can I add on to my house or deck?", tag: "FAQ", href: "faq.html#faq-4", keywords: "addition deck add on" },
-  { title: "Can I change the color of my roof or siding?", tag: "FAQ", href: "faq.html#faq-5", keywords: "roof siding color shingle" },
-  { title: "Can I make my landscaping different?", tag: "FAQ", href: "faq.html#faq-6", keywords: "landscaping landscape yard" },
-  { title: "Can I install a swimming pool? If so, what kind?", tag: "FAQ", href: "faq.html#faq-7", keywords: "pool swimming pool above ground in ground hot tub" },
-  { title: "Can I extend the width of my driveway?", tag: "FAQ", href: "faq.html#faq-8", keywords: "driveway widen extend" },
-  { title: "What's the process for getting approval for a home or yard change?", tag: "FAQ", href: "faq.html#faq-9", keywords: "approval process design review application submit" },
-  { title: "What are the requirements for my mailbox?", tag: "FAQ", href: "faq.html#faq-10", keywords: "mailbox post color white loggia" },
-  { title: "Where am I allowed to store my garbage cans?", tag: "FAQ", href: "faq.html#faq-11", keywords: "garbage can storage location trash" },
-  { title: "What are the rules for a garbage can screen or enclosure?", tag: "FAQ", href: "faq.html#faq-12", keywords: "garbage can screen enclosure dimensions materials" },
-  { title: "What happens if my garbage cans or screen aren't in compliance?", tag: "FAQ", href: "faq.html#faq-13", keywords: "garbage can violation fine compliance" },
-  { title: "Can I park a truck, RV, boat, or trailer at my house?", tag: "FAQ", href: "faq.html#faq-14", keywords: "truck rv boat trailer vehicle parking pickup" },
-  { title: "Can I put up a satellite dish or antenna?", tag: "FAQ", href: "faq.html#faq-15", keywords: "satellite dish antenna" },
-  { title: "Can I run a business out of my home?", tag: "FAQ", href: "faq.html#faq-16", keywords: "business home occupation" },
-  { title: "Are there restrictions on yard signs?", tag: "FAQ", href: "faq.html#faq-17", keywords: "signs yard sign real estate" },
-  { title: "What happens if I don't pay my dues on time?", tag: "FAQ", href: "faq.html#faq-18", keywords: "late dues unpaid fee lien" },
-  { title: "What does the HOA Board do?", tag: "FAQ", href: "faq.html#faq-19", keywords: "board of directors role duties" },
-  { title: "What is the Design Review Board?", tag: "FAQ", href: "faq.html#faq-20", keywords: "design review board role members" },
-  { title: "What is the Grounds Committee?", tag: "FAQ", href: "faq.html#faq-21", keywords: "grounds committee role volunteer" },
-  { title: "How do I contact the board?", tag: "FAQ", href: "faq.html#faq-22", keywords: "contact email board" },
-  { title: "Fencing Rules (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Fencing&phrase=true", keywords: "fence fencing split rail height policy full text document" },
-  { title: "Trim, Door &amp; Shutter Colors (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Doors%20and%20Shutters&phrase=true", keywords: "paint trim door shutter color approved policy document" },
-  { title: "Roof Shingle Color (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Shingle%20Color&phrase=true", keywords: "roof shingle color replace policy document" },
-  { title: "Exterior Siding &amp; Paint (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Exterior%20Paint%20and%20Siding&phrase=true", keywords: "siding paint exterior color norandex policy document" },
-  { title: "Swimming Pool Rules (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Swimming%20Pools&phrase=true", keywords: "pool swimming above ground hot tub policy document" },
-  { title: "Mailbox Requirements (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Mailbox&phrase=true", keywords: "mailbox post color loggia white policy document" },
-  { title: "Sign Restrictions (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Signs&phrase=true", keywords: "sign yard real estate policy document" },
-  { title: "Late Fees &amp; Liens (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Late%20Charge&phrase=true", keywords: "late fee lien unpaid assessment collection policy document" },
-  { title: "Design Review &amp; Modifications (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true", keywords: "design review board architectural standards modifications approval covenants" },
-  { title: "Vehicle &amp; Parking Rules (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Vehicles&phrase=true", keywords: "truck rv boat trailer parking vehicle covenants" },
-  { title: "Antenna &amp; Satellite Dish Rules (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Antennae&phrase=true", keywords: "antenna satellite dish covenants" },
-  { title: "Home Business Rules (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Business&phrase=true", keywords: "business home occupation trade covenants" },
-  { title: "Assessments &amp; Dues Rules (Covenants Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=12&search=ASSESSMENTS&phrase=true", keywords: "assessment dues reserve fund special assessment covenants" },
-  { title: "Board Meeting Schedule (Code of Regulations)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=27&search=Code%20of%20Regulations&phrase=true", keywords: "annual meeting quarterly board meeting minutes bylaws code of regulations" },
-  { title: "Garbage Can Storage Options (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Storage%20Options&phrase=true", keywords: "garbage can trash storage location policy document" },
-  { title: "Garbage Can Screen Regulations (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Screen/Enclosure%20Regulations&phrase=true", keywords: "garbage can screen enclosure dimensions material color policy document" },
-  { title: "Garbage Can Violations &amp; Fines (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=3&search=fine%20of%20%2425/month&phrase=true", keywords: "garbage can violation fine compliance notification policy document" },
-  { title: "Trash Pickup Day (New Resident Guide)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1&search=Garbage%20pickup%20is%20Monday&phrase=true", keywords: "trash day pickup monday recycling new resident guide" },
-  { title: "Annual Dues Amount (New Resident Guide)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1&search=Annual%20Dues&phrase=true", keywords: "dues 350 annual invoice april new resident guide" },
+  { title: "When are HOA dues to be paid?", tag: "FAQ", href: "faq.html#faq-dues-when", keywords: "dues due date april 350 payment annual invoice" },
+  { title: "What happens if I don’t pay my dues on time?", tag: "FAQ", href: "faq.html#faq-dues-late", keywords: "late dues unpaid fee lien 10 per month 120 maximum charge" },
+  { title: "What is a special assessment, and can the board levy one?", tag: "FAQ", href: "faq.html#faq-special-assessment", keywords: "special assessment extra fee unbudgeted expense vote" },
+  { title: "What is the Reserve Fund for?", tag: "FAQ", href: "faq.html#faq-reserve-fund", keywords: "reserve fund savings capital repairs replacement" },
+  { title: "Can the HOA place a lien on my home over unpaid dues?", tag: "FAQ", href: "faq.html#faq-liens", keywords: "lien unpaid assessment foreclosure collection 400" },
+  { title: "When do I see the HOA’s annual budget?", tag: "FAQ", href: "faq.html#faq-budget", keywords: "budget annual operating capital fiscal year" },
+  { title: "Can homeowners request an independent audit of the HOA’s finances?", tag: "FAQ", href: "faq.html#faq-audit", keywords: "audit finances accountant review vote" },
+  { title: "Can I see the HOA’s financial records and meeting minutes?", tag: "FAQ", href: "faq.html#faq-records", keywords: "records minutes books inspect membership account" },
+  { title: "What’s the process for getting approval for a home or yard change?", tag: "FAQ", href: "faq.html#faq-drb-process", keywords: "approval process design review application submit" },
+  { title: "Can I add on to my house or deck?", tag: "FAQ", href: "faq.html#faq-additions", keywords: "addition deck add on extend" },
+  { title: "Can I extend the width of my driveway?", tag: "FAQ", href: "faq.html#faq-driveway", keywords: "driveway widen extend concrete" },
+  { title: "Can I make my landscaping different?", tag: "FAQ", href: "faq.html#faq-landscaping", keywords: "landscaping landscape yard plants" },
+  { title: "What is a “no-build zone,” and can I build or plant there?", tag: "FAQ", href: "faq.html#faq-no-build", keywords: "no build zone easement construction plat restriction" },
+  { title: "What happens if I make a change without HOA approval first?", tag: "FAQ", href: "faq.html#faq-no-approval", keywords: "unapproved change violation remove redo without approval" },
+  { title: "Can I change the color of my roof or siding?", tag: "FAQ", href: "faq.html#faq-roof-siding", keywords: "roof siding color shingle change" },
+  { title: "Can I paint my trim, door, and shutters a different color?", tag: "FAQ", href: "faq.html#faq-trim-paint", keywords: "paint trim door shutters color approved" },
+  { title: "What siding material or brand am I supposed to use if I replace mine?", tag: "FAQ", href: "faq.html#faq-siding-material", keywords: "siding material brand norandex vinyl replace" },
+  { title: "Can I install a fence? If so, what kind is allowed?", tag: "FAQ", href: "faq.html#faq-fence-type", keywords: "fence fencing split rail wood mesh" },
+  { title: "Are there height or placement rules for fences?", tag: "FAQ", href: "faq.html#faq-fence-rules", keywords: "fence height 48 inches setback placement street" },
+  { title: "Can I install a swimming pool? If so, what kind?", tag: "FAQ", href: "faq.html#faq-pool", keywords: "pool swimming pool above ground in ground hot tub sauna" },
+  { title: "Are there restrictions on yard signs?", tag: "FAQ", href: "faq.html#faq-signs", keywords: "signs sign yard restriction rules" },
+  { title: "Can I put up a “for sale” or realtor sign?", tag: "FAQ", href: "faq.html#faq-signs-realestate", keywords: "for sale sign realtor real estate sign yard" },
+  { title: "What about security-company signs, political signs, or holiday signs?", tag: "FAQ", href: "faq.html#faq-signs-other", keywords: "security sign political sign holiday sign alarm company yard sign not allowed" },
+  { title: "What are the requirements for my mailbox?", tag: "FAQ", href: "faq.html#faq-mailbox", keywords: "mailbox post color white loggia repair replace" },
+  { title: "What day is trash and recycling picked up?", tag: "FAQ", href: "faq.html#faq-trash-day", keywords: "trash day pickup monday recycling schedule" },
+  { title: "Where am I allowed to store my garbage cans?", tag: "FAQ", href: "faq.html#faq-garbage-storage", keywords: "garbage can storage location trash" },
+  { title: "What are the rules for a garbage can screen or enclosure?", tag: "FAQ", href: "faq.html#faq-garbage-screen", keywords: "garbage can screen enclosure dimensions materials height" },
+  { title: "What happens if my garbage cans or screen aren’t in compliance?", tag: "FAQ", href: "faq.html#faq-garbage-violation", keywords: "garbage can violation fine compliance notification" },
+  { title: "Can I park a truck, RV, boat, or trailer at my house?", tag: "FAQ", href: "faq.html#faq-vehicles", keywords: "truck rv boat trailer vehicle parking pickup camper" },
+  { title: "Can I put up a satellite dish or antenna?", tag: "FAQ", href: "faq.html#faq-antenna", keywords: "satellite dish antenna" },
+  { title: "Can I run a business out of my home?", tag: "FAQ", href: "faq.html#faq-business", keywords: "business home occupation trade profession" },
+  { title: "What does the HOA Board do?", tag: "FAQ", href: "faq.html#faq-board-role", keywords: "board of directors role duties" },
+  { title: "What is the Design Review Board?", tag: "FAQ", href: "faq.html#faq-drb-role", keywords: "design review board role members drb" },
+  { title: "What is the Grounds Committee?", tag: "FAQ", href: "faq.html#faq-grounds-committee", keywords: "grounds committee role volunteer landscaping" },
+  { title: "Who can serve on the Board, and how are trustees nominated?", tag: "FAQ", href: "faq.html#faq-board-qualify", keywords: "board trustee qualification nomination election who can serve" },
+  { title: "How much notice do I get before an HOA meeting, and can I call a special meeting?", tag: "FAQ", href: "faq.html#faq-meetings-notice", keywords: "meeting notice special meeting annual petition" },
+  { title: "Can someone vote on my behalf if I can’t attend the annual meeting?", tag: "FAQ", href: "faq.html#faq-proxy", keywords: "proxy vote absentee meeting" },
+  { title: "If the covenants, articles of incorporation, and rules conflict, which one wins?", tag: "FAQ", href: "faq.html#faq-rules-precedence", keywords: "conflicts precedence ohio law which rule wins" },
+  { title: "Is there a quick-reference guide for new residents?", tag: "FAQ", href: "faq.html#faq-new-resident-guide", keywords: "new resident welcome guide moving in getting started" },
+  { title: "How do I contact the board?", tag: "FAQ", href: "faq.html#faq-contact-board", keywords: "contact email board message" },
+  { title: "How do I report a specific concern, like a violation?", tag: "FAQ", href: "faq.html#faq-report-concern", keywords: "report a concern complaint violation neighbor issue" },
+  { title: "What happens if I don’t pay my dues on time (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Late%20Charge%3B%20Acceleration&phrase=true", keywords: "late dues unpaid fee lien 10 per month 120 maximum charge full text document policy source" },
+  { title: "What is a special assessment, and can the board levy one (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=13&search=Special%20Assessments&phrase=true", keywords: "special assessment extra fee unbudgeted expense vote full text document policy source" },
+  { title: "What is the Reserve Fund for (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=12&search=Reserve%20Fund&phrase=true", keywords: "reserve fund savings capital repairs replacement full text document policy source" },
+  { title: "Can the HOA place a lien on my home over unpaid dues (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Liens.&phrase=true", keywords: "lien unpaid assessment foreclosure collection 400 full text document policy source" },
+  { title: "When do I see the HOA’s annual budget (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=34&search=Failure%20to%20Adopt%20Budget&phrase=true", keywords: "budget annual operating capital fiscal year full text document policy source" },
+  { title: "Can homeowners request an independent audit of the HOA’s finances (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=36&search=audited%20as%20a%20common%20expense&phrase=true", keywords: "audit finances accountant review vote full text document policy source" },
+  { title: "Can I see the HOA’s financial records and meeting minutes (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=35&search=Inspection%20by%20Members&phrase=true", keywords: "records minutes books inspect membership account full text document policy source" },
+  { title: "Can I add on to my house or deck (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true", keywords: "addition deck add on extend full text document policy source" },
+  { title: "Can I extend the width of my driveway (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true", keywords: "driveway widen extend concrete full text document policy source" },
+  { title: "Can I make my landscaping different (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=plantings&phrase=true", keywords: "landscaping landscape yard plants full text document policy source" },
+  { title: "What is a “no-build zone,” and can I build or plant there (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=10&search=No-Build%20Zones&phrase=true", keywords: "no build zone easement construction plat restriction full text document policy source" },
+  { title: "What happens if I make a change without HOA approval first (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1&search=Starting%20work%20without%20approval&phrase=true", keywords: "unapproved change violation remove redo without approval full text document policy source" },
+  { title: "Can I change the color of my roof or siding (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Shingle%20Color&phrase=true", keywords: "roof siding color shingle change full text document policy source" },
+  { title: "Can I paint my trim, door, and shutters a different color (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Doors%20and%20Shutters&phrase=true", keywords: "paint trim door shutters color approved full text document policy source" },
+  { title: "What siding material or brand am I supposed to use if I replace mine (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Norandex&phrase=true", keywords: "siding material brand norandex vinyl replace full text document policy source" },
+  { title: "Can I install a fence? If so, what kind is allowed (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Fencing%3A&phrase=true", keywords: "fence fencing split rail wood mesh full text document policy source" },
+  { title: "Are there height or placement rules for fences (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=No%20fence%20or%20wall%20shall%20be%20constructed&phrase=true", keywords: "fence height 48 inches setback placement street full text document policy source" },
+  { title: "Can I install a swimming pool? If so, what kind (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Swimming%20Pools&phrase=true", keywords: "pool swimming pool above ground in ground hot tub sauna full text document policy source" },
+  { title: "Are there restrictions on yard signs (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Signs.&phrase=true", keywords: "signs sign yard restriction rules full text document policy source" },
+  { title: "Can I put up a “for sale” or realtor sign (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=temporary%20real%20estate%20sign&phrase=true", keywords: "for sale sign realtor real estate sign yard full text document policy source" },
+  { title: "What about security-company signs, political signs, or holiday signs (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=subject%20to%20board%20action&phrase=true", keywords: "security sign political sign holiday sign alarm company yard sign not allowed full text document policy source" },
+  { title: "What are the requirements for my mailbox (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Mailbox&phrase=true", keywords: "mailbox post color white loggia repair replace full text document policy source" },
+  { title: "What day is trash and recycling picked up (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1&search=Garbage%20pickup%20is%20Monday&phrase=true", keywords: "trash day pickup monday recycling schedule full text document policy source" },
+  { title: "Where am I allowed to store my garbage cans (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Storage%20Options&phrase=true", keywords: "garbage can storage location trash full text document policy source" },
+  { title: "What are the rules for a garbage can screen or enclosure (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Screen%2FEnclosure%20Regulations&phrase=true", keywords: "garbage can screen enclosure dimensions materials height full text document policy source" },
+  { title: "What happens if my garbage cans or screen aren’t in compliance (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=3&search=fine%20of%20%2425%2Fmonth&phrase=true", keywords: "garbage can violation fine compliance notification full text document policy source" },
+  { title: "Can I park a truck, RV, boat, or trailer at my house (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Vehicles&phrase=true", keywords: "truck rv boat trailer vehicle parking pickup camper full text document policy source" },
+  { title: "Can I put up a satellite dish or antenna (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Antennae&phrase=true", keywords: "satellite dish antenna full text document policy source" },
+  { title: "Can I run a business out of my home (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Business&phrase=true", keywords: "business home occupation trade profession full text document policy source" },
+  { title: "Who can serve on the Board, and how are trustees nominated (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=30&search=Number%20and%20Qualification%20of%20Trustees&phrase=true", keywords: "board trustee qualification nomination election who can serve full text document policy source" },
+  { title: "How much notice do I get before an HOA meeting, and can I call a special meeting (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=28&search=Notice%20of%20Meetings&phrase=true", keywords: "meeting notice special meeting annual petition full text document policy source" },
+  { title: "Can someone vote on my behalf if I can’t attend the annual meeting (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=29&search=A%20vote%20allocated%20to%20a%20lot%20may%20be%20cast%20pursuant%20to%20a%20proxy&phrase=true", keywords: "proxy vote absentee meeting full text document policy source" },
+  { title: "If the covenants, articles of incorporation, and rules conflict, which one wins (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=35&search=Conflicts&phrase=true", keywords: "conflicts precedence ohio law which rule wins full text document policy source" },
+  { title: "Is there a quick-reference guide for new residents (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1", keywords: "new resident welcome guide moving in getting started full text document policy source" },
+  { title: "How do I contact the board (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=1&search=Resolution%20to%20Update&phrase=true", keywords: "contact email board message full text document policy source" },
 ];
 
 const searchToggle = document.getElementById('searchToggle');
@@ -1117,12 +1312,28 @@ function currentPageName() {
   return p === '' ? 'index.html' : p;
 }
 
+function scoreItem(item, q) {
+  const title = item.title.toLowerCase();
+  const kw = item.keywords.toLowerCase();
+  const esc = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const wordStart = new RegExp('(^|[^a-z0-9])' + esc);
+  if (title === q) return 5;
+  if (wordStart.test(title)) return 4;
+  if (wordStart.test(kw)) return 3;
+  if (title.includes(q)) return 2;
+  if (kw.includes(q)) return 1;
+  return 0;
+}
+
 function renderResults(query) {
   const q = query.trim().toLowerCase();
   if (!q) { searchResults.innerHTML = ''; return; }
-  const matches = searchIndex.filter(item =>
-    item.title.toLowerCase().includes(q) || item.keywords.toLowerCase().includes(q)
-  ).slice(0, 8);
+  const matches = searchIndex
+    .map((item, i) => ({ item, i, score: scoreItem(item, q) }))
+    .filter(m => m.score > 0)
+    .sort((a, b) => b.score - a.score || a.i - b.i)
+    .slice(0, 8)
+    .map(m => m.item);
   if (matches.length === 0) {
     searchResults.innerHTML = '<div class="search-empty">No matches — try a different word.</div>';
     return;
