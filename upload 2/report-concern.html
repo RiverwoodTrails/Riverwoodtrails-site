@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Let the Riverwood Trails HOA Board know about a property or common-area concern so we can follow up. Kings Mills, Ohio.">
+<meta property="og:title" content="Report a Concern — Riverwood Trails HOA">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://riverwoodtrails.github.io/Riverwoodtrails-site/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://riverwoodtrails.github.io/Riverwoodtrails-site/report-concern.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23223829'/%3E%3Cpath d='M6 22c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M6 34c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round' opacity='0.7'/%3E%3Cpath d='M6 46c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round' opacity='0.45'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Report a Concern — Riverwood Trails HOA</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+:root{
+  --forest: #223829;
+  --forest-deep: #16241a;
+  --river: #3d6b6b;
+  --clay: #a15a3c;
+  --cream: #f4efe4;
+  --paper: #fbf8f1;
+  --ink: #22221f;
+  --line: rgba(34,56,41,0.15);
+}
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:80px;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter', sans-serif;
+  line-height:1.6;
+}
+h1,h2,h3{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  color:var(--forest-deep);
+}
+a{color:inherit;}
+img{max-width:100%; display:block;}
+
+
+/* TOP BAR */
+.topbar{
+  background:var(--forest-deep);
+  color:var(--cream);
+  text-align:center;
+  padding:9px 6vw;
+  font-size:.82rem;
+  letter-spacing:.01em;
+}
+.topbar a{
+  color:var(--cream);
+  text-decoration:underline;
+  font-weight:600;
+}
+.topbar a:hover{opacity:.85;}
+
+/* ORPHAN-WORD PREVENTION (always on, unlike .keep-together) */
+.no-orphan{white-space:nowrap;}
+
+nav{
+  position:sticky; top:0; z-index:50;
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 6vw;
+}
+.brand{display:flex; align-items:center; gap:10px;}
+.brand-mark{
+  width:32px; height:32px;
+  background:var(--forest);
+  border-radius:6px;
+  position:relative;
+}
+.brand-mark::after{
+  content:"";
+  position:absolute; left:50%; top:50%;
+  width:14px; height:14px;
+  border:2px solid var(--cream);
+  border-right:none; border-top:none;
+  transform:translate(-50%,-60%) rotate(-45deg);
+}
+.brand-name{font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem; color:var(--forest-deep);}
+.brand-name small{display:block; font-family:'Inter',sans-serif; font-weight:400; font-size:0.68rem; color:var(--river); letter-spacing:.02em;}
+.navlinks{display:flex; align-items:center; flex-wrap:wrap; justify-content:flex-end; gap:8px 20px; font-size:0.87rem;}
+.navlinks a{text-decoration:none; color:var(--forest-deep); opacity:.75; transition:opacity .15s;}
+.navlinks a:hover{opacity:1;}
+.navlinks a.active{opacity:1; font-weight:600;}
+.navlinks a:focus-visible, .brand:focus-visible{outline:2px solid var(--river); outline-offset:3px;}
+
+/* SEARCH */
+.search-wrap{position:relative; display:flex; align-items:center;}
+.search-toggle{
+  background:none; border:none; cursor:pointer;
+  width:36px; height:36px;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--forest-deep); opacity:.75;
+  border-radius:50%;
+  transition:opacity .15s ease, background .15s ease;
+}
+.search-toggle:hover{opacity:1; background:rgba(34,56,41,0.06);}
+.search-toggle svg{width:18px; height:18px;}
+.search-panel{
+  position:absolute; top:calc(100% + 14px); right:0;
+  width:340px; max-width:88vw;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:10px;
+  box-shadow:0 20px 44px -16px rgba(22,36,26,0.3);
+  padding:10px;
+  opacity:0; visibility:hidden; transform:translateY(-6px);
+  transition:opacity .18s ease, transform .18s ease, visibility .18s ease;
+  z-index:70;
+}
+.search-panel.open{opacity:1; visibility:visible; transform:translateY(0);}
+.search-input{
+  width:100%;
+  padding:11px 14px;
+  border:1px solid var(--line);
+  border-radius:6px;
+  font-family:'Inter',sans-serif;
+  font-size:.92rem;
+  background:var(--cream);
+  color:var(--ink);
+}
+.search-input:focus{outline:none; border-color:var(--river);}
+.search-results{
+  max-height:340px; overflow-y:auto;
+  margin-top:8px;
+}
+.search-result{
+  display:flex; flex-direction:column; gap:2px;
+  padding:10px 12px;
+  border-radius:6px;
+  text-decoration:none;
+  cursor:pointer;
+}
+.search-result:hover, .search-result.active{background:var(--cream);}
+.search-result .r-title{font-size:.9rem; color:var(--forest-deep); font-weight:500;}
+.search-result .r-tag{font-size:.72rem; color:var(--river); text-transform:uppercase; letter-spacing:.04em;}
+.search-empty{padding:14px 12px; font-size:.86rem; color:#8a8a80; text-align:center;}
+@media (max-width:760px){
+  .search-panel{position:fixed; top:65px; left:0; right:0; width:auto; max-width:none; border-radius:0; border-left:none; border-right:none; padding:14px 6vw;}
+}
+
+.menu-toggle{
+  display:none;
+  background:none; border:none; cursor:pointer;
+  width:34px; height:34px;
+  padding:0;
+  flex-direction:column; align-items:center; justify-content:center; gap:5px;
+}
+.menu-toggle span{
+  display:block; width:22px; height:2px;
+  background:var(--forest-deep); border-radius:2px;
+  transition:transform .2s ease, opacity .2s ease;
+}
+.menu-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.menu-toggle.open span:nth-child(2){opacity:0;}
+.menu-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+@media (max-width:760px){
+  .menu-toggle{display:flex;}
+  .navlinks{
+    position:fixed; top:65px; left:0; right:0; bottom:0;
+    background:var(--paper);
+    flex-direction:column; align-items:stretch; gap:0;
+    padding:8px 6vw 40px;
+    transform:translateY(-8px);
+    opacity:0; visibility:hidden; pointer-events:none;
+    transition:opacity .2s ease, transform .2s ease, visibility .2s ease;
+    overflow-y:auto;
+    z-index:56;
+  }
+  .navlinks.open{opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto;}
+  .navlinks > a{padding:16px 4px; border-bottom:1px solid var(--line); font-size:1.02rem;}
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 26px;
+  border-radius:8px;
+  font-size:0.86rem;
+  text-decoration:none;
+  font-weight:500;
+  letter-spacing:.03em;
+  position:relative;
+  box-shadow:0 2px 6px rgba(22,36,26,0.12);
+  transition:transform .2s cubic-bezier(.2,.7,.3,1), box-shadow .2s ease, border-color .2s ease, background .2s ease;
+  border:none; cursor:pointer;
+}
+.btn-clay{
+  background:var(--clay);
+  color:var(--cream);
+  border:1px solid var(--clay);
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+.btn-clay::after{content:"";width:14px;height:1px;background:var(--cream);opacity:.7;transition:width .2s ease;}
+.btn-clay:hover{
+  background:#8a4a30;
+  border-color:#8a4a30;
+  transform:translateY(-1px);
+  box-shadow:0 6px 16px rgba(0,0,0,0.3);
+}
+.btn-clay:hover::after{width:22px;}
+
+/* SECTION SHELL */
+section{padding:7vw 6vw; position:relative;}
+
+/* PAGE HEADER (for non-home pages) */
+.page-header{
+  padding:6vw 6vw 3vw;
+  max-width:80ch;
+}
+.page-header .eyebrow{
+  display:block;
+  font-size:.76rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--river);
+  font-weight:600;
+  margin-bottom:10px;
+}
+.page-header h1{font-size:clamp(1.9rem,3.2vw,2.6rem);}
+.page-header p{color:#4a4a43; margin-top:12px; font-size:1.02rem;}
+
+/* NOTICE BOX */
+.notice-box{
+  border-left:4px solid var(--clay);
+  background:rgba(161,90,60,0.06);
+  padding:20px 24px;
+  border-radius:0 8px 8px 0;
+  margin-top:8px;
+}
+.notice-box h4{font-size:1.02rem; margin-bottom:6px; color:var(--forest-deep); font-family:'Fraunces',serif; font-weight:600;}
+.notice-box p{font-size:.92rem; color:#4a4a43;}
+
+.cal-wrap{
+  border:1px solid var(--line);
+  border-radius:10px;
+  overflow:hidden;
+  background:var(--paper);
+  box-shadow:0 12px 32px -16px rgba(22,36,26,0.18);
+}
+
+/* REPORT FORM */
+.report-form{display:flex; flex-direction:column; gap:16px; max-width:560px;}
+.report-form label{font-size:.86rem; font-weight:500; color:var(--forest-deep); margin-bottom:6px; display:block;}
+.report-form input, .report-form select, .report-form textarea{
+  width:100%;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:12px 14px;
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  font-size:.94rem;
+}
+.report-form input:focus, .report-form select:focus, .report-form textarea:focus{outline:none; border-color:var(--river);}
+.report-form ::placeholder{color:#9a9a90;}
+.report-form .field{display:flex; flex-direction:column;}
+.report-form button{
+  align-self:flex-start;
+  margin-top:6px;
+  background:var(--clay);
+  color:var(--cream);
+  border:1px solid var(--clay);
+  padding:14px 28px;
+  border-radius:6px;
+  font-size:.9rem;
+  letter-spacing:.03em;
+  font-weight:500;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.report-form button::after{
+  content:"";
+  width:14px; height:1px;
+  background:var(--cream);
+  opacity:.7;
+  transition:width .2s ease;
+}
+.report-form button:hover{
+  background:#8a4a30;
+  border-color:#8a4a30;
+  transform:translateY(-1px);
+  box-shadow:0 6px 16px rgba(0,0,0,0.25);
+}
+.report-form button:hover::after{width:22px;}
+
+/* CONTACT / FOOTER */
+footer{
+  background:var(--forest-deep);
+  color:var(--cream);
+  padding:5vw 6vw 3vw;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.3fr 0.9fr 0.9fr 0.9fr;
+  gap:32px;
+  padding-bottom:34px;
+  border-bottom:1px solid rgba(244,239,228,0.15);
+}
+footer h5{font-size:.82rem; letter-spacing:.02em; opacity:.6; margin-bottom:14px; font-weight:500;}
+footer a{display:block; text-decoration:none; color:var(--cream); opacity:.85; font-size:.92rem; margin-bottom:9px;}
+footer a:hover{opacity:1;}
+.foot-bottom{padding-top:22px; display:flex; justify-content:space-between; font-size:.82rem; opacity:.55; flex-wrap:wrap; gap:8px;}
+@media (max-width:900px){ .footer-grid{grid-template-columns:1fr 1fr; gap:26px;} }
+@media (max-width:520px){ .footer-grid{grid-template-columns:1fr; gap:26px;} }
+
+.contact-form{display:flex; flex-direction:column; gap:12px; max-width:420px;}
+.contact-form input, .contact-form textarea{
+  background:rgba(244,239,228,0.06);
+  border:1px solid rgba(244,239,228,0.25);
+  border-radius:3px;
+  padding:12px 14px;
+  color:var(--cream);
+  font-family:'Inter',sans-serif;
+  font-size:.92rem;
+}
+.contact-form ::placeholder{color:rgba(244,239,228,0.5);}
+.contact-form button{
+  align-self:flex-start;
+  margin-top:4px;
+  background:var(--clay);
+  color:var(--cream);
+  border:1px solid var(--clay);
+  padding:13px 24px;
+  border-radius:2px;
+  font-size:.86rem;
+  letter-spacing:.03em;
+  font-weight:500;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.contact-form button::after{
+  content:"";
+  width:14px; height:1px;
+  background:var(--cream);
+  opacity:.7;
+  transition:width .2s ease;
+}
+.contact-form button:hover{
+  background:#8a4a30;
+  border-color:#8a4a30;
+  transform:translateY(-1px);
+  box-shadow:0 6px 16px rgba(0,0,0,0.25);
+}
+.contact-form button:hover::after{width:22px;}
+
+
+/* SCROLL REVEAL */
+.reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in-view{opacity:1; transform:translateY(0);}
+.reveal-1{transition-delay:.08s;}
+.reveal-2{transition-delay:.16s;}
+.reveal-3{transition-delay:.24s;}
+
+/* PRINT STYLES */
+@media print{
+  .topbar, .search-wrap, .menu-toggle, .cal-nav, .cal-today-btn,
+  footer .contact-form, nav .search-wrap{ display:none !important; }
+  nav{ position:static; border-bottom:1px solid #999; }
+  .navlinks{ display:none !important; }
+  body{ background:#fff; color:#000; }
+  a{ color:#000; text-decoration:underline; }
+  .hero{ min-height:auto; padding:20px 0; color:#000; }
+  .hero::after{ display:none; }
+  .hero-slides{ display:none; }
+  .hero h1, .hero p.lede{ color:#000; }
+  .btn, .cal-event, .search-toggle{ display:none !important; }
+  .reveal{ opacity:1 !important; transform:none !important; }
+  section{ padding:14px 0; page-break-inside:avoid; }
+  .callout{ background:#fff !important; color:#000 !important; border:1px solid #999; box-shadow:none; }
+  .callout h3, .callout p{ color:#000 !important; }
+  footer{ background:#fff !important; color:#000 !important; }
+  footer a{ color:#000 !important; }
+  footer h5{ opacity:1; color:#000; }
+  .foot-bottom{ opacity:1; }
+  details{ page-break-inside:avoid; }
+  details p{ color:#000; }
+  .grid3, .board-grid{ display:block !important; }
+  .tile, .board-card{ box-shadow:none; border:1px solid #ccc; margin-bottom:10px; }
+  .gallery-grid{ display:none; }
+  a[href]::after{ content:""; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html#newsletter">✉ Stay in the Loop</a> — get occasional HOA updates by email
+</div>
+
+<nav>
+  <a href="index.html#top" class="brand" style="text-decoration:none;">
+    <div class="brand-mark"></div>
+    <div class="brand-name">Riverwood Trails <small>HOMEOWNERS ASSOCIATION · KINGS MILLS, OH</small></div>
+  </a>
+  <div style="display:flex; align-items:center; gap:16px;">
+    <div class="navlinks" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#dues">HOA Dues</a>
+      <a href="documents.html">HOA Documents</a>
+      <a href="faq.html">FAQ</a>
+      <a href="index.html#announcements">HOA News</a>
+      <a href="board.html">Board &amp; Committees</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="new-residents.html">New Residents</a>
+      <a href="realtors.html">Realtors</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="search-wrap">
+      <button class="search-toggle" id="searchToggle" aria-label="Search the site">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="search-panel" id="searchPanel">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search dues, fencing, mailbox, covenants…" autocomplete="off">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <span class="eyebrow">Neighborhood Upkeep</span>
+  <h1>Report a Concern</h1>
+  <p>Use this form to let the board know about a property or common-area concern so we can follow up. This isn't for design review submissions — use the <a href="documents.html#drb-form" style="text-decoration:underline;">Design Review Application</a> for those.</p>
+</div>
+
+<section id="report-form" style="padding-top:1vw;">
+  <a href="faq.html#faq-contact-board" style="display:inline-block; margin-bottom:24px; color:var(--river); font-weight:500; font-size:.9rem; text-decoration:underline;">← Back to FAQ</a>
+
+  <div class="notice-box" style="margin-top:8px; margin-bottom:32px; max-width:70ch;">
+    <h4>Reports are not anonymous</h4>
+    <p>Your name and email go to the board along with your report, and we may follow up with you for details. The board is all-volunteer, so we’ll follow up as soon as we’re able.</p>
+  </div>
+
+  <div class="cal-wrap" style="box-shadow:none; padding:32px 28px; max-width:640px;">
+    <form class="report-form" action="https://formsubmit.co/home@riverwoodtrails.com" method="POST">
+      <input type="hidden" name="_subject" value="New Concern Report — Riverwood Trails website">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://riverwoodtrails.github.io/Riverwoodtrails-site/report-concern.html#contact">
+
+      <div class="field">
+        <label for="rc-name">Your name</label>
+        <input type="text" id="rc-name" name="Name" placeholder="Your name" required>
+      </div>
+
+      <div class="field">
+        <label for="rc-email">Your email</label>
+        <input type="email" id="rc-email" name="Email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="field">
+        <label for="rc-category">Category</label>
+        <select id="rc-category" name="Category" required>
+          <option value="" disabled selected>Select a category…</option>
+          <option value="Garbage Cans">Garbage cans / screens</option>
+          <option value="Parking">Parking / vehicles</option>
+          <option value="Fencing">Fencing</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="rc-location">Location of concern</label>
+        <input type="text" id="rc-location" name="Location" placeholder="Address or general area">
+      </div>
+
+      <div class="field">
+        <label for="rc-description">Description</label>
+        <textarea id="rc-description" name="Description" rows="5" placeholder="Tell us what you're seeing" required></textarea>
+      </div>
+
+      <button type="submit">Submit Report</button>
+    </form>
+  </div>
+
+  <p style="max-width:62ch; margin-top:24px; color:#4a4a43; font-size:.88rem;">Prefer to email directly? Reach the board at <a href="mailto:home@riverwoodtrails.com" style="text-decoration:underline;">home@riverwoodtrails.com</a>.</p>
+</section>
+
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <h5>CONTACT THE BOARD</h5>
+      <p style="color:var(--cream); opacity:.85; font-size:.92rem; margin-bottom:14px;">Email us directly at <a href="mailto:home@riverwoodtrails.com" style="text-decoration:underline;">home@riverwoodtrails.com</a> or send a message below. General questions, design review requests, and neighborhood concerns are all welcome here.</p>
+      <form class="contact-form" action="https://formsubmit.co/home@riverwoodtrails.com" method="POST">
+        <input type="hidden" name="_subject" value="New message from Riverwood Trails website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://riverwoodtrails.github.io/Riverwoodtrails-site/report-concern.html#contact">
+        <input type="text" name="Name" placeholder="Your name" required>
+        <input type="text" name="Address" placeholder="Address (optional)">
+        <input type="email" name="Email" placeholder="Email" required>
+        <textarea rows="3" name="Message" placeholder="Message" required></textarea>
+        <button type="submit">Send message</button>
+      </form>
+    </div>
+    <div>
+      <h5>QUICK LINKS</h5>
+      <a href="index.html#about">About Riverwood Trails</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#announcements">Announcements</a>
+      <a href="index.html#dues">Dues & Payments</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="board.html#board">Board Directory</a>
+      <a href="board.html#design-review-board">Design Review Board</a>
+      <a href="board.html#grounds-committee">Grounds Committee</a>
+      <a href="faq.html">FAQ</a>
+      <a href="documents.html">HOA Documents</a>
+      <a href="new-residents.html">New Residents</a>
+      <a href="realtors.html">Realtors</a>
+      <a href="report-concern.html">Report a Concern</a>
+    </div>
+    <div>
+      <h5>DOCUMENTS</h5>
+      <a href="documents.html#drb-form">Design Review Application</a>
+      <a href="documents.html#covenants">Covenants</a>
+      <a href="documents.html#policy-clarification">HOA Policy Clarification</a>
+      <a href="documents.html#garbage-can-policy">Garbage Can Storage Policy</a>
+      <a href="documents.html#new-resident-guide">New Resident Guide</a>
+    </div>
+    <div>
+      <h5>NEIGHBORHOOD</h5>
+      <a href="https://www.google.com/maps/search/?api=1&query=Kings+Mills+OH+45034" target="_blank" rel="noopener">Riverwood Trails, Kings Mills, OH 45034</a>
+      <a href="https://en.wikipedia.org/wiki/Deerfield_Township,_Warren_County,_Ohio" target="_blank" rel="noopener">Deerfield Township</a>
+      <a href="https://www.kingslocal.net/" target="_blank" rel="noopener">Kings Local School District</a>
+    </div>
+  </div>
+  <p style="font-size:.76rem; color:rgba(244,239,228,0.55); padding-top:18px; max-width:70ch;">We only use the contact information and reports submitted through this site to respond to you, follow up on the issue described, or send occasional HOA updates — we don’t sell it or use it for marketing. Forms are processed by FormSubmit, a third-party form service; see their privacy policy for details on how submissions are handled in transit.</p>
+  <p style="font-size:.76rem; color:rgba(244,239,228,0.55); padding-top:10px; max-width:70ch;">Official website of the Riverwood Trails Homeowners Association. Content on this site is provided for informational purposes to assist residents and is not legal advice. While we strive to keep information accurate and current, the HOA, its trustees, and its management assume no liability for errors, omissions, or technical issues with form submissions. Official governing documents — including the recorded Covenants, Conditions &amp; Restrictions — and formal board notices take precedence over anything displayed here. By using this site, you agree that form submissions and emails sent through it do not constitute formal legal notice to the HOA.</p>
+  <div class="foot-bottom">
+    <span>© 2026 Riverwood Trails Homeowners Association</span>
+    <span>Site last updated September 2026</span>
+    <span>76 Homes · Kings Mills, Ohio</span>
+  </div>
+</footer>
+
+<script>
+// ---- MOBILE NAV TOGGLE ----
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuToggle.classList.toggle('open', isOpen);
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.classList.remove('open');
+      document.body.classList.remove('nav-open');
+    });
+  });
+}
+
+// ---- SITE SEARCH (cross-page aware) ----
+const searchIndex = [
+  { title: "Home", tag: "Page", href: "index.html", keywords: "home welcome" },
+  { title: "HOA News / Announcements", tag: "Section", href: "index.html#announcements", keywords: "announcements news updates board notices" },
+  { title: "HOA Dues", tag: "Section", href: "index.html#dues", keywords: "dues payment 350 annual assessment invoice insurance lawn care reserve landscape" },
+  { title: "Make a Payment", tag: "Section", href: "index.html#make-a-payment", keywords: "make a payment pay online pay by check credit card ach pnc bank qr code notice of payment by mail po box 195" },
+  { title: "Neighborhood Gallery", tag: "Section", href: "index.html#gallery", keywords: "gallery photos pictures neighborhood" },
+  { title: "About Riverwood Trails", tag: "Section", href: "index.html#about", keywords: "about history real estate realtor selling home" },
+  { title: "Community Calendar", tag: "Page", href: "calendar.html#calendar", keywords: "calendar meetings annual meeting quarterly board meeting minutes" },
+  { title: "Board of Directors", tag: "Section", href: "board.html#board", keywords: "board directors president treasurer secretary tim macy amanda wells daniel kostreva" },
+  { title: "Design Review Board", tag: "Section", href: "board.html#design-review-board", keywords: "design review board drb approval application architectural" },
+  { title: "Grounds Committee", tag: "Section", href: "board.html#grounds-committee", keywords: "grounds committee volunteer landscaping lawn care quotes" },
+  { title: "Frequently Asked Questions", tag: "Page", href: "faq.html#faq", keywords: "faq questions rules guidelines" },
+  { title: "Contact the Board", tag: "Section", href: "#contact", keywords: "contact email message form" },
+  { title: "HOA Documents", tag: "Page", href: "documents.html", keywords: "documents covenants policy garbage can design review application" },
+  { title: "Design Review Application (fillable)", tag: "Document", href: "documents.html#drb-form", keywords: "design review application form approval submit fillable online" },
+  { title: "Fill Out Design Review Application Online", tag: "Page", href: "design-review-form.html", keywords: "design review application form fill out online jotform submit" },
+  { title: "Covenants (Full Declaration)", tag: "Document", href: "documents.html#covenants", keywords: "covenants declaration restrictions easements articles of incorporation code of regulations bylaws" },
+  { title: "HOA Policy Clarification", tag: "Document", href: "documents.html#policy-clarification", keywords: "policy clarification signs trash fencing mailbox pools shingle siding shutters fees liens" },
+  { title: "Garbage Can Storage Policy", tag: "Document", href: "documents.html#garbage-can-policy", keywords: "garbage can trash storage screen enclosure policy violations fine" },
+  { title: "New Residents", tag: "Page", href: "new-residents.html", keywords: "new resident welcome guide moving in trash day new to neighborhood getting started" },
+  { title: "Realtors", tag: "Page", href: "realtors.html", keywords: "realtor real estate agent listing buyer selling home" },
+  { title: "New Resident Welcome Guide", tag: "Document", href: "documents.html#new-resident-guide", keywords: "new resident welcome guide moving in trash day new to neighborhood" },
+  { title: "Report a Concern", tag: "Page", href: "report-concern.html", keywords: "report a concern complaint garbage can parking fencing violation neighbor issue" },
+  { title: "When are HOA dues to be paid?", tag: "FAQ", href: "faq.html#faq-dues-when", keywords: "dues due date april 350 payment annual invoice" },
+  { title: "What is a special assessment, and can the board levy one?", tag: "FAQ", href: "faq.html#faq-special-assessment", keywords: "special assessment extra fee unbudgeted expense vote" },
+  { title: "What is the Reserve Fund for?", tag: "FAQ", href: "faq.html#faq-reserve-fund", keywords: "reserve fund savings capital repairs replacement" },
+  { title: "Can the HOA place a lien on my home over unpaid dues?", tag: "FAQ", href: "faq.html#faq-liens", keywords: "lien unpaid assessment foreclosure collection 400" },
+  { title: "When do I see the HOA’s annual budget?", tag: "FAQ", href: "faq.html#faq-budget", keywords: "budget annual operating capital fiscal year" },
+  { title: "What’s the process for getting approval for a home or yard change?", tag: "FAQ", href: "faq.html#faq-drb-process", keywords: "approval process design review application submit" },
+  { title: "Can I add on to my house or deck?", tag: "FAQ", href: "faq.html#faq-additions", keywords: "addition deck add on extend" },
+  { title: "Can I extend the width of my driveway?", tag: "FAQ", href: "faq.html#faq-driveway", keywords: "driveway widen extend concrete" },
+  { title: "Can I make my landscaping different?", tag: "FAQ", href: "faq.html#faq-landscaping", keywords: "landscaping landscape yard plants" },
+  { title: "What is a “no-build zone,” and can I build or plant there?", tag: "FAQ", href: "faq.html#faq-no-build", keywords: "no build zone easement construction plat restriction" },
+  { title: "What happens if I make a change without HOA approval first?", tag: "FAQ", href: "faq.html#faq-no-approval", keywords: "unapproved change violation remove redo without approval" },
+  { title: "Can I change the color of my roof or siding?", tag: "FAQ", href: "faq.html#faq-roof-siding", keywords: "roof siding color shingle change" },
+  { title: "Can I paint my trim, door, and shutters a different color?", tag: "FAQ", href: "faq.html#faq-trim-paint", keywords: "paint trim door shutters color approved" },
+  { title: "What siding material or brand am I supposed to use if I replace mine?", tag: "FAQ", href: "faq.html#faq-siding-material", keywords: "siding material brand norandex vinyl replace" },
+  { title: "Can I install a fence? If so, what kind is allowed?", tag: "FAQ", href: "faq.html#faq-fence-type", keywords: "fence fencing split rail wood mesh" },
+  { title: "Are there height or placement rules for fences?", tag: "FAQ", href: "faq.html#faq-fence-rules", keywords: "fence height 48 inches setback placement street" },
+  { title: "Can I install a swimming pool? If so, what kind?", tag: "FAQ", href: "faq.html#faq-pool", keywords: "pool swimming pool above ground in ground hot tub sauna" },
+  { title: "Are there restrictions on yard signs?", tag: "FAQ", href: "faq.html#faq-signs", keywords: "signs sign yard restriction rules" },
+  { title: "Can I put up a “for sale” or realtor sign?", tag: "FAQ", href: "faq.html#faq-signs-realestate", keywords: "for sale sign realtor real estate sign yard" },
+  { title: "What about security-company signs, political signs, or holiday signs?", tag: "FAQ", href: "faq.html#faq-signs-other", keywords: "security sign political sign holiday sign alarm company yard sign not allowed" },
+  { title: "What are the requirements for my mailbox?", tag: "FAQ", href: "faq.html#faq-mailbox", keywords: "mailbox post color white loggia repair replace" },
+  { title: "What day is trash and recycling picked up?", tag: "FAQ", href: "faq.html#faq-trash-day", keywords: "trash day pickup monday recycling schedule" },
+  { title: "Where am I allowed to store my garbage cans?", tag: "FAQ", href: "faq.html#faq-garbage-storage", keywords: "garbage can storage location trash" },
+  { title: "What are the rules for a garbage can screen or enclosure?", tag: "FAQ", href: "faq.html#faq-garbage-screen", keywords: "garbage can screen enclosure dimensions materials height" },
+  { title: "What happens if my garbage cans or screen aren’t in compliance?", tag: "FAQ", href: "faq.html#faq-garbage-violation", keywords: "garbage can violation fine compliance notification" },
+  { title: "Can I park a truck, RV, boat, or trailer at my house?", tag: "FAQ", href: "faq.html#faq-vehicles", keywords: "truck rv boat trailer vehicle parking pickup camper" },
+  { title: "Can I put up a satellite dish or antenna?", tag: "FAQ", href: "faq.html#faq-antenna", keywords: "satellite dish antenna" },
+  { title: "Can I run a business out of my home?", tag: "FAQ", href: "faq.html#faq-business", keywords: "business home occupation trade profession" },
+  { title: "What does the HOA Board do?", tag: "FAQ", href: "faq.html#faq-board-role", keywords: "board of directors role duties" },
+  { title: "What is the Design Review Board?", tag: "FAQ", href: "faq.html#faq-drb-role", keywords: "design review board role members drb" },
+  { title: "What is the Grounds Committee?", tag: "FAQ", href: "faq.html#faq-grounds-committee", keywords: "grounds committee role volunteer landscaping" },
+  { title: "Who can serve on the Board, and how are trustees nominated?", tag: "FAQ", href: "faq.html#faq-board-qualify", keywords: "board trustee qualification nomination election who can serve" },
+  { title: "How much notice do I get before an HOA meeting, and can I call a special meeting?", tag: "FAQ", href: "faq.html#faq-meetings-notice", keywords: "meeting notice special meeting annual petition" },
+  { title: "Can someone vote on my behalf if I can’t attend the annual meeting?", tag: "FAQ", href: "faq.html#faq-proxy", keywords: "proxy vote absentee meeting" },
+  { title: "If the covenants, articles of incorporation, and rules conflict, which one wins?", tag: "FAQ", href: "faq.html#faq-rules-precedence", keywords: "conflicts precedence ohio law which rule wins" },
+  { title: "Is there a quick-reference guide for new residents?", tag: "FAQ", href: "faq.html#faq-new-resident-guide", keywords: "new resident welcome guide moving in getting started" },
+  { title: "How do I contact the board?", tag: "FAQ", href: "faq.html#faq-contact-board", keywords: "contact email board message" },
+  { title: "How do I report a specific concern, like a violation?", tag: "FAQ", href: "faq.html#faq-report-concern", keywords: "report a concern complaint violation neighbor issue" },
+  { title: "What is a special assessment, and can the board levy one (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=13&search=Special%20Assessments&phrase=true", keywords: "special assessment extra fee unbudgeted expense vote full text document policy source" },
+  { title: "What is the Reserve Fund for (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=12&search=Reserve%20Fund&phrase=true", keywords: "reserve fund savings capital repairs replacement full text document policy source" },
+  { title: "Can the HOA place a lien on my home over unpaid dues (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Liens.&phrase=true", keywords: "lien unpaid assessment foreclosure collection 400 full text document policy source" },
+  { title: "When do I see the HOA’s annual budget (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=34&search=Failure%20to%20Adopt%20Budget&phrase=true", keywords: "budget annual operating capital fiscal year full text document policy source" },
+  { title: "Can I add on to my house or deck (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true", keywords: "addition deck add on extend full text document policy source" },
+  { title: "Can I extend the width of my driveway (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=Modifications&phrase=true", keywords: "driveway widen extend concrete full text document policy source" },
+  { title: "Can I make my landscaping different (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=8&search=plantings&phrase=true", keywords: "landscaping landscape yard plants full text document policy source" },
+  { title: "What is a “no-build zone,” and can I build or plant there (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=10&search=No-Build%20Zones&phrase=true", keywords: "no build zone easement construction plat restriction full text document policy source" },
+  { title: "What happens if I make a change without HOA approval first (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1&search=Starting%20work%20without%20approval&phrase=true", keywords: "unapproved change violation remove redo without approval full text document policy source" },
+  { title: "Can I change the color of my roof or siding (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Shingle%20Color&phrase=true", keywords: "roof siding color shingle change full text document policy source" },
+  { title: "Can I paint my trim, door, and shutters a different color (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Doors%20and%20Shutters&phrase=true", keywords: "paint trim door shutters color approved full text document policy source" },
+  { title: "What siding material or brand am I supposed to use if I replace mine (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=3&search=Norandex&phrase=true", keywords: "siding material brand norandex vinyl replace full text document policy source" },
+  { title: "Can I install a fence? If so, what kind is allowed (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Fencing%3A&phrase=true", keywords: "fence fencing split rail wood mesh full text document policy source" },
+  { title: "Are there height or placement rules for fences (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=No%20fence%20or%20wall%20shall%20be%20constructed&phrase=true", keywords: "fence height 48 inches setback placement street full text document policy source" },
+  { title: "Can I install a swimming pool? If so, what kind (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=2&search=Swimming%20Pools&phrase=true", keywords: "pool swimming pool above ground in ground hot tub sauna full text document policy source" },
+  { title: "Are there restrictions on yard signs (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Signs.&phrase=true", keywords: "signs sign yard restriction rules full text document policy source" },
+  { title: "Can I put up a “for sale” or realtor sign (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=temporary%20real%20estate%20sign&phrase=true", keywords: "for sale sign realtor real estate sign yard full text document policy source" },
+  { title: "What about security-company signs, political signs, or holiday signs (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=subject%20to%20board%20action&phrase=true", keywords: "security sign political sign holiday sign alarm company yard sign not allowed full text document policy source" },
+  { title: "What are the requirements for my mailbox (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/hoa-policy-clarification.pdf#page=1&search=Mailbox&phrase=true", keywords: "mailbox post color white loggia repair replace full text document policy source" },
+  { title: "What day is trash and recycling picked up (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1&search=Garbage%20pickup%20is%20Monday&phrase=true", keywords: "trash day pickup monday recycling schedule full text document policy source" },
+  { title: "Where am I allowed to store my garbage cans (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Storage%20Options&phrase=true", keywords: "garbage can storage location trash full text document policy source" },
+  { title: "What are the rules for a garbage can screen or enclosure (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=2&search=Screen%2FEnclosure%20Regulations&phrase=true", keywords: "garbage can screen enclosure dimensions materials height full text document policy source" },
+  { title: "What happens if my garbage cans or screen aren’t in compliance (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=3&search=fine%20of%20%2425%2Fmonth&phrase=true", keywords: "garbage can violation fine compliance notification full text document policy source" },
+  { title: "Can I park a truck, RV, boat, or trailer at my house (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Vehicles&phrase=true", keywords: "truck rv boat trailer vehicle parking pickup camper full text document policy source" },
+  { title: "Can I put up a satellite dish or antenna (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Antennae&phrase=true", keywords: "satellite dish antenna full text document policy source" },
+  { title: "Can I run a business out of my home (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=6&search=Business&phrase=true", keywords: "business home occupation trade profession full text document policy source" },
+  { title: "Who can serve on the Board, and how are trustees nominated (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=30&search=Number%20and%20Qualification%20of%20Trustees&phrase=true", keywords: "board trustee qualification nomination election who can serve full text document policy source" },
+  { title: "How much notice do I get before an HOA meeting, and can I call a special meeting (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=28&search=Notice%20of%20Meetings&phrase=true", keywords: "meeting notice special meeting annual petition full text document policy source" },
+  { title: "Can someone vote on my behalf if I can’t attend the annual meeting (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=29&search=A%20vote%20allocated%20to%20a%20lot%20may%20be%20cast%20pursuant%20to%20a%20proxy&phrase=true", keywords: "proxy vote absentee meeting full text document policy source" },
+  { title: "If the covenants, articles of incorporation, and rules conflict, which one wins (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/covenants.pdf#page=35&search=Conflicts&phrase=true", keywords: "conflicts precedence ohio law which rule wins full text document policy source" },
+  { title: "Is there a quick-reference guide for new residents (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/new-resident-welcome.pdf#page=1", keywords: "new resident welcome guide moving in getting started full text document policy source" },
+  { title: "How do I contact the board (Full Policy Text)", tag: "Document", href: "pdfjs/web/viewer.html?file=../../documents/garbage-can-storage-policy.pdf#page=1&search=Resolution%20to%20Update&phrase=true", keywords: "contact email board message full text document policy source" },
+];
+
+const searchToggle = document.getElementById('searchToggle');
+const searchPanel = document.getElementById('searchPanel');
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+
+function currentPageName() {
+  const p = location.pathname.split('/').pop();
+  return p === '' ? 'index.html' : p;
+}
+
+function scoreItem(item, q) {
+  const title = item.title.toLowerCase();
+  const kw = item.keywords.toLowerCase();
+  const esc = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const wordStart = new RegExp('(^|[^a-z0-9])' + esc);
+  if (title === q) return 5;
+  if (wordStart.test(title)) return 4;
+  if (wordStart.test(kw)) return 3;
+  if (title.includes(q)) return 2;
+  if (kw.includes(q)) return 1;
+  return 0;
+}
+
+function renderResults(query) {
+  const q = query.trim().toLowerCase();
+  if (!q) { searchResults.innerHTML = ''; return; }
+  const matches = searchIndex
+    .map((item, i) => ({ item, i, score: scoreItem(item, q) }))
+    .filter(m => m.score > 0)
+    .sort((a, b) => b.score - a.score || a.i - b.i)
+    .slice(0, 8)
+    .map(m => m.item);
+  if (matches.length === 0) {
+    searchResults.innerHTML = '<div class="search-empty">No matches — try a different word.</div>';
+    return;
+  }
+  searchResults.innerHTML = matches.map(item =>
+    `<a class="search-result" data-href="${item.href}" data-external="${!!item.external}">
+      <span class="r-title">${item.title}</span>
+      <span class="r-tag">${item.tag}</span>
+    </a>`
+  ).join('');
+  searchResults.querySelectorAll('.search-result').forEach(el => {
+    el.addEventListener('click', () => goToResult(el.dataset.href, el.dataset.external === 'true'));
+  });
+}
+
+function goToResult(href, external) {
+  closeSearch();
+  if (external) {
+    window.open(href, '_blank', 'noopener');
+    return;
+  }
+  const [page, hash] = href.split('#');
+  const targetPage = page || '';
+  const onDifferentPage = targetPage !== '' && targetPage !== currentPageName();
+
+  if (onDifferentPage) {
+    window.location.href = href;
+    return;
+  }
+
+  const targetHash = hash ? '#' + hash : '';
+  if (!targetHash) return;
+  if (targetHash.startsWith('#faq-')) {
+    const details = document.getElementById(targetHash.slice(1));
+    if (details) {
+      details.setAttribute('open', '');
+      details.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  } else {
+    const target = document.querySelector(targetHash);
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+if (searchToggle && searchPanel && searchInput && searchResults) {
+  function openSearch() {
+    searchPanel.classList.add('open');
+    setTimeout(() => searchInput.focus(), 50);
+  }
+  function closeSearch() {
+    searchPanel.classList.remove('open');
+    searchInput.value = '';
+    searchResults.innerHTML = '';
+  }
+  searchToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    searchPanel.classList.contains('open') ? closeSearch() : openSearch();
+  });
+  searchInput.addEventListener('input', (e) => renderResults(e.target.value));
+  document.addEventListener('click', (e) => {
+    if (!searchPanel.contains(e.target) && e.target !== searchToggle) closeSearch();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSearch();
+  });
+}
+
+// ---- DEEP-LINKED FAQ: auto-open + scroll when arriving via #faq-N ----
+if (location.hash && location.hash.startsWith('#faq-')) {
+  const d = document.getElementById(location.hash.slice(1));
+  if (d && d.tagName === 'DETAILS') {
+    d.setAttribute('open', '');
+    setTimeout(() => d.scrollIntoView({ behavior: 'smooth', block: 'center' }), 60);
+  }
+}
+// ---- SCROLL REVEAL (subtle fade/rise on scroll, respects reduced motion) ----
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  revealEls.forEach((el) => revealObserver.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in-view'));
+}
+</script>
+</body>
+</html>
