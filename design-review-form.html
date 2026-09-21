@@ -356,6 +356,7 @@ nav{
   }
   .navlinks.open{opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto;}
   .navlinks > a{padding:16px 4px; border-bottom:1px solid var(--line); font-size:1.02rem;}
+  body.nav-open .float-logo{display:none;}
 }
 
 
@@ -884,7 +885,12 @@ footer a:hover{opacity:1;}
 </section>
 <script type="text/javascript" src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
 <script type="text/javascript">
-  window.jotformEmbedHandler("iframe[id='JotFormIFrame-262544520228049']", "https://form.jotform.com/")
+  if (typeof window.jotformEmbedHandler === 'function') {
+    window.jotformEmbedHandler("iframe[id='JotFormIFrame-262544520228049']", "https://form.jotform.com/");
+  }
+  /* If JotForm's script is blocked or slow to load (ad blocker, network hiccup), the form still
+     works via the iframe's own src above — this just skips the auto-resize helper instead of
+     throwing an error. */
 </script>
 
 
@@ -955,12 +961,14 @@ if (menuToggle && navLinks) {
     const isOpen = navLinks.classList.toggle('open');
     menuToggle.classList.toggle('open', isOpen);
     menuToggle.setAttribute('aria-expanded', isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
   });
 
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
       menuToggle.classList.remove('open');
+      document.body.classList.remove('nav-open');
     });
   });
 }

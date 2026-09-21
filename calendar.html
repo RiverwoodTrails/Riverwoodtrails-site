@@ -356,6 +356,7 @@ nav{
   }
   .navlinks.open{opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto;}
   .navlinks > a{padding:16px 4px; border-bottom:1px solid var(--line); font-size:1.02rem;}
+  body.nav-open .float-logo{display:none;}
 }
 
 
@@ -961,12 +962,14 @@ if (menuToggle && navLinks) {
     const isOpen = navLinks.classList.toggle('open');
     menuToggle.classList.toggle('open', isOpen);
     menuToggle.setAttribute('aria-expanded', isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
   });
 
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('open');
       menuToggle.classList.remove('open');
+      document.body.classList.remove('nav-open');
     });
   });
 }
