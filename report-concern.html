@@ -12,6 +12,7 @@
 <meta property="og:url" content="https://riverwoodtrails.github.io/Riverwoodtrails-site/report-concern.html">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23223829'/%3E%3Cpath d='M6 22c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M6 34c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round' opacity='0.7'/%3E%3Cpath d='M6 46c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round' opacity='0.45'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title>Report a Concern — Riverwood Trails HOA</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
@@ -45,56 +46,6 @@ h1,h2,h3{
 a{color:inherit;}
 img{max-width:100%; display:block;}
 
-/* FLOATING LOGO BADGE */
-.float-logo{
-  position:fixed;
-  top:84px; right:24px;
-  z-index:55;
-  display:flex; align-items:center; gap:10px;
-  background:rgba(251,248,241,0.9);
-  backdrop-filter:blur(6px);
-  border:1px solid rgba(34,56,41,0.14);
-  border-radius:999px;
-  padding:8px 16px 8px 8px;
-  box-shadow:0 10px 26px -10px rgba(22,36,26,0.28);
-  text-decoration:none;
-  transition:box-shadow .2s ease, transform .2s ease;
-}
-.float-logo:hover{box-shadow:0 14px 32px -10px rgba(22,36,26,0.36); transform:translateY(-1px);}
-.float-logo-mark{
-  width:38px; height:38px;
-  border-radius:50%;
-  background:linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%);
-  display:flex; align-items:center; justify-content:center;
-  flex-shrink:0;
-  position:relative;
-  overflow:hidden;
-}
-.float-logo-mark svg{width:22px; height:22px;}
-.float-logo-text{
-  font-family:'Fraunces', serif;
-  font-weight:600;
-  font-size:.82rem;
-  color:var(--forest-deep);
-  line-height:1.15;
-  white-space:nowrap;
-}
-.float-logo-text small{
-  display:block;
-  font-family:'Inter',sans-serif;
-  font-weight:400;
-  font-size:.62rem;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  color:var(--river);
-  margin-top:1px;
-}
-@media (max-width:760px){
-  .float-logo{top:auto; bottom:22px; right:16px; padding:7px 14px 7px 7px;}
-  .float-logo-mark{width:34px; height:34px;}
-  .float-logo-mark svg{width:19px; height:19px;}
-  .float-logo-text{font-size:.76rem;}
-}
 
 /* TOP BAR */
 .topbar{
@@ -231,7 +182,6 @@ nav{
   }
   .navlinks.open{opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto;}
   .navlinks > a{padding:16px 4px; border-bottom:1px solid var(--line); font-size:1.02rem;}
-  body.nav-open .float-logo{display:none;}
 }
 
 .btn{
@@ -415,9 +365,16 @@ footer a:hover{opacity:1;}
 .contact-form button:hover::after{width:22px;}
 
 
+/* SCROLL REVEAL */
+.reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in-view{opacity:1; transform:translateY(0);}
+.reveal-1{transition-delay:.08s;}
+.reveal-2{transition-delay:.16s;}
+.reveal-3{transition-delay:.24s;}
+
 /* PRINT STYLES */
 @media print{
-  .topbar, .float-logo, .search-wrap, .menu-toggle, .cal-nav, .cal-today-btn,
+  .topbar, .search-wrap, .menu-toggle, .cal-nav, .cal-today-btn,
   footer .contact-form, nav .search-wrap{ display:none !important; }
   nav{ position:static; border-bottom:1px solid #999; }
   .navlinks{ display:none !important; }
@@ -428,6 +385,7 @@ footer a:hover{opacity:1;}
   .hero-slides{ display:none; }
   .hero h1, .hero p.lede{ color:#000; }
   .btn, .cal-event, .search-toggle{ display:none !important; }
+  .reveal{ opacity:1 !important; transform:none !important; }
   section{ padding:14px 0; page-break-inside:avoid; }
   .callout{ background:#fff !important; color:#000 !important; border:1px solid #999; box-shadow:none; }
   .callout h3, .callout p{ color:#000 !important; }
@@ -483,17 +441,6 @@ footer a:hover{opacity:1;}
   </div>
 </nav>
 
-<a href="index.html#top" class="float-logo" aria-label="Back to top — Riverwood Trails">
-  <div class="float-logo-mark">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2 8c1.5 1.6 3 1.6 4.5 0s3-1.6 4.5 0 3 1.6 4.5 0 3-1.6 4.5 0" stroke="#f4efe4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M2 13c1.5 1.6 3 1.6 4.5 0s3-1.6 4.5 0 3 1.6 4.5 0 3-1.6 4.5 0" stroke="#f4efe4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
-      <path d="M2 18c1.5 1.6 3 1.6 4.5 0s3-1.6 4.5 0 3 1.6 4.5 0 3-1.6 4.5 0" stroke="#f4efe4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
-    </svg>
-  </div>
-  <div class="float-logo-text">Riverwood Trails<small>Kings Mills, OH</small></div>
-</a>
-
 <div class="page-header">
   <span class="eyebrow">Neighborhood Upkeep</span>
   <h1>Report a Concern</h1>
@@ -505,7 +452,7 @@ footer a:hover{opacity:1;}
 
   <div class="notice-box" style="margin-top:8px; margin-bottom:32px; max-width:70ch;">
     <h4>Reports are not anonymous</h4>
-    <p>Your name and email go to the board along with your report, and we may follow up with you for details. Reports go directly to home@riverwoodtrails.com — please allow 1–2 weeks for a response.</p>
+    <p>Your name and email go to the board along with your report, and we may follow up with you for details. The board is all-volunteer, so we’ll follow up as soon as we’re able.</p>
   </div>
 
   <div class="cal-wrap" style="box-shadow:none; padding:32px 28px; max-width:640px;">
@@ -601,7 +548,7 @@ footer a:hover{opacity:1;}
       <a href="https://www.kingslocal.net/" target="_blank" rel="noopener">Kings Local School District</a>
     </div>
   </div>
-  <p style="font-size:.76rem; color:rgba(244,239,228,0.55); padding-top:18px; max-width:70ch;">We only use the email addresses submitted through this site to respond to you or send occasional HOA updates — never sold or shared. Forms are processed by FormSubmit, a third-party form service; see their privacy policy for details on how submissions are handled in transit.</p>
+  <p style="font-size:.76rem; color:rgba(244,239,228,0.55); padding-top:18px; max-width:70ch;">We only use the contact information and reports submitted through this site to respond to you, follow up on the issue described, or send occasional HOA updates — we don’t sell it or use it for marketing. Forms are processed by FormSubmit, a third-party form service; see their privacy policy for details on how submissions are handled in transit.</p>
   <p style="font-size:.76rem; color:rgba(244,239,228,0.55); padding-top:10px; max-width:70ch;">Official website of the Riverwood Trails Homeowners Association. Content on this site is provided for informational purposes to assist residents and is not legal advice. While we strive to keep information accurate and current, the HOA, its trustees, and its management assume no liability for errors, omissions, or technical issues with form submissions. Official governing documents — including the recorded Covenants, Conditions &amp; Restrictions — and formal board notices take precedence over anything displayed here. By using this site, you agree that form submissions and emails sent through it do not constitute formal legal notice to the HOA.</p>
   <div class="foot-bottom">
     <span>© 2026 Riverwood Trails Homeowners Association</span>
@@ -834,6 +781,21 @@ if (location.hash && location.hash.startsWith('#faq-')) {
     d.setAttribute('open', '');
     setTimeout(() => d.scrollIntoView({ behavior: 'smooth', block: 'center' }), 60);
   }
+}
+// ---- SCROLL REVEAL (subtle fade/rise on scroll, respects reduced motion) ----
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  revealEls.forEach((el) => revealObserver.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in-view'));
 }
 </script>
 </body>

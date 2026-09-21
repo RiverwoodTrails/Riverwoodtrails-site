@@ -13,6 +13,7 @@
 <meta property="og:url" content="https://riverwoodtrails.github.io/Riverwoodtrails-site/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23223829'/%3E%3Cpath d='M6 22c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M6 34c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round' opacity='0.7'/%3E%3Cpath d='M6 46c4 4.5 8 4.5 12 0s8-4.5 12 0 8 4.5 12 0 8-4.5 12 0' stroke='%23f4efe4' stroke-width='4' fill='none' stroke-linecap='round' opacity='0.45'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title>Riverwood Trails HOA — Kings Mills, Ohio</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
@@ -46,56 +47,6 @@ h1,h2,h3{
 a{color:inherit;}
 img{max-width:100%; display:block;}
 
-/* FLOATING LOGO BADGE */
-.float-logo{
-  position:fixed;
-  top:84px; right:24px;
-  z-index:55;
-  display:flex; align-items:center; gap:10px;
-  background:rgba(251,248,241,0.9);
-  backdrop-filter:blur(6px);
-  border:1px solid rgba(34,56,41,0.14);
-  border-radius:999px;
-  padding:8px 16px 8px 8px;
-  box-shadow:0 10px 26px -10px rgba(22,36,26,0.28);
-  text-decoration:none;
-  transition:box-shadow .2s ease, transform .2s ease;
-}
-.float-logo:hover{box-shadow:0 14px 32px -10px rgba(22,36,26,0.36); transform:translateY(-1px);}
-.float-logo-mark{
-  width:38px; height:38px;
-  border-radius:50%;
-  background:linear-gradient(135deg, var(--forest) 0%, var(--forest-deep) 100%);
-  display:flex; align-items:center; justify-content:center;
-  flex-shrink:0;
-  position:relative;
-  overflow:hidden;
-}
-.float-logo-mark svg{width:22px; height:22px;}
-.float-logo-text{
-  font-family:'Fraunces', serif;
-  font-weight:600;
-  font-size:.82rem;
-  color:var(--forest-deep);
-  line-height:1.15;
-  white-space:nowrap;
-}
-.float-logo-text small{
-  display:block;
-  font-family:'Inter',sans-serif;
-  font-weight:400;
-  font-size:.62rem;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  color:var(--river);
-  margin-top:1px;
-}
-@media (max-width:760px){
-  .float-logo{top:auto; bottom:22px; right:16px; padding:7px 14px 7px 7px;}
-  .float-logo-mark{width:34px; height:34px;}
-  .float-logo-mark svg{width:19px; height:19px;}
-  .float-logo-text{font-size:.76rem;}
-}
 
 /* TOP BAR */
 .topbar{
@@ -357,7 +308,6 @@ nav{
   }
   .navlinks.open{opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto;}
   .navlinks > a{padding:16px 4px; border-bottom:1px solid var(--line); font-size:1.02rem;}
-  body.nav-open .float-logo{display:none;}
 }
 
 
@@ -411,6 +361,41 @@ nav{
   color:rgba(244,239,228,0.88);
 }
 .hero .cta-row{margin-top:32px; display:flex; gap:14px; flex-wrap:wrap;}
+.hero-mark{
+  position:absolute;
+  right:8vw; bottom:10vw;
+  width:180px; height:180px;
+  border-radius:32px;
+  background:rgba(244,239,228,0.06);
+  pointer-events:none;
+}
+.hero-mark::after{
+  content:"";
+  position:absolute; left:50%; top:50%;
+  width:78px; height:78px;
+  border:8px solid rgba(244,239,228,0.14);
+  border-right:none; border-top:none;
+  transform:translate(-50%,-58%) rotate(-45deg);
+}
+@media (max-width:900px){ .hero-mark{display:none;} }
+/* NEW RESIDENT BANNER */
+.nrb-wrap{padding:0 6vw; margin-top:-34px; position:relative; z-index:2;}
+.nrb{
+  max-width:1180px; margin:0 auto;
+  background:linear-gradient(120deg, var(--clay) 0%, #8a4a30 100%);
+  border-radius:12px;
+  padding:22px 28px;
+  display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+  box-shadow:0 20px 40px -20px rgba(22,36,26,0.4);
+}
+.nrb-icon{width:38px; height:38px; flex-shrink:0; color:var(--cream); opacity:.9;}
+.nrb-icon svg{width:100%; height:100%;}
+.nrb-text{flex:1; min-width:200px;}
+.nrb-title{color:var(--cream); font-family:'Fraunces',serif; font-weight:600; font-size:1.05rem; margin-bottom:2px;}
+.nrb-sub{color:rgba(244,239,228,0.85); font-size:.9rem;}
+.nrb-link{color:var(--cream); font-size:.9rem; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(244,239,228,0.5); padding-bottom:2px; white-space:nowrap; transition:border-color .2s;}
+.nrb-link:hover{border-color:var(--cream);}
+@media (max-width:600px){ .nrb-wrap{margin-top:-24px;} .nrb{padding:18px 20px;} }
 .btn{
   display:inline-flex;
   align-items:center;
@@ -593,9 +578,11 @@ section{padding:7vw 6vw; position:relative;}
 @media (max-width:600px){ .announce{grid-template-columns:1fr; gap:6px;} }
 
 /* QUICK LINKS GRID */
-.grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:8px; overflow:hidden; box-shadow:0 12px 32px -16px rgba(22,36,26,0.18);}
-.tile{background:var(--paper); padding:34px 30px; transition:background .2s ease;}
-.tile:hover{background:#fff;}
+.grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+.tile{background:var(--paper); padding:34px 30px; border:1px solid var(--line); border-radius:10px; box-shadow:0 1px 2px rgba(22,36,26,0.04); transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;}
+.tile:hover{background:#fff; transform:translateY(-3px); border-color:rgba(34,56,41,0.28); box-shadow:0 20px 36px -22px rgba(22,36,26,0.28);}
+.grid3-feature .tile{padding:38px 34px; border-top:3px solid var(--river); border-radius:4px 4px 10px 10px;}
+.grid3-feature .tile .num{display:inline-block; padding:4px 12px; background:rgba(61,107,107,0.08); border-radius:20px;}
 .tile .num{font-family:'Fraunces',serif; color:var(--river); font-size:.85rem; margin-bottom:14px; letter-spacing:.04em; text-transform:uppercase;}
 .tile h4{font-size:1.08rem; margin-bottom:8px; font-family:'Fraunces',serif; font-weight:500;}
 .tile p{font-size:.92rem; color:#4a4a43;}
@@ -779,9 +766,16 @@ footer a:hover{opacity:1;}
 .contact-form button:hover::after{width:22px;}
 
 
+/* SCROLL REVEAL */
+.reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.in-view{opacity:1; transform:translateY(0);}
+.reveal-1{transition-delay:.08s;}
+.reveal-2{transition-delay:.16s;}
+.reveal-3{transition-delay:.24s;}
+
 /* PRINT STYLES */
 @media print{
-  .topbar, .float-logo, .search-wrap, .menu-toggle, .cal-nav, .cal-today-btn,
+  .topbar, .search-wrap, .menu-toggle, .cal-nav, .cal-today-btn,
   footer .contact-form, nav .search-wrap{ display:none !important; }
   nav{ position:static; border-bottom:1px solid #999; }
   .navlinks{ display:none !important; }
@@ -791,7 +785,9 @@ footer a:hover{opacity:1;}
   .hero::after{ display:none; }
   .hero-slides{ display:none; }
   .hero h1, .hero p.lede{ color:#000; }
+  .hero-mark, .nrb-wrap{ display:none !important; }
   .btn, .cal-event, .search-toggle{ display:none !important; }
+  .reveal{ opacity:1 !important; transform:none !important; }
   section{ padding:14px 0; page-break-inside:avoid; }
   .callout{ background:#fff !important; color:#000 !important; border:1px solid #999; box-shadow:none; }
   .callout h3, .callout p{ color:#000 !important; }
@@ -847,17 +843,6 @@ footer a:hover{opacity:1;}
   </div>
 </nav>
 
-<a href="index.html#top" class="float-logo" aria-label="Back to top — Riverwood Trails">
-  <div class="float-logo-mark">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2 8c1.5 1.6 3 1.6 4.5 0s3-1.6 4.5 0 3 1.6 4.5 0 3-1.6 4.5 0" stroke="#f4efe4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M2 13c1.5 1.6 3 1.6 4.5 0s3-1.6 4.5 0 3 1.6 4.5 0 3-1.6 4.5 0" stroke="#f4efe4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
-      <path d="M2 18c1.5 1.6 3 1.6 4.5 0s3-1.6 4.5 0 3 1.6 4.5 0 3-1.6 4.5 0" stroke="#f4efe4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
-    </svg>
-  </div>
-  <div class="float-logo-text">Riverwood Trails<small>Kings Mills, OH</small></div>
-</a>
-
 <div id="top" class="hero">
   <div class="hero-slides">
     <img id="heroEntranceImg" src="images/riverwood-entrance-day.jpg" data-day="images/riverwood-entrance-day.jpg" data-night="images/riverwood-entrance-night.jpg" alt="Riverwood Trails entrance sign" aria-hidden="true">
@@ -879,38 +864,45 @@ footer a:hover{opacity:1;}
   <div class="hero-content">
     <h1>Welcome to <span class="keep-together">Riverwood Trails</span></h1>
     <p class="lede">Walking distance to top-ranked schools, minutes from shopping and adventure. Riverwood Trails is a close-knit community of 76 homes woven into the woods along the Little Miami River in historic Kings Mills, Ohio.</p>
-    <p class="lede">Whether you are an avid cyclist, a nature lover, or an adventure seeker, Riverwood Trails does not disappoint. We are within walking distance of scenic wooded hiking trails, an archery park, and stunning views of the Little Miami River.</p>
-    <p class="lede">Beyond our peaceful streets, convenience is just around the corner. Kings Mills is served by the highly ranked Kings Local School District, and offers excellent shopping and diverse dining options nearby. Plus, we are just minutes away from world-class attractions like Kings Island Theme Park and the internationally recognized Lindner Family Tennis Center.</p>
     <div class="cta-row">
       <a href="index.html#dues" class="btn btn-primary">Pay HOA Dues</a>
       <a href="faq.html" class="btn btn-ghost-invert">Community Guidelines</a>
     </div>
   </div>
+  <div class="hero-mark" aria-hidden="true"></div>
 </div>
 
-<div style="background:var(--clay); padding:14px 6vw; display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; text-align:center;">
-  <p style="color:var(--cream); font-size:.92rem; margin:0;">New to Riverwood Trails? Start with our quick guide — trash days, dues, and the rules that matter most.</p>
-  <a href="new-residents.html" style="color:var(--cream); font-size:.92rem; font-weight:600; text-decoration:underline; white-space:nowrap;">Get the New Resident Guide →</a>
+<div class="nrb-wrap">
+  <div class="nrb reveal">
+    <div class="nrb-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l9 6-9 6-9-6 9-6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 15l9 6 9-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="nrb-text">
+      <p class="nrb-title">New to Riverwood Trails?</p>
+      <p class="nrb-sub">Start with our quick guide — trash days, dues, and the rules that matter most.</p>
+    </div>
+    <a href="new-residents.html" class="nrb-link">Get the Guide →</a>
+  </div>
 </div>
 
 <section style="padding-top:6vw;">
-  <div class="section-head" style="max-width:70ch;">
+  <div class="section-head reveal" style="max-width:70ch;">
     <span class="eyebrow">The Neighborhood</span>
     <h2>Why families choose Riverwood Trails</h2>
     <p>A neighborhood shaped by water, woods, and a school district families move here for.</p>
   </div>
-  <div class="grid3">
-    <div class="tile">
+  <div class="grid3 grid3-feature">
+    <div class="tile reveal reveal-1">
       <div class="num">Schools</div>
       <h4>Kings High School & Elementary, on foot</h4>
       <p>Kings Local is consistently ranked among Ohio's top districts, and Riverwood Trails is within walking distance of both Kings High School and Kings Elementary — a rare find for a neighborhood this secluded.</p>
     </div>
-    <div class="tile">
+    <div class="tile reveal reveal-2">
       <div class="num">Nature</div>
       <h4>Wooded trails along the Little Miami</h4>
       <p>The neighborhood backs into wooded conservation land along the Little Miami — a federally designated Wild and Scenic River. Walking trails wind through the trees just beyond your yard, tucked away and quiet.</p>
     </div>
-    <div class="tile">
+    <div class="tile reveal reveal-3">
       <div class="num">Location</div>
       <h4>Minutes from everything</h4>
       <p>Kings Island, the Lindner Family Tennis Center, and the Loveland Bike Trail are all a short drive away, along with shops and restaurants throughout Kings Mills and Mason. Secluded in the woods, close to it all.</p>
@@ -920,7 +912,7 @@ footer a:hover{opacity:1;}
 
 <div class="band">
 <section id="announcements">
-  <div class="section-head">
+  <div class="section-head reveal">
     <span class="eyebrow">Community News</span>
     <h2>Announcements</h2>
     <p>Notices from the board — assessments, projects, and neighborhood updates.</p>
@@ -944,13 +936,13 @@ footer a:hover{opacity:1;}
 
 <div class="band">
 <section>
-  <div class="section-head">
+  <div class="section-head reveal">
     <span class="eyebrow">Get Oriented</span>
     <h2>Get to know Riverwood Trails</h2>
     <p>Residents: governing documents, dues information, and your HOA board.</p>
   </div>
   <div class="grid3">
-    <div class="tile">
+    <div class="tile reveal reveal-1">
       <div class="num">01</div>
       <h4>Governing Documents</h4>
       <p>Covenants, bylaws, and architectural standards that keep the neighborhood consistent and well cared for.</p>
@@ -959,13 +951,13 @@ footer a:hover{opacity:1;}
       <a class="tile-link" href="documents.html#garbage-can-policy" style="margin-top:6px;">Garbage Can Policy →</a>
       <a class="tile-link" href="documents.html#drb-form" style="margin-top:6px;">Design Review App →</a>
     </div>
-    <div class="tile">
+    <div class="tile reveal reveal-2">
       <div class="num">02</div>
       <h4>Dues Information</h4>
       <p>$350 per year, invoiced by April and covering the calendar year. See how dues are used and how to pay.</p>
       <a class="tile-link" href="index.html#dues">View payment info →</a>
     </div>
-    <div class="tile">
+    <div class="tile reveal reveal-3">
       <div class="num">03</div>
       <h4>HOA Board</h4>
       <p>Volunteer neighbors who manage HOA business. Reach out directly with questions or requests.</p>
@@ -977,7 +969,7 @@ footer a:hover{opacity:1;}
 
 <div class="band">
 <section id="dues">
-  <div class="callout">
+  <div class="callout reveal">
     <div>
       <h3>Annual dues are $350, invoiced every April.</h3>
       <p>Dues cover the calendar year (January–December) and fund shared expenses like common-area landscaping and reserves. Amounts may adjust slightly year to year based on association needs.</p>
@@ -987,7 +979,7 @@ footer a:hover{opacity:1;}
 
   <div style="margin-top:40px;">
     <p style="color:#4a4a43; font-size:.9rem; font-weight:500; letter-spacing:.04em; text-transform:uppercase; margin-bottom:16px;">Primary HOA Expenses</p>
-    <div class="grid3" style="grid-template-columns:repeat(4,1fr);">
+    <div class="grid3 reveal" style="grid-template-columns:repeat(4,1fr);">
       <div class="tile">
         <h4 style="font-size:1rem;">HOA Insurance</h4>
       </div>
@@ -1004,14 +996,14 @@ footer a:hover{opacity:1;}
   </div>
 
   <div id="make-a-payment" style="margin-top:56px;">
-    <div class="section-head" style="max-width:70ch; margin-bottom:32px;">
+    <div class="section-head reveal" style="max-width:70ch; margin-bottom:32px;">
       <span class="eyebrow">Make a Payment</span>
       <h2 style="font-size:clamp(1.3rem,2vw,1.7rem);">How to pay your dues</h2>
-      <p>Each year, residents receive an annual billing notice by mail, which includes a QR code linking directly to our secure online payment portal. Choose whichever option works best for you below.</p>
+      <p>Each year, residents receive an annual billing notice by mail, which includes a QR code linking directly to our online payment portal. Choose whichever option works best for you below.</p>
     </div>
 
     <div class="grid3" style="grid-template-columns:1fr 1fr; align-items:stretch;">
-      <div class="tile" style="display:flex; flex-direction:column;">
+      <div class="tile reveal reveal-1" style="display:flex; flex-direction:column;">
         <div class="num">By Mail</div>
         <h4>Pay by Check</h4>
         <p>Make it payable to <strong>Riverwood Trails HOA</strong> and mail it to the address below. Including your property address in the memo line helps us apply the payment correctly.</p>
@@ -1032,10 +1024,10 @@ footer a:hover{opacity:1;}
         </div>
       </div>
 
-      <div class="tile" style="display:flex; flex-direction:column;">
+      <div class="tile reveal reveal-2" style="display:flex; flex-direction:column;">
         <div class="num">Online</div>
         <h4>Pay Online</h4>
-        <p>Your annual billing notice includes a QR code that links directly to our secure payment portal. If we have your email on file, we can also send the payment link straight to your inbox — just share your contact information below.</p>
+        <p>Your annual billing notice includes a QR code that links directly to our online payment portal. If we have your email on file, we can also send the payment link straight to your inbox — just share your contact information below.</p>
         <div style="margin-top:22px; padding-top:20px; border-top:1px solid var(--line);">
           <h4 style="font-size:.98rem;">Request a Payment Link</h4>
           <p style="font-size:.88rem; margin-bottom:14px;">Don't have a link yet? Share your contact info and we'll send one to your email.</p>
@@ -1544,6 +1536,21 @@ if (drbFormToggle && drbFormWrap) {
   });
 }
 
+// ---- SCROLL REVEAL (subtle fade/rise on scroll, respects reduced motion) ----
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  revealEls.forEach((el) => revealObserver.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in-view'));
+}
 </script>
 </body>
 </html>
