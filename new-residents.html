@@ -876,11 +876,12 @@ footer a:hover{opacity:1;}
     <div>
       <h5>CONTACT THE BOARD</h5>
       <p style="color:var(--cream); opacity:.85; font-size:.92rem; margin-bottom:14px;">Email us directly at <a href="mailto:home@riverwoodtrails.com" style="text-decoration:underline;">home@riverwoodtrails.com</a> or send a message below. General questions, design review requests, and neighborhood concerns are all welcome here.</p>
-      <form class="contact-form" action="https://formsubmit.co/home@riverwoodtrails.com" method="POST">
-        <input type="hidden" name="_subject" value="General Contact Message — New Residents page">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://riverwoodtrails.com/new-residents.html#contact">
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="accfe0bc-fa2d-46dc-b644-ef392f1760d0">
+        <input type="hidden" name="subject" value="General Contact Message — New Residents page">
+        <input type="hidden" name="from_name" value="Riverwood Trails Website">
+        <input type="hidden" name="redirect" value="https://riverwoodtrails.com/new-residents.html#contact">
+        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
         <input type="text" name="Name" placeholder="Your name" required>
         <input type="text" name="Address" placeholder="Address (optional)">
         <input type="email" name="Email" placeholder="Email" required>
@@ -919,7 +920,7 @@ footer a:hover{opacity:1;}
       <a href="https://www.kingslocal.net/" target="_blank" rel="noopener">Kings Local School District</a>
     </div>
   </div>
-  <p style="font-size:.76rem; color:rgba(244,239,228,0.55); padding-top:18px; max-width:70ch;">We only use the email addresses submitted through this site to respond to you or send occasional HOA updates — never sold or shared. Forms are processed by FormSubmit, a third-party form service; see their privacy policy for details on how submissions are handled in transit.</p>
+  <p style="font-size:.76rem; color:rgba(244,239,228,0.55); padding-top:18px; max-width:70ch;">We only use the email addresses submitted through this site to respond to you or send occasional HOA updates — never sold or shared. Forms are processed by Web3Forms, a third-party form service; see their <a href="https://www.web3forms.com/privacy" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">privacy policy</a> for details on how submissions are handled in transit.</p>
   <p style="font-size:.76rem; color:rgba(244,239,228,0.55); padding-top:10px; max-width:70ch;">Official website of the Riverwood Trails Homeowners Association. Content on this site is provided for informational purposes to assist residents and is not legal advice. While we strive to keep information accurate and current, the HOA, its trustees, and its management assume no liability for errors, omissions, or technical issues with form submissions. Official governing documents — including the recorded Covenants, Conditions &amp; Restrictions — and formal board notices take precedence over anything displayed here. By using this site, you agree that form submissions and emails sent through it do not constitute formal legal notice to the HOA.</p>
   <div class="foot-bottom">
     <span>© 2026 Riverwood Trails Homeowners Association</span>

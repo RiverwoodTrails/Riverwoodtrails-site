@@ -1011,11 +1011,12 @@ footer a:hover{opacity:1;}
         <div style="margin-top:22px; padding-top:20px; border-top:1px solid var(--line);">
           <h4 style="font-size:.98rem;">Notice of Payment by Mail</h4>
           <p style="font-size:.88rem; margin-bottom:14px;">Please use the form below to let us know you're mailing a payment to the PO Box, so we can process it more quickly.</p>
-          <form action="https://formsubmit.co/home@riverwoodtrails.com" method="POST" style="display:flex; flex-direction:column; gap:10px;">
-            <input type="hidden" name="_subject" value="Notice of Payment by Mail">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://riverwoodtrails.com/index.html#make-a-payment">
+          <form action="https://api.web3forms.com/submit" method="POST" style="display:flex; flex-direction:column; gap:10px;">
+            <input type="hidden" name="access_key" value="accfe0bc-fa2d-46dc-b644-ef392f1760d0">
+            <input type="hidden" name="subject" value="Notice of Payment by Mail">
+            <input type="hidden" name="from_name" value="Riverwood Trails Website">
+            <input type="hidden" name="redirect" value="https://riverwoodtrails.com/index.html#make-a-payment">
+            <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
             <input type="text" name="Name" placeholder="Your name" required style="padding:11px 14px; border:1px solid var(--line); border-radius:6px; font-family:'Inter',sans-serif; font-size:.9rem; background:var(--paper);">
             <input type="text" name="Address" placeholder="Property address" required style="padding:11px 14px; border:1px solid var(--line); border-radius:6px; font-family:'Inter',sans-serif; font-size:.9rem; background:var(--paper);">
             <input type="text" name="Amount Mailed" placeholder="Amount mailed (optional)" style="padding:11px 14px; border:1px solid var(--line); border-radius:6px; font-family:'Inter',sans-serif; font-size:.9rem; background:var(--paper);">
@@ -1031,11 +1032,12 @@ footer a:hover{opacity:1;}
         <div style="margin-top:22px; padding-top:20px; border-top:1px solid var(--line);">
           <h4 style="font-size:.98rem;">Request a Payment Link</h4>
           <p style="font-size:.88rem; margin-bottom:14px;">Don't have a link yet? Share your contact info and we'll send one to your email.</p>
-          <form action="https://formsubmit.co/home@riverwoodtrails.com" method="POST" style="display:flex; flex-direction:column; gap:10px;">
-            <input type="hidden" name="_subject" value="Request for Online Payment Link — Riverwood Trails HOA">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://riverwoodtrails.com/index.html#make-a-payment">
+          <form action="https://api.web3forms.com/submit" method="POST" style="display:flex; flex-direction:column; gap:10px;">
+            <input type="hidden" name="access_key" value="accfe0bc-fa2d-46dc-b644-ef392f1760d0">
+            <input type="hidden" name="subject" value="Request for Online Payment Link — Riverwood Trails HOA">
+            <input type="hidden" name="from_name" value="Riverwood Trails Website">
+            <input type="hidden" name="redirect" value="https://riverwoodtrails.com/index.html#make-a-payment">
+            <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
             <input type="text" name="Name" placeholder="Your name" required style="padding:11px 14px; border:1px solid var(--line); border-radius:6px; font-family:'Inter',sans-serif; font-size:.9rem; background:var(--paper);">
             <input type="text" name="Address" placeholder="Property address" required style="padding:11px 14px; border:1px solid var(--line); border-radius:6px; font-family:'Inter',sans-serif; font-size:.9rem; background:var(--paper);">
             <input type="email" name="Email" placeholder="Email" required style="padding:11px 14px; border:1px solid var(--line); border-radius:6px; font-family:'Inter',sans-serif; font-size:.9rem; background:var(--paper);">
@@ -1091,10 +1093,12 @@ footer a:hover{opacity:1;}
 <div class="band" id="newsletter" style="padding:48px 6vw; text-align:center; scroll-margin-top:80px;">
   <p style="font-family:'Fraunces',serif; font-size:1.3rem; color:var(--forest-deep); margin-bottom:8px;">Stay in the loop</p>
   <p style="color:#4a4a43; font-size:.94rem; margin-bottom:22px; max-width:50ch; margin-left:auto; margin-right:auto;">Get occasional neighborhood updates by email — dues reminders, announcements, and anything else worth knowing.</p>
-  <form action="https://formsubmit.co/home@riverwoodtrails.com" method="POST" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; max-width:420px; margin:0 auto;">
-    <input type="hidden" name="_subject" value="Newsletter signup — Riverwood Trails website">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://riverwoodtrails.com/index.html#top">
+  <form action="https://api.web3forms.com/submit" method="POST" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; max-width:420px; margin:0 auto;">
+    <input type="hidden" name="access_key" value="accfe0bc-fa2d-46dc-b644-ef392f1760d0">
+    <input type="hidden" name="subject" value="Newsletter signup — Riverwood Trails website">
+    <input type="hidden" name="from_name" value="Riverwood Trails Website">
+    <input type="hidden" name="redirect" value="https://riverwoodtrails.com/index.html#top">
+    <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
     <input type="email" name="Email" placeholder="Your email address" required style="flex:1; min-width:220px; padding:12px 16px; border:1px solid var(--line); border-radius:3px; font-family:'Inter',sans-serif; font-size:.92rem; background:var(--paper);">
     <button type="submit" class="btn btn-primary" style="padding:12px 22px;">Sign Up</button>
   </form>
@@ -1105,11 +1109,12 @@ footer a:hover{opacity:1;}
     <div>
       <h5>CONTACT THE BOARD</h5>
       <p style="color:var(--cream); opacity:.85; font-size:.92rem; margin-bottom:14px;">Email us directly at <a href="mailto:home@riverwoodtrails.com" style="text-decoration:underline;">home@riverwoodtrails.com</a> or send a message below. General questions, design review requests, and neighborhood concerns are all welcome here.</p>
-      <form class="contact-form" action="https://formsubmit.co/home@riverwoodtrails.com" method="POST">
-        <input type="hidden" name="_subject" value="General Contact Message — Homepage">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://riverwoodtrails.com/index.html#contact">
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="accfe0bc-fa2d-46dc-b644-ef392f1760d0">
+        <input type="hidden" name="subject" value="General Contact Message — Homepage">
+        <input type="hidden" name="from_name" value="Riverwood Trails Website">
+        <input type="hidden" name="redirect" value="https://riverwoodtrails.com/index.html#contact">
+        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
         <input type="text" name="Name" placeholder="Your name" required>
         <input type="text" name="Address" placeholder="Address (optional)">
         <input type="email" name="Email" placeholder="Email" required>
@@ -1148,7 +1153,7 @@ footer a:hover{opacity:1;}
       <a href="https://www.kingslocal.net/" target="_blank" rel="noopener">Kings Local School District</a>
     </div>
   </div>
-  <p style="font-size:.76rem; color:rgba(244,239,228,0.55); padding-top:18px; max-width:70ch;">We only use the email addresses submitted through this site to respond to you or send occasional HOA updates — never sold or shared. Forms are processed by FormSubmit, a third-party form service; see their privacy policy for details on how submissions are handled in transit.</p>
+  <p style="font-size:.76rem; color:rgba(244,239,228,0.55); padding-top:18px; max-width:70ch;">We only use the email addresses submitted through this site to respond to you or send occasional HOA updates — never sold or shared. Forms are processed by Web3Forms, a third-party form service; see their <a href="https://www.web3forms.com/privacy" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">privacy policy</a> for details on how submissions are handled in transit.</p>
   <p style="font-size:.76rem; color:rgba(244,239,228,0.55); padding-top:10px; max-width:70ch;">Official website of the Riverwood Trails Homeowners Association. Content on this site is provided for informational purposes to assist residents and is not legal advice. While we strive to keep information accurate and current, the HOA, its trustees, and its management assume no liability for errors, omissions, or technical issues with form submissions. Official governing documents — including the recorded Covenants, Conditions &amp; Restrictions — and formal board notices take precedence over anything displayed here. By using this site, you agree that form submissions and emails sent through it do not constitute formal legal notice to the HOA.</p>
   <div class="foot-bottom">
     <span>© 2026 Riverwood Trails Homeowners Association</span>
