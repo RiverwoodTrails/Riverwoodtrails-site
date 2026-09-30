@@ -644,12 +644,12 @@ details .cite{margin-top:12px;}
 /* MOBILE-ONLY CROP: shift the front entrance photos left so the right side of the picture shows. Desktop crop is untouched. */
 @media (max-width:760px){
   .hero-slides img:nth-child(1),
-  .gallery-grid img:nth-child(1){object-position:80% center;}  /* front entrance, day/night (time-based) */
-  .gallery-grid img:nth-child(5){object-position:80% center;}  /* front entrance, night */
+  .gallery-grid img:nth-child(1){object-position:100% center;}  /* front entrance, day/night (time-based) — full stone monument visible, just the edge of the tree/lamppost to its left */
+  .gallery-grid img:nth-child(5){object-position:100% center;}  /* front entrance, night */
   .hero-slides img:nth-child(3),
-  .gallery-grid img:nth-child(3){object-position:0% center;}  /* aerial river view — shifted to show the far left side */
+  .gallery-grid img:nth-child(3){object-position:100% center;}  /* aerial river view — shifted to show the far right side */
   .hero-slides img:nth-child(4),
-  .gallery-grid img:nth-child(4){object-position:center 35%;}  /* pergola/gazebo — nudged down slightly */
+  .gallery-grid img:nth-child(4){object-position:center 65%;}  /* pergola/gazebo — shifted down */
 }
 @media (max-width:900px){ .grid3[style*="repeat(4"]{grid-template-columns:repeat(2,1fr) !important;} }
 @media (max-width:760px){ .grid3{grid-template-columns:1fr !important;} }
