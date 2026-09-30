@@ -644,12 +644,11 @@ details .cite{margin-top:12px;}
 /* MOBILE-ONLY CROP: shift the front entrance photos left so the right side of the picture shows. Desktop crop is untouched. */
 @media (max-width:760px){
   .hero-slides img:nth-child(1),
-  .gallery-grid img:nth-child(1){object-position:100% center;}  /* front entrance, day/night (time-based) — full stone monument visible, just the edge of the tree/lamppost to its left */
-  .gallery-grid img:nth-child(5){object-position:100% center;}  /* front entrance, night */
-  .hero-slides img:nth-child(3),
-  .gallery-grid img:nth-child(3){object-position:100% center;}  /* aerial river view — shifted to show the far right side */
-  .hero-slides img:nth-child(4),
-  .gallery-grid img:nth-child(4){object-position:center 65%;}  /* pergola/gazebo — shifted down */
+  .gallery-grid img:nth-child(1){object-position:91% center;}  /* front entrance, day/night (time-based) — monument's right edge lands near the screen's right edge */
+  .gallery-grid img:nth-child(5){object-position:91% center;}  /* front entrance, night */
+  .hero-slides img:nth-child(3){object-position:74% center; transform:scale(1.12); transform-origin:100% 100%;}  /* aerial river view (hero) — cropped to hide the bridge/industrial complex, keep the river */
+  .gallery-grid img:nth-child(3){object-position:60% center;}  /* aerial river view (gallery thumb) — no transform here, gallery has no clipping wrapper */
+  .hero-slides img:nth-child(4){transform:scale(1.4); transform-origin:50% 0%;}  /* pergola/gazebo (hero) — zoomed so the structure sits lower, clear of the hero text */
 }
 @media (max-width:900px){ .grid3[style*="repeat(4"]{grid-template-columns:repeat(2,1fr) !important;} }
 @media (max-width:760px){ .grid3{grid-template-columns:1fr !important;} }
